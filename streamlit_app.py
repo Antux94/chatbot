@@ -63,7 +63,7 @@ import subprocess
 
 def run_install_script():
 
-    bat_file = "/workspaces/chatbot/install.sh"
+    bat_file = "/chatbot/install.sh"
         # Ejecutar el archivo .bat con Popen
     process = subprocess.Popen([bat_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, shell=True)
 
