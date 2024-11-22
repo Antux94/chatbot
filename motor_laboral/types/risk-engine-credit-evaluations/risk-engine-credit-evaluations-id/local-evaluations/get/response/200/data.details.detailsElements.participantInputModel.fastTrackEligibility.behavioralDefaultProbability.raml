@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  behavioralDefaultProbability:
+    type: object
+    description: "Is a measure of credit evaluation that is given internally with the payments behavior of a customer in order to estimate its unfulfillment probability."
+    properties:
+      value:
+        type: number
+        description: |
+          Behavioral default probability value
+        required: true
+
+      behavioralReportDate:
+        type: date-only
+        description: |
+          String based on ISO-8601 date format that corresponds to the date which behavioral information is generated.
+        required: true
+

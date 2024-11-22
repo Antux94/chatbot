@@ -1,0 +1,15 @@
+{
+  "messages": [
+    {
+      "code": "invalidParameters",
+      "message": "Invalid parameters.",
+      "parameters": [
+        {
+          "name": "indicators.id"
+        }
+      ],
+      "type": "ERROR"
+    }
+  ]
+}
+

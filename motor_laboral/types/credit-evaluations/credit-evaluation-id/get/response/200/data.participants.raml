@@ -1,0 +1,207 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  identityDocument: data.participants.identityDocument.raml
+  roleType: data.participants.roleType.raml
+  economicActivity: data.participants.economicActivity.raml
+  customerSeniority: data.participants.customerSeniority.raml
+  gender: data.participants.gender.raml
+  nationality: data.participants.nationality.raml
+  maritalStatus: data.participants.maritalStatus.raml
+  addresses: data.participants.addresses.raml
+  averagePassiveBalance: data.participants.averagePassiveBalance.raml
+  cashBalance: data.participants.cashBalance.raml
+  cardCreditLine: data.participants.cardCreditLine.raml
+  financialSystemClassification: data.participants.financialSystemClassification.raml
+  economicData: data.participants.economicData.raml
+  workPlaces: data.participants.workPlaces.raml
+
+types:
+  participants:
+    type: object
+    description: "It is the participants to which a credit evaluation is applied."
+    properties:
+      identityDocument:
+        type: identityDocument.identityDocument
+        description: |
+          Information about the identity document of the proposal participant.
+        required: true
+
+      roleType:
+        type: roleType.roleType
+        description: |
+          Role type, it refers to the role of the customer on the proposal.
+        required: false
+
+      lastname:
+        type: string
+        description: |
+          Participant's last name.
+        required: true
+
+        (annotations.customControlAttributes):
+        - kind: AUDITABLE_DATA
+          country: CO
+      economicActivity:
+        type: economicActivity.economicActivity
+        description: |
+          Economic activity information.
+        required: false
+
+      customerSeniority:
+        type: customerSeniority.customerSeniority
+        description: |
+          Seniority of the customer in the financial entity.
+        required: false
+
+      birthDate:
+        type: date-only
+        description: |
+          Participant's birthdate.
+        required: true
+
+      age:
+        type: number
+        description: |
+          Age of the person expressed in years.
+        required: false
+
+      gender:
+        type: gender.gender
+        description: |
+          The person gender.
+        required: false
+
+      nationality:
+        type: nationality.nationality
+        description: |
+          Contains the nationality of the participant.
+        required: true
+
+      maritalStatus:
+        type: maritalStatus.maritalStatus
+        description: |
+          The person gender.
+        required: false
+
+      familyMembersNumber:
+        type: number
+        description: |
+          Number of members that make up the person's family.
+        required: false
+
+      personsOnCharge:
+        type: number
+        description: |
+          Number of people who depend financially on the participant.
+        required: false
+
+      bureauClassification:
+        type: string
+        description: |
+          Classification of bureau applied by the bank for the credit assessment and which is obtained internally by each geography.
+        required: false
+
+      hasDirectDebits:
+        type: boolean
+        description: |
+          Automatic debit indicator in the bank, used to identify if a customer domiciled services such as electricity, water, etc.
+        required: false
+
+      hasPayroll:
+        type: boolean
+        description: |
+          Indicates whether the client receives his salary through the bank. This indicator allows to identify if the client has an account in the bank, which receives the payment of his salary.
+        required: false
+
+      hasLowIncome:
+        type: boolean
+        description: |
+          Indicates if the client has low income.
+        required: false
+
+      addresses:
+        type: addresses.addresses[]
+        description: |
+          Address of the business.
+        required: false
+
+      averagePassiveBalance:
+        type: averagePassiveBalance.averagePassiveBalance
+        description: |
+          It is the average passive balance of the client in the bank.
+        required: false
+
+      cashBalance:
+        type: cashBalance.cashBalance
+        description: |
+          Cash balance information.
+        required: false
+
+      installmentIncomeRatio:
+        type: number
+        description: |
+          Ratio between the installment and average balance.
+        required: false
+
+      cardUsageRatio:
+        type: number
+        description: |
+          Ratio of use of credit card, line used and not used.
+        required: false
+
+      averageBalanceRatio:
+        type: number
+        description: |
+          Ratio between the average balance liabilities (savings) and the installment.
+        required: false
+
+      professionalEmploymentSituation:
+        type: string
+        description: |
+          It represents participant's employment situation performed by the engine. This value is composed of concatenation of variables labor and professional situation.
+        required: false
+
+      cardCreditLine:
+        type: cardCreditLine.cardCreditLine
+        description: |
+          Card credit line that the person has with the bank.
+        required: false
+
+      financialSystemClassification:
+        type: financialSystemClassification.financialSystemClassification
+        description: |
+          Classification of the person in the financial system. According to the days of delay that a debtor has when not paying his credit (risk of default), he receives a category, with which we identify his behavior in the payments he has with his creditors.
+        required: false
+
+      numberOfYearlyReportingEntities:
+        type: number
+        description: |
+          Number of reporting financial entities in the last year.
+        required: false
+
+      numberOfMonthlyReportingEntities:
+        type: number
+        description: |
+          Number of reporting financial entities in the last month.
+        required: false
+
+      economicData:
+        type: economicData.economicData
+        description: |
+          Contains the economic information of the participant.
+        required: true
+
+      isCustomer:
+        type: boolean
+        description: |
+          Indicator to identify in case the evaluated person is customer or not.
+        required: true
+
+      workPlaces:
+        type: workPlaces.workPlaces[]
+        description: |
+          Contains the information about companies or workplaces where the customer has been working..
+        required: false
+
+    

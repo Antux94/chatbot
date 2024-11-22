@@ -1,0 +1,10 @@
+{
+  "messages": [
+    {
+      "code": "functionalError",
+      "message": "The backend message is shown here.",
+      "type": "ERROR"
+    }
+  ]
+}
+

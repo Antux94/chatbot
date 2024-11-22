@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  status: data.status.raml
+
+types:
+  data:
+    type: object
+    description: ""
+    properties:
+      operationId:
+        type: string
+        description: |
+          Identifier of the operation to be consulted, this operation refers to the query requested to the external entity.
+        required: true
+
+      status:
+        type: status.status
+        description: |
+          Status of the operation that has been created.
+        required: true
+

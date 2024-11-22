@@ -1,0 +1,35 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  conditions: data.products.detailsElements.account.conditions.raml
+
+types:
+  account:
+    type: object
+    discriminator: productType
+    discriminatorValue: ACCOUNT
+    description: "Detailed information according to the product type (productType)."
+    properties:
+      productId:
+        type: string
+        description: |
+          Financial product id.
+        required: true
+
+      productType:
+        type: string
+        description: |
+          Financial product type.
+        required: true
+        enum: [LOAN,ACCOUNT,CARD]
+        (annotations.enumDescription):
+        - LOAN: "Product type is a LOAN"
+        - ACCOUNT: "Product type is a ACCOUNT"
+        - CARD: "Product type is a CARD"
+
+      conditions:
+        type: conditions.conditions
+        description: |
+          Conditions to opening product.
+        required: false
+

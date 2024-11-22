@@ -1,0 +1,30 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  person: body.person.raml
+  informationSources: body.informationSources.raml
+  product: body.product.raml
+
+types:
+  body:
+    type: object
+    description: ""
+    properties:
+      person:
+        type: person.person
+        description: |
+          Person associated with calculation.
+        required: true
+
+      informationSources:
+        type: informationSources.informationSources[]
+        description: |
+          Contains the source of information with which the information is enriched. This can be SOI / APL, Income or Predictor. It's required indicating what is the first source to Query
+        required: true
+
+      product:
+        type: product.product
+        description: |
+          Contains information about product that is performing request to motor.
+        required: false
+

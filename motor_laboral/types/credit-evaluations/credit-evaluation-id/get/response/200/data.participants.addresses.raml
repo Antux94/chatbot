@@ -1,0 +1,43 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  addressType: data.participants.addresses.addressType.raml
+  ownershipType: data.participants.addresses.ownershipType.raml
+  location: data.participants.addresses.location.raml
+
+types:
+  addresses:
+    type: object
+    description: "Address of the business."
+    properties:
+      isPreferential:
+        type: boolean
+        description: |
+          Indicates whether this address is the preferred one related by the business customer.
+        required: false
+
+      addressType:
+        type: addressType.addressType
+        description: |
+          Type of address.
+        required: false
+
+      lastUpdateDate:
+        type: date-only
+        description: |
+          String based on ISO-8601 date format for providing the last day to make use of the approved risk.
+        required: false
+
+      ownershipType:
+        type: ownershipType.ownershipType
+        description: |
+          Property relationship with the business customer.
+        required: false
+
+      location:
+        type: location.location
+        description: |
+          Physical location address.
+        required: true
+
+    

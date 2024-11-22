@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  state:
+    type: object
+    description: "State, Province or Region where the location is placed."
+    properties:
+      id:
+        type: string
+        description: |
+          Geographic state identifier.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Geographic state name.
+        required: true
+

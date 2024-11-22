@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  totalDeductions:
+    type: object
+    description: "Total deductions from all employers"
+    properties:
+      amount:
+        type: number
+        description: |
+          Monetary amount.
+        required: true
+        example: 100000000.25
+
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency
+        required: true
+        example: "COP"
+

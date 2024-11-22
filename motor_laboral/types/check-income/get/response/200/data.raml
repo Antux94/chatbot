@@ -1,0 +1,41 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  customer: data.customer.raml
+  workPlaces: data.workPlaces.raml
+
+types:
+  data:
+    type: object
+    description: ""
+    properties:
+      customer:
+        type: customer.customer
+        description: |
+          Basic information of the customer
+        required: true
+
+      consultType:
+        type: string
+        description: |
+          Type of query that will be made according to the external entity.
+        required: false
+        enum: [OVI,CIS,CIE,VIP]
+        (annotations.enumDescription):
+        - OVI: "Initials standing for “Orquestador de validador de Ingreso” spanish for Income Validation Orchestrator"
+        - CIS: "nitials standing for “Consulta Ingreso Simplificada” spanish for Simplified Income Query"
+        - CIE: "Initials standing for “Consulta Ingreso Extendida” spanish for Extended Income Query"
+        - VIP: "Initials standing for “Validador de Ingresos Plus” spanish for Incomes Validator Plus"
+
+      operationDate:
+        type: datetime
+        description: |
+          String based on ISO-8601 date format for providing the date when the consult was made.
+        required: false
+
+      workPlaces:
+        type: workPlaces.workPlaces[]
+        description: |
+          Company or workplaces where the customer has worked recently.
+        required: false
+

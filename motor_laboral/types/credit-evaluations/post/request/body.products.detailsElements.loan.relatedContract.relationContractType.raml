@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  relationContractType:
+    type: object
+    description: "Contains the channel through which the service is consumed."
+    properties:
+      id:
+        type: string
+        description: |
+          Contract type identifier.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Contract type name.
+        required: true
+

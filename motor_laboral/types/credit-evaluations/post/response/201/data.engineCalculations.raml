@@ -1,0 +1,16 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  outputData: data.engineCalculations.outputData.raml
+
+types:
+  engineCalculations:
+    type: object
+    description: "Data calculated by the risk engine based on the input information."
+    properties:
+      outputData:
+        type: outputData.outputData
+        description: |
+          Output data calculated by the engine.
+        required: true
+

@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  value: data.products.detailsElements.loan.responseCredit.consolidated.value.raml
+
+types:
+  consolidated:
+    type: object
+    description: "Contains the consolidated data after performing the scoring evaluation"
+    properties:
+      id:
+        type: string
+        description: |
+          Consolidated type identifier.
+        required: true
+
+      value:
+        type: value.value
+        description: |
+          Monetary value associated with the consolidated.
+        required: false
+
+    

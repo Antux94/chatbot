@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  accountReceivableTurnover:
+    type: object
+    description: "It´s an accounting measure used to quantify a company's effectiveness in collecting its receivables or money owed by clients. It shows how quickly (in days) the short-term debt extended to its customers is collected or is paid."
+    properties:
+      percentage:
+        type: number
+        description: |
+          Percentage of the asset.
+        required: false
+
+      isCalculated:
+        type: boolean
+        description: |
+          It is calculated, if the value is true, it is because the risk tool could calculate it, otherwise its value is false and likewise it ratifies when the value is a possible 0.
+        required: true
+

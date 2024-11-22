@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  valueOfAppraisal:
+    type: object
+    description: "Contains the value of the appraisal of the property that is being acquired."
+    properties:
+      amount:
+        type: number
+        description: |
+          Appraisal value of the property that is being acquired.
+        required: true
+
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency related to the amount.
+        required: true
+

@@ -1,0 +1,206 @@
+{
+  "data": {
+    "stage": {
+      "id": "SCREENING_CLUSTER"
+    },
+    "proposalId": "01233",
+    "details": [
+      {
+        "detailsElements": {
+          "detailsType": "PARTICIPANT_INPUT_MODEL",
+          "business": {
+            "id": "23053",
+            "isCustomerRisk": true
+          },
+          "financialStatements": [
+            {
+              "id": "001",
+              "status": {
+                "id": "INITIALIZED"
+              },
+              "certification": {
+                "certificationType": "FISCAL"
+              },
+              "period": {
+                "periodType": {
+                  "id": "ANNUAL"
+                },
+                "unit": "MONTHS",
+                "number": 5,
+                "startDate": "2018-06-05",
+                "endDate": "2018-07-05"
+              },
+              "accountingAccounts": [
+                {
+                  "id": "806567",
+                  "amount": {
+                    "amount": 950000,
+                    "currency": "COP"
+                  },
+                  "accountsCategory": {
+                    "accountsType": {
+                      "id": "0012"
+                    },
+                    "accountsGroup": {
+                      "id": "0234"
+                    },
+                    "accountLevel": {
+                      "id": "0123"
+                    }
+                  }
+                }
+              ],
+              "ratios": {
+                "profittability": {
+                  "ebitda": {
+                    "amount": {
+                      "amount": 550000,
+                      "currency": "COP"
+                    }
+                  },
+                  "roe": {
+                    "percentage": 87
+                  },
+                  "roa": {
+                    "percentage": 87
+                  },
+                  "internalFundsToSales": {
+                    "percentage": 56
+                  }
+                },
+                "activity": {
+                  "averageInventoryTurnover": {
+                    "percentage": 34
+                  },
+                  "accountReceivableTurnover": {
+                    "percentage": 50
+                  },
+                  "workingCapital": {
+                    "amount": {
+                      "amount": 6750000,
+                      "currency": "COP"
+                    }
+                  },
+                  "averagePaymentPeriod": {
+                    "percentage": 80
+                  },
+                  "assetTurnoverVariation": {
+                    "percentage": 78
+                  },
+                  "variationOnSales": {
+                    "percentage": 46
+                  },
+                  "daysOfCashOutstanding": {
+                    "percentage": 75
+                  }
+                },
+                "investmentCriteria": {
+                  "netPayBack": {
+                    "percentage": 37
+                  }
+                },
+                "solvency": {
+                  "financingExpensesToSales": {
+                    "percentage": 67
+                  },
+                  "interestCoverageWithEbidta": {
+                    "percentage": 78
+                  },
+                  "netFinancialDebtOverEbitda": {
+                    "percentage": 90
+                  },
+                  "equityToLongTermAssets": {
+                    "percentage": 34
+                  },
+                  "equityToAssets": {
+                    "percentage": 56
+                  },
+                  "debtToEquity": {
+                    "percentage": 92
+                  },
+                  "debtToAssets": {
+                    "percentage": 78
+                  },
+                  "debtToIncome": {
+                    "percentage": 45
+                  }
+                },
+                "changeOfScale": {
+                  "assetsChangeOfScale": {
+                    "percentage": 70
+                  },
+                  "salesChangeOfScale": {
+                    "percentage": 78
+                  }
+                },
+                "liquidity": {
+                  "acidTest": {
+                    "percentage": 90
+                  },
+                  "cashConversionCycle": {
+                    "percentage": 56
+                  },
+                  "current": {
+                    "percentage": 69
+                  },
+                  "operatingCycle": {
+                    "percentage": 50
+                  }
+                }
+              }
+            }
+          ],
+          "visitReports": [
+            {
+              "id": 234,
+              "reportStatus": "OPEN",
+              "endDate": "2018-05-30",
+              "ownerType": "HOLDER"
+            }
+          ],
+          "roleType": {
+            "id": "HOLDER"
+          },
+          "clientStartDate": "2018-05-25",
+          "fixedAssets": {
+            "amount": 456000,
+            "currency": "COP"
+          },
+          "economicActivityClass": {
+            "id": "0989",
+            "group": {
+              "id": "7865"
+            },
+            "activitystartDate": "2019-01-20"
+          },
+          "vulnerability": 1980,
+          "modelSector": "INDUSTRY",
+          "fastTrackEligibility": {
+            "behavioralDefaultProbability": {
+              "value": 8923,
+              "behavioralReportDate": "2019-07-01"
+            },
+            "riskGroup": {
+              "id": "VF900"
+            }
+          },
+          "qualitativeBlocks": [
+            {
+              "id": "08J9",
+              "startDate": "2019-04-20",
+              "endDate": "2019-07-19",
+              "qualitativeVariables": [
+                {
+                  "id": "ACCESS_TO_ALTERNATIVE_SOURCES_OF_FINANCING",
+                  "value": "MUY ALTO",
+                  "variableType": "BLOCK"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+

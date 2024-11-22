@@ -1,0 +1,35 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  employmentHistory:
+    type: object
+    description: "Information about employment history."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of time.
+        required: false
+        enum: [YEAR,MONTH,DAY]
+        (annotations.enumDescription):
+        - YEAR: "Years in the company."
+        - MONTH: "Months in the company."
+        - DAY: "Days in the company."
+        example: "MONTH"
+
+      timeContinuity:
+        type: number
+        description: |
+          Periods worked by the employee in general.
+        required: false
+        example: 6
+
+      dateContinuity:
+        type: date-only
+        description: |
+          String based on ISO-8601 for specifying the date of entry or relationship with the employers.
+        required: false
+        example: "2022-08-01"
+

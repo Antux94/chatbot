@@ -1,0 +1,30 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  identityDocument: data.result.employers.employerInfo.identityDocument.raml
+  economicActivity: data.result.employers.employerInfo.economicActivity.raml
+
+types:
+  employerInfo:
+    type: object
+    description: "Information about the company where the person works."
+    properties:
+      companyName:
+        type: string
+        description: |
+          Name of the company, business, etc, where participant work.
+        required: true
+        example: "Construcciones Diaz"
+
+      identityDocument:
+        type: identityDocument.identityDocument
+        description: |
+          Employer identification.
+        required: true
+
+      economicActivity:
+        type: economicActivity.economicActivity
+        description: |
+          Economic activity of the company where the person works.
+        required: true
+

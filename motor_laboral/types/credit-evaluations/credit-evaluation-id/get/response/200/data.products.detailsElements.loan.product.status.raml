@@ -1,0 +1,25 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  status:
+    type: object
+    description: "State in which the good that is being acquired is."
+    properties:
+      id:
+        type: string
+        description: |
+          Asset status identifier.
+        required: true
+        enum: [NEW,USED]
+        (annotations.enumDescription):
+        - NEW: "Property that is completely new."
+        - USED: "Property that has been used previously."
+
+      name:
+        type: string
+        description: |
+          Asset status description.
+        required: true
+

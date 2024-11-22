@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  employmentSituation:
+    type: object
+    description: "Work situation declared by the person..For example,employed worker,unemployed,civil servant,self-employed,bussiness-man,temporal contract,long-term contract,etc."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of customer employment situation.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Description of customer employment situation.
+        required: true
+

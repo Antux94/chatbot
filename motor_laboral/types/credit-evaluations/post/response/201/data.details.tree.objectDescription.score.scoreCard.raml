@@ -1,0 +1,41 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  matrices: data.details.tree.objectDescription.score.scoreCard.matrices.raml
+
+types:
+  scoreCard:
+    type: object
+    description: "Information about scoreCard."
+    properties:
+      element:
+        type: string
+        description: |
+          Segmentation variable applied to the person evaluated and with which the assigned score is justified.
+        required: false
+
+      value:
+        type: string
+        description: |
+          Value of the segmentation variable indicated in element.
+        required: false
+
+      outcome:
+        type: string
+        description: |
+          Represents the output range of a segmentation variable.
+        required: false
+
+      partialScore:
+        type: number
+        description: |
+          Partial Scorecards component score.
+        required: false
+
+      matrices:
+        type: matrices.matrices[]
+        description: |
+          Matrix used when there are two segmentation variables. The field of the variable one would make reference to the values for one of them and the one of variable two to the values of the other, as if they were arranged in a matrix one is the axis of abscises and another that of ordinates respectively.
+        required: false
+
+    

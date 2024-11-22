@@ -1,0 +1,24 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  type: body.participants.economicData.expenses.type.raml
+  value: body.participants.economicData.expenses.value.raml
+
+types:
+  expenses:
+    type: object
+    description: "Report participant expenses."
+    properties:
+      type:
+        type: type.type
+        description: |
+          Participant's expense type.
+        required: true
+
+      value:
+        type: value.value
+        description: |
+          Contains the value associated with the type of expense.
+        required: false
+
+    

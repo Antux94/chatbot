@@ -1,0 +1,49 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  probability: body.products.detailsElements.loan.responseCredit.probability.raml
+  quotas: body.products.detailsElements.loan.responseCredit.quotas.raml
+  consolidated: body.products.detailsElements.loan.responseCredit.consolidated.raml
+  dictums: body.products.detailsElements.loan.responseCredit.dictums.raml
+
+types:
+  responseCredit:
+    type: object
+    description: "Contains the evaluation response and the scoring query."
+    properties:
+      probability:
+        type: probability.probability
+        description: |
+          They are the possible probability values ​​that can be presented for the global evaluation, this probability is used by each of the scoring participants.
+        required: false
+
+      evaluationDateGlobal:
+        type: date-only
+        description: |
+          It is the time when the global evaluation is carried out.
+        required: false
+
+      evaluationHourGlobal:
+        type: string
+        description: |
+          Global evaluation hour.
+        required: false
+
+      quotas:
+        type: quotas.quotas[]
+        description: |
+          Quota of the credit acquired with the bank.
+        required: false
+
+      consolidated:
+        type: consolidated.consolidated[]
+        description: |
+          Contains the consolidated data after performing the scoring evaluation
+        required: false
+
+      dictums:
+        type: dictums.dictums[]
+        description: |
+          Contains global scoring dictums.
+        required: false
+

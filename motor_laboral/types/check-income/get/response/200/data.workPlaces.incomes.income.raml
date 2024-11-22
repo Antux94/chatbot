@@ -1,0 +1,45 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  incomeAmount: data.workPlaces.incomes.income.incomeAmount.raml
+
+types:
+  income:
+    type: object
+    description: "Information of a certain income received by the employee."
+    properties:
+      id:
+        type: string
+        description: |
+          Type identifier income customer.
+        required: true
+        enum: [BASIC,INTEGRAL,PENSIONAL]
+        (annotations.enumDescription):
+        - BASIC: "This type of income corresponds to the basic salary of the person consulted.."
+        - INTEGRAL: "This type of income corresponds if the person consulted receive Integral salary."
+        - PENSIONAL: "This type of income corresponds if the person consulted receive pension."
+
+      name:
+        type: string
+        description: |
+          Description of the type of customer income.
+        required: true
+
+      incomeAmount:
+        type: incomeAmount.incomeAmount
+        description: |
+          Type of liability declared by the person consulted.
+        required: false
+
+      issueDate:
+        type: date-only
+        description: |
+          Date of expedition the pay.
+        required: false
+
+      frequency:
+        type: string
+        description: |
+          Periodicity on which incomes are earned by the customer.
+        required: false
+

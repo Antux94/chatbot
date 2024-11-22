@@ -1,0 +1,24 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  value: body.products.detailsElements.loan.responseCredit.quotas.value.raml
+
+types:
+  quotas:
+    type: object
+    description: "Quota of the credit acquired with the bank."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier associated with the quota.
+        required: true
+        example: "\"Cuotacontra\""
+
+      value:
+        type: value.value
+        description: |
+          Value associated with quota of the credit acquired with the bank.
+        required: true
+
+    

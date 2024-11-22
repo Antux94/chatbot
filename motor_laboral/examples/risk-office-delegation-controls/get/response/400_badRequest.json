@@ -1,0 +1,15 @@
+{
+  "messages": [
+    {
+      "code": "badRequest",
+      "message": "The request could not be understood by the server due to malformed syntax",
+      "type": "ERROR"
+    },
+    {
+      "code": "58",
+      "message": "NO PASSWORD (no se ha encontrado la password en los datos de autenticación)",
+      "type": "ERROR"
+    }
+  ]
+}
+

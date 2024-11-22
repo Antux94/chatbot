@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  incomeAmount:
+    type: object
+    description: "Estimation of income for the cash balance made by the engine. It is calculated based on fixed income (5th category) plus variable income (4th category) of which a percentage is estimated. This information is calculated by the risk engine."
+    properties:
+      amount:
+        type: number
+        description: |
+          Amount.
+        required: true
+
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency of the amount.
+        required: true
+

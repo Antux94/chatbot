@@ -1,0 +1,16 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  codes:
+    type: object
+    description: "Sort reason code table in Decision setter tree for main strategy (DEC)."
+    properties:
+      value:
+        type: string
+        description: |
+          Value of the sort reason value table in Decision setter tree for main strategy (DEC).
+        required: true
+
+    

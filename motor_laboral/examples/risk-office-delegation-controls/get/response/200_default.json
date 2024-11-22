@@ -1,0 +1,77 @@
+{
+  "data": {
+    "id": "0000098765BP",
+    "delegationType": "OFFICE_DELEGATION",
+    "proposal": {
+      "id": "0000098765",
+      "riskStudyStage": {
+        "id": "SCREENING_CLUSTER"
+      }
+    },
+    "details": [
+      {
+        "detailsElements": {
+          "detailsType": "DELEGATION_INPUT",
+          "proposal": {
+            "customersLimitAmount": {
+              "currency": "COP",
+              "amount": 1000000000
+            },
+            "groupLimitAmount": {
+              "currency": "COP",
+              "amount": 1000000000
+            },
+            "othersLimitAmount": {
+              "currency": "COP",
+              "amount": 1000000000
+            },
+            "requestedAmount": {
+              "currency": "COP",
+              "amount": 1000000000
+            }
+          }
+        }
+      },
+      {
+        "detailsElements": {
+          "detailsType": "DELEGATION_OUTPUT",
+          "riskDelegationProfiles": [
+            {
+              "id": "GER",
+              "name": "GERENTE",
+              "riskAnalystAgents": [
+                {
+                  "id": "O002482",
+                  "name": "Sergio Sepúlveda"
+                },
+                {
+                  "id": "O002483",
+                  "name": "Andrés Cruz"
+                }
+              ],
+              "levelDelegation": "LEVEL_1",
+              "canAttributeOfficeOperation": false
+            },
+            {
+              "id": "DIR_PYM",
+              "name": "DIRECTOR_PYMES",
+              "riskAnalystAgents": [
+                {
+                  "id": "CE57459",
+                  "name": "Jean Cañon"
+                },
+                {
+                  "id": "CE57458",
+                  "name": "Paul Cadena"
+                }
+              ],
+              "levelDelegation": "LEVEL_2",
+              "canAttributeOfficeOperation": true
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transaction xmlns="http://www.w3schools.com" transactionName="CMLCT001" application="CMLC" version="01" country="CO" language="ES">
+	<paramsIn>
+		<dto order="1" name="person" mandatory="1" package="com.bbva.cmlc.dto.c001.PersonDTO" artifactId="CMLCC001">
+			<dto order="1" name="identityDocument" mandatory="1" package="com.bbva.cmlc.dto.c001.IdentityDocumentDTO" artifactId="CMLCC001">
+				<parameter order="1" name="documentType" mandatory="1" type="String" size="255"/>
+				<parameter order="2" name="documentNumber" mandatory="1" type="String" size="255"/>
+			</dto>
+			<parameter order="2" name="firstName" mandatory="1" type="String" size="255"/>
+			<parameter order="3" name="middleName" mandatory="0" type="String" size="255"/>
+			<parameter order="4" name="lastName" mandatory="1" type="String" size="255"/>
+			<dto order="5" name="laboralInformation" mandatory="0" package="com.bbva.cmlc.dto.c001.LaboralInformationDTO" artifactId="CMLCC001">
+				<parameter order="1" name="companyId" mandatory="0" type="String" size="255"/>
+				<parameter order="2" name="declaratedIncome" mandatory="0" type="Long" size="15"/>
+			</dto>
+		</dto>
+		<list order="2" name="informationSources" mandatory="1">
+			<dto order="1" name="Type" mandatory="1" package="com.bbva.cmlc.dto.c001.InformationSourcesDTO" artifactId="CMLCC001">
+				<parameter order="1" name="id" mandatory="1" type="String" size="255"/>
+				<parameter order="2" name="isConsulted" mandatory="0" type="String" size="255"/>
+			</dto>
+		</list>
+		<dto order="3" name="product" mandatory="0" package="com.bbva.cmlc.dto.c001.ProductInDTO" artifactId="CMLCC001">
+			<parameter order="1" name="id" mandatory="1" type="String" size="255"/>
+			<parameter order="2" name="name" mandatory="1" type="String" size="255"/>
+		</dto>
+
+	</paramsIn>
+	<paramsOut>
+		<dto order="1" name="data" mandatory="0" package="com.bbva.cmlc.dto.c001.DataDTO" artifactId="CMLCC001">
+			<dto order="1" name="person" mandatory="1" package="com.bbva.cmlc.dto.c001.PersonDTO" artifactId="CMLCC001">
+				<dto order="1" name="identityDocument" mandatory="1" package="com.bbva.cmlc.dto.c001.IdentityDocumentDTO" artifactId="CMLCC001">
+					<parameter order="1" name="documentType" mandatory="1" type="String" size="255"/>
+					<parameter order="2" name="documentNumber" mandatory="1" type="String" size="255"/>
+				</dto>
+				<parameter order="2" name="firstName" mandatory="1" type="String" size="255"/>
+				<parameter order="3" name="middleName" mandatory="0" type="String" size="255"/>
+				<parameter order="4" name="lastName" mandatory="1" type="String" size="255"/>
+				<dto order="5" name="laboralInformation" mandatory="0" package="com.bbva.cmlc.dto.c001.LaboralInformationDTO" artifactId="CMLCC001">
+					<parameter order="1" name="companyId" mandatory="0" type="String" size="255"/>
+					<parameter order="2" name="declaratedIncome" mandatory="0" type="Long" size="15"/>
+				</dto>
+			</dto>
+			<list order="2" name="informationSources" mandatory="1">
+				<dto order="1" name="Type" mandatory="0" package="com.bbva.cmlc.dto.c001.InformationSourcesDTO" artifactId="CMLCC001">
+					<parameter order="1" name="id" mandatory="1" type="String" size="255"/>
+					<parameter order="2" name="isConsulted" mandatory="1" type="Boolean" size="0"/>
+				</dto>
+			</list>
+			<dto order="3" name="totalIncomes" mandatory="1" package="com.bbva.cmlc.dto.c001.AmountDTO" artifactId="CMLCC001">
+				<parameter order="1" name="amount" mandatory="1" type="Long" size="15"/>
+				<parameter order="2" name="currency" mandatory="1" type="String" size="255"/>
+			</dto>
+			<dto order="4" name="totalDeductions" mandatory="1" package="com.bbva.cmlc.dto.c001.AmountDTO" artifactId="CMLCC001">
+				<parameter order="1" name="amount" mandatory="1" type="Long" size="15"/>
+				<parameter order="2" name="currency" mandatory="1" type="String" size="255"/>
+			</dto>
+			<list order="5" name="employers" mandatory="1">
+				<dto order="1" name="Type" mandatory="0" package="com.bbva.cmlc.dto.c001.EmployersDTO" artifactId="CMLCC001">
+					<dto order="1" name="employerInfo" mandatory="1" package="com.bbva.cmlc.dto.c001.EmployerInfoDTO" artifactId="CMLCC001">
+						<parameter order="1" name="companyName" mandatory="1" type="String" size="255"/>
+						<dto order="2" name="identityDocument" mandatory="1" package="com.bbva.cmlc.dto.c001.IdentityDocumentDTO" artifactId="CMLCC001">
+							<parameter order="1" name="documentType" mandatory="1" type="String" size="255"/>
+							<parameter order="2" name="documentNumber" mandatory="1" type="String" size="255"/>
+						</dto>
+						<dto order="3" name="economicActivity" mandatory="1" package="com.bbva.cmlc.dto.c001.EconomicActivityDTO" artifactId="CMLCC001">
+							<parameter order="1" name="id" mandatory="1" type="String" size="255"/>
+							<parameter order="2" name="name" mandatory="1" type="String" size="255"/>
+							<parameter order="3" name="internationalClassification" mandatory="1" type="String" size="255"/>
+						</dto>
+					</dto>
+					<dto order="2" name="participantInformation" mandatory="1" package="com.bbva.cmlc.dto.c001.ParticipantInformationDTO" artifactId="CMLCC001">
+						<dto order="1" name="seniority" mandatory="1" package="com.bbva.cmlc.dto.c001.SeniorityDTO" artifactId="CMLCC001">
+							<parameter order="1" name="number" mandatory="1" type="Long" size="15"/>
+							<dto order="2" name="period" mandatory="1" package="com.bbva.cmlc.dto.c001.ParamNameIdDTO" artifactId="CMLCC001">
+								<parameter order="1" name="id" mandatory="1" type="String" size="255"/>
+								<parameter order="2" name="name" mandatory="1" type="String" size="255"/>
+							</dto>
+						</dto>
+						<list order="2" name="incomes" mandatory="1">
+							<dto order="1" name="Type" mandatory="0" package="com.bbva.cmlc.dto.c001.IncomesDTO" artifactId="CMLCC001">
+								<parameter order="1" name="id" mandatory="1" type="String" size="255"/>
+								<parameter order="2" name="name" mandatory="1" type="String" size="255"/>
+								<dto order="3" name="incomeAmount" mandatory="1" package="com.bbva.cmlc.dto.c001.AmountDTO" artifactId="CMLCC001">
+									<parameter order="1" name="amount" mandatory="1" type="Long" size="15"/>
+									<parameter order="2" name="currency" mandatory="1" type="String" size="255"/>
+								</dto>
+								<parameter order="4" name="frecuency" mandatory="1" type="String" size="255"/>
+							</dto>
+						</list>
+						<dto order="3" name="deduction" mandatory="1" package="com.bbva.cmlc.dto.c001.AmountDTO" artifactId="CMLCC001">
+							<parameter order="1" name="amount" mandatory="1" type="Long" size="15"/>
+							<parameter order="2" name="currency" mandatory="1" type="String" size="255"/>
+						</dto>
+						<dto order="4" name="employmentSituation" mandatory="1" package="com.bbva.cmlc.dto.c001.ParamNameIdDTO" artifactId="CMLCC001">
+							<parameter order="1" name="id" mandatory="1" type="String" size="255"/>
+							<parameter order="2" name="name" mandatory="1" type="String" size="255"/>
+						</dto>
+						<parameter order="5" name="dateRelationship" mandatory="1" type="String" size="10"/>
+					</dto>
+				</dto>
+			</list>
+			<dto order="6" name="employmentHistory" mandatory="0" package="com.bbva.cmlc.dto.c001.EmploymentHistoryDTO" artifactId="CMLCC001">
+				<parameter order="1" name="id" mandatory="0" type="String" size="255"/>
+				<parameter order="2" name="timeContinuity" mandatory="0" type="String" size="15"/>
+				<parameter order="3" name="dateContinuity" mandatory="0" type="String" size="10"/>
+			</dto>
+			<dto order="7" name="status" mandatory="0" package="com.bbva.cmlc.dto.c001.StatusDTO" artifactId="CMLCC001">
+				<parameter order="1" name="id" mandatory="0" type="String" size="255"/>
+				<parameter order="2" name="description" mandatory="0" type="String" size="255"/>
+			</dto>
+		</dto>
+		<parameter order="2" name="appId" mandatory="1" type="String" size="255"/>
+	</paramsOut>
+	<description>For RiskAdmission</description>
+</transaction>

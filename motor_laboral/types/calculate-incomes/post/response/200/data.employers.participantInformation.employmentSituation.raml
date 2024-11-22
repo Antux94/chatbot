@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  employmentSituation:
+    type: object
+    description: "Employment status of the participant with the employer"
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier situation of participant.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Description of employment situation.
+        required: true
+

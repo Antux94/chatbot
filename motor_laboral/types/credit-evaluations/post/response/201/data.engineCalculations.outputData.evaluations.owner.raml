@@ -1,0 +1,27 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  owner:
+    type: object
+    description: "Information about notifications related to proposal risk."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the notification owner. If is a participant is the document number identification. If is a guarantee or a product is de identifier. If is a proposal is the proposal number.
+        required: true
+
+      ownerType:
+        type: string
+        description: |
+          Owner type identifier.
+        required: true
+        enum: [PARTICIPANT,PRODUCT,GUARANTEE,APPLICATION]
+        (annotations.enumDescription):
+        - PARTICIPANT: "It refers to a notification is associated with a participant."
+        - PRODUCT: "It refers to a notification is associated with a product."
+        - GUARANTEE: "It refers to a notification is associated with a guarantee."
+        - APPLICATION: "It refers to a notification is associated with a proposal."
+

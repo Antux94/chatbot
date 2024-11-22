@@ -1,0 +1,31 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  propertyType:
+    type: object
+    description: "Type of property that the client is acquiring, applies for Mortgage."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the type of property that the participant is acquiring.
+        required: true
+        enum: [FLAT_OR_APARTMENT,CHALET,CONDOMINIUM,LOT,COMMERCIAL_LOCAL,RUSTIC_PROPERTY,PARKING_PLACE,OTHERS]
+        (annotations.enumDescription):
+        - FLAT_OR_APARTMENT: "The property is an apartment or is it an entire flat."
+        - CHALET: "The property is a chalet."
+        - CONDOMINIUM: "The property is a condominium."
+        - LOT: "The property is a lot."
+        - COMMERCIAL_LOCAL: "The property is a commercial local."
+        - RUSTIC_PROPERTY: "The property is rustic or an old house."
+        - PARKING_PLACE: "The property is a parking place."
+        - OTHERS: "Other type of property."
+
+      name:
+        type: string
+        description: |
+          Description of the type of property that the participant is acquiring.
+        required: true
+

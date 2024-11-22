@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  foreignCountry:
+    type: object
+    description: "For the cases when it's a foreign country."
+    properties:
+      zipCode:
+        type: string
+        description: |
+          Location ZIP code if it is an external country.
+        required: true
+

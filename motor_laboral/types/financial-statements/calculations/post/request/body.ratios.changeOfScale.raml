@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  assets: body.ratios.changeOfScale.assets.raml
+  sales: body.ratios.changeOfScale.sales.raml
+
+types:
+  changeOfScale:
+    type: object
+    description: "Grouping change of scale ratios"
+    properties:
+      assets:
+        type: assets.assets
+        description: |
+          Asstes of change of scale of the sales.
+        required: true
+
+      sales:
+        type: sales.sales
+        description: |
+          Change of scale of the sales.
+        required: true
+

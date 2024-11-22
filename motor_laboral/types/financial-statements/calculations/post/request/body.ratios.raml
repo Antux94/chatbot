@@ -1,0 +1,58 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  profitability: body.ratios.profitability.raml
+  activity: body.ratios.activity.raml
+  investmentCriteria: body.ratios.investmentCriteria.raml
+  solvency: body.ratios.solvency.raml
+  changeOfScale: body.ratios.changeOfScale.raml
+  liquidity: body.ratios.liquidity.raml
+  specificRatioMagnitudes: body.ratios.specificRatioMagnitudes.raml
+
+types:
+  ratios:
+    type: object
+    description: "Calculations by made ratios."
+    properties:
+      profitability:
+        type: profitability.profitability
+        description: |
+          Grouping profitability ratios.
+        required: true
+
+      activity:
+        type: activity.activity
+        description: |
+          Grouping activity ratios.
+        required: true
+
+      investmentCriteria:
+        type: investmentCriteria.investmentCriteria
+        description: |
+          Grouping investment criteria ratios.
+        required: true
+
+      solvency:
+        type: solvency.solvency
+        description: |
+          Grouping solvency ratios.
+        required: true
+
+      changeOfScale:
+        type: changeOfScale.changeOfScale
+        description: |
+          Grouping change of scale ratios
+        required: true
+
+      liquidity:
+        type: liquidity.liquidity
+        description: |
+          Grouping liquidity ratios.
+        required: true
+
+      specificRatioMagnitudes:
+        type: specificRatioMagnitudes.specificRatioMagnitudes[]
+        description: |
+          Ratios and magnitudes calculated by engine.
+        required: false
+

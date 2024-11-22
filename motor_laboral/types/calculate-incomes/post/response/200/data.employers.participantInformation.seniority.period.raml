@@ -1,0 +1,26 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  period:
+    type: object
+    description: "Seniority's period of the participant in the company."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of seniority duration.
+        required: true
+        enum: [YEAR,MONTH,DAY]
+        (annotations.enumDescription):
+        - YEAR: "Years in the company."
+        - MONTH: "Months in the company."
+        - DAY: "Days in the company."
+
+      name:
+        type: string
+        description: |
+          Periods worked by the employee in the company.
+        required: true
+

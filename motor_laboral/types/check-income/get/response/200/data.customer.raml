@@ -1,0 +1,40 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  identityDocument: data.customer.identityDocument.raml
+
+types:
+  customer:
+    type: object
+    description: "Basic information of the customer"
+    properties:
+      identityDocument:
+        type: identityDocument.identityDocument
+        description: |
+          Information about the identification.
+        required: true
+
+      firstName:
+        type: string
+        description: |
+          First Name of the customer that is being consulted.
+        required: true
+
+      middleName:
+        type: string
+        description: |
+          Person's name occurring between the first Name and family names, as a second or additional given name of the person consulted.
+        required: false
+
+      lastName:
+        type: string
+        description: |
+          Family name. Name(s) written after the first name and the middle name. First surname of the person consulted.
+        required: true
+
+      secondLastName:
+        type: string
+        description: |
+          Second surname of the person consulted. Mother's last name.
+        required: false
+

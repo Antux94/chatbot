@@ -1,0 +1,67 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  state: data.participants.addresses.location.state.raml
+  country: data.participants.addresses.location.country.raml
+  geolocation: data.participants.addresses.location.geolocation.raml
+  foreignCountry: data.participants.addresses.location.foreignCountry.raml
+
+types:
+  location:
+    type: object
+    description: "Physical location address."
+    properties:
+      addressName:
+        type: string
+        description: |
+          Complete address of the location.
+        required: false
+
+      city:
+        type: string
+        description: |
+          City where the location is placed.
+        required: true
+
+      state:
+        type: state.state
+        description: |
+          State, Province or Region where the location is placed.
+        required: false
+
+      country:
+        type: country.country
+        description: |
+          Country where the location is placed.
+        required: false
+
+      zipCode:
+        type: string
+        description: |
+          Location ZIP code.
+        required: false
+
+      geolocation:
+        type: geolocation.geolocation
+        description: |
+          Geographic coordinates of a point.
+        required: false
+
+      additionalInformation:
+        type: string
+        description: |
+          Additional information of the location.
+        required: false
+
+      addressNumber:
+        type: string
+        description: |
+          Address number.
+        required: false
+
+      foreignCountry:
+        type: foreignCountry.foreignCountry
+        description: |
+          For the cases when it's a foreign country.
+        required: false
+

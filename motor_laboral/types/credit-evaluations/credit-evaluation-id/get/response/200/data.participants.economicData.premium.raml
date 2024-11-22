@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  value: data.participants.economicData.premium.value.raml
+
+types:
+  premium:
+    type: object
+    description: "Contains the participant's premium information."
+    properties:
+      isPremium:
+        type: boolean
+        description: |
+          Indicates if the participant has a premium.
+        required: true
+
+      value:
+        type: value.value
+        description: |
+          Value associated with the customer's quota.
+        required: false
+

@@ -1,0 +1,26 @@
+{
+  "person": {
+    "identityDocument": {
+      "documentType": "CC",
+      "documentNumber": "1235489345"
+    },
+    "firstName": "Christian",
+    "middleName": "David",
+    "lastName": "Rojas",
+    "laboralInformation": {
+      "companyId": "800900231-5",
+      "declaratedIncome": 5000000
+    }
+  },
+  "informationSources": [
+    {
+      "id": "SOI",
+      "isConsulted": false
+    }
+  ],
+  "product": {
+    "id": "12",
+    "name": "hipotecas"
+  }
+}
+

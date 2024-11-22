@@ -1,0 +1,30 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  financialStatement: body.financialStatement.raml
+  engineControlRiskAssessmentTool: body.engineControlRiskAssessmentTool.raml
+  ratios: body.ratios.raml
+
+types:
+  body:
+    type: object
+    description: ""
+    properties:
+      financialStatement:
+        type: financialStatement.financialStatement
+        description: |
+          Financial statement related to business.
+        required: true
+
+      engineControlRiskAssessmentTool:
+        type: engineControlRiskAssessmentTool.engineControlRiskAssessmentTool
+        description: |
+          Information of the tool of the execution of financial calculations.
+        required: true
+
+      ratios:
+        type: ratios.ratios
+        description: |
+          Calculations by made ratios.
+        required: true
+

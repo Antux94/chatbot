@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  value: data.products.detailsElements.loan.responseCredit.dictums.value.raml
+
+types:
+  dictums:
+    type: object
+    description: "Contains global scoring dictums."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the opinion returned after performing the evaluation.
+        required: true
+
+      value:
+        type: value.value
+        description: |
+          Contains the response of the returned opinion.
+        required: false
+
+    

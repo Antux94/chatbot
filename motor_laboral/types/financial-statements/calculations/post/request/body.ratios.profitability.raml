@@ -1,0 +1,37 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  ebitda: body.ratios.profitability.ebitda.raml
+  roe: body.ratios.profitability.roe.raml
+  roa: body.ratios.profitability.roa.raml
+  internalFundsToSales: body.ratios.profitability.internalFundsToSales.raml
+
+types:
+  profitability:
+    type: object
+    description: "Grouping profitability ratios."
+    properties:
+      ebitda:
+        type: ebitda.ebitda
+        description: |
+          Asset that measures a company's earnings, before interest expenses, taxes, depreciation, and amortization are subtracted (EBITDA).
+        required: true
+
+      roe:
+        type: roe.roe
+        description: |
+          The return on equity (ROE) is a measure of the profitability of a business in relation to the equity. It´s a measure of how well a company uses investments to generate earnings growth.
+        required: true
+
+      roa:
+        type: roa.roa
+        description: |
+          The return on assets (ROA) shows the percentage of how profitable a company's assets are in generating revenue.
+        required: true
+
+      internalFundsToSales:
+        type: internalFundsToSales.internalFundsToSales
+        description: |
+          This ratio comparises the internal generation of funds to the  amount of sales of the period.
+        required: true
+

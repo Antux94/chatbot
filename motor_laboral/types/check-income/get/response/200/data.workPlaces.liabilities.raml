@@ -1,0 +1,17 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  liabilityType: data.workPlaces.liabilities.liabilityType.raml
+
+types:
+  liabilities:
+    type: object
+    description: "List of liabilities declared by the person consulted. A person's liabilities include debts, commitments or obligations of any nature or accounts payable"
+    properties:
+      liabilityType:
+        type: liabilityType.liabilityType
+        description: |
+          Type of liability declared by the person consulted.
+        required: true
+
+    

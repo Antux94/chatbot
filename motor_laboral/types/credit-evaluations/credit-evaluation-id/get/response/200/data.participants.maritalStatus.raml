@@ -1,0 +1,37 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  maritalStatus:
+    type: object
+    description: "The person gender."
+    properties:
+      id:
+        type: string
+        description: |
+          Participant's marital status identifier.
+        required: true
+        enum: [SINGLE,MARRIED,DIVORCED,COHABITANT,SEPARATED,WIDOWED,MARRIED_WITH_SEPARATED_PROPERTY,MARRIED_WITHOUT_SEPARATED_PROPERTY,CIVIL_UNION_AGREEMENT_WITH_SEPARATED_PROPERTY,CIVIL_UNION_AGREEMENT_WITHOUT_SEPARATED_PROPERTY,MARRIED_WITH_COMMUNITY_PROPERTY,DE_FACTO_SEPARATION,COMMON_LAW_MARRIAGE,NO_INFO]
+        (annotations.enumDescription):
+        - SINGLE: "Indicator marital status single."
+        - MARRIED: "Indicator marital status married."
+        - DIVORCED: "Indicator marital status divorced."
+        - COHABITANT: "Indicator marital status cohabitant."
+        - SEPARATED: "Indicator of persons legally married, but no longer living with their spouse and has not obtained a divorce."
+        - WIDOWED: "Indicator of someone who has lost her spouse to death and hasn't remarried."
+        - MARRIED_WITH_SEPARATED_PROPERTY: "Indicator marital status married with separated property."
+        - MARRIED_WITHOUT_SEPARATED_PROPERTY: "Indicator marital status married without separated property."
+        - CIVIL_UNION_AGREEMENT_WITH_SEPARATED_PROPERTY: "Indicator marital status union with separated property through the civil agreement."
+        - CIVIL_UNION_AGREEMENT_WITHOUT_SEPARATED_PROPERTY: "Indicator marital status union without separated property through the civil agreement."
+        - MARRIED_WITH_COMMUNITY_PROPERTY: "Indicator marital status married with community property."
+        - DE_FACTO_SEPARATION: "Indicator marital status facto separation."
+        - COMMON_LAW_MARRIAGE: "Indicator marital status common law marriage."
+        - NO_INFO: "Without information registered in systems."
+
+      name:
+        type: string
+        description: |
+          Participant's marital status description.
+        required: true
+

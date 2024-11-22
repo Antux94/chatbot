@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  laboralInformation:
+    type: object
+    description: "It´s an object must contains the laboral information of employee."
+    properties:
+      companyId:
+        type: string
+        description: |
+          The unique identification of enterprise.
+        required: false
+        example: "800900231-5"
+
+      declaratedIncome:
+        type: integer
+        description: |
+          The amount of income reported.
+        required: false
+        example: 5000000
+

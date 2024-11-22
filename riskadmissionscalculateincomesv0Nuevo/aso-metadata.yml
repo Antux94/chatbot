@@ -1,0 +1,9 @@
+aso-metadata:
+    uuaa            : CHXA
+    name            : riskAdmissionsCalculateIncomesV0
+    type            : service
+    country         : CO
+    version         : 0-SNAPSHOT
+    flavour         : old
+    namespace       : co.chxa.app-id-1186645.dsg
+    repoName        : riskAdmissionsCalculateIncomesV0

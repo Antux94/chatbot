@@ -1,0 +1,128 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  quotas: data.participants.economicData.quotas.raml
+  profession: data.participants.economicData.profession.raml
+  bankDepositBalance: data.participants.economicData.bankDepositBalance.raml
+  realEstatesValue: data.participants.economicData.realEstatesValue.raml
+  habitualResidence: data.participants.economicData.habitualResidence.raml
+  premium: data.participants.economicData.premium.raml
+  patrimony: data.participants.economicData.patrimony.raml
+  occupationType: data.participants.economicData.occupationType.raml
+  employmentSeniority: data.participants.economicData.employmentSeniority.raml
+  employmentSituation: data.participants.economicData.employmentSituation.raml
+  creditData: data.participants.economicData.creditData.raml
+  valueOfAppraisal: data.participants.economicData.valueOfAppraisal.raml
+  declaredFixedIncome: data.participants.economicData.declaredFixedIncome.raml
+  declaredVariableIncome: data.participants.economicData.declaredVariableIncome.raml
+  incomes: data.participants.economicData.incomes.raml
+  expenses: data.participants.economicData.expenses.raml
+  deductions: data.participants.economicData.deductions.raml
+
+types:
+  economicData:
+    type: object
+    description: "Contains the economic information of the participant."
+    properties:
+      quotas:
+        type: quotas.quotas[]
+        description: |
+          It contains the information of the quotas that the participant has.
+        required: false
+
+      profession:
+        type: profession.profession
+        description: |
+          Contains the profession that the participant has.
+        required: true
+
+      bankDepositBalance:
+        type: bankDepositBalance.bankDepositBalance
+        description: |
+          Deposit that the participant has in the bank.
+        required: false
+
+      realEstatesValue:
+        type: realEstatesValue.realEstatesValue
+        description: |
+          Contains the value of other properties owned by the participant.
+        required: false
+
+      habitualResidence:
+        type: habitualResidence.habitualResidence
+        description: |
+          Contains the information of the home in which the client resides.
+        required: false
+
+      premium:
+        type: premium.premium
+        description: |
+          Contains the participant's premium information.
+        required: false
+
+      patrimony:
+        type: patrimony.patrimony
+        description: |
+          Stores the equity owned by the participant.
+        required: false
+
+      occupationType:
+        type: occupationType.occupationType
+        description: |
+          Customer occupation or professional classification. For example, draftsman, lawyer, teacher, etc.
+        required: false
+
+      employmentSeniority:
+        type: employmentSeniority.employmentSeniority
+        description: |
+          Employment seniority of the person.
+        required: false
+
+      employmentSituation:
+        type: employmentSituation.employmentSituation
+        description: |
+          Work situation declared by the customer. For example,employed worker,unemployed,civil servant,self-employed,bussiness-man,temporal contract,long-term contract,etc.
+        required: false
+
+      creditData:
+        type: creditData.creditData
+        description: |
+          Contains the individual information for the credit application.
+        required: true
+
+      valueOfAppraisal:
+        type: valueOfAppraisal.valueOfAppraisal
+        description: |
+          Contains the value of the appraisal of the property that is being acquired.
+        required: false
+
+      declaredFixedIncome:
+        type: declaredFixedIncome.declaredFixedIncome
+        description: |
+          Fixed income declared by the customer.
+        required: false
+
+      declaredVariableIncome:
+        type: declaredVariableIncome.declaredVariableIncome
+        description: |
+          Variable income declared by the customer.
+        required: false
+
+      incomes:
+        type: incomes.incomes[]
+        description: |
+          Report participant incomes.
+        required: false
+
+      expenses:
+        type: expenses.expenses[]
+        description: |
+          Report participant expenses.
+        required: false
+
+      deductions:
+        type: deductions.deductions[]
+        description: |
+          Information about the discounts made to the payroll.
+        required: false
+

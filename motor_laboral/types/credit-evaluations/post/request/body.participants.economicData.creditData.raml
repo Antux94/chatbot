@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  creditOrigin: body.participants.economicData.creditData.creditOrigin.raml
+  creditDestination: body.participants.economicData.creditData.creditDestination.raml
+
+types:
+  creditData:
+    type: object
+    description: "Contains the individual information for the credit application."
+    properties:
+      creditOrigin:
+        type: creditOrigin.creditOrigin
+        description: |
+          It is the channel through which the client is requesting the credit, this field is only used as input for the individual evaluation.
+        required: false
+
+      creditDestination:
+        type: creditDestination.creditDestination
+        description: |
+          Contains the destination of the requested credit, this field is used for the entry of individual evaluation.
+        required: true
+

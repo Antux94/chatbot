@@ -1,0 +1,36 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  ownsershipType: body.participants.economicData.habitualResidence.ownsershipType.raml
+  propertyType: body.participants.economicData.habitualResidence.propertyType.raml
+  value: body.participants.economicData.habitualResidence.value.raml
+
+types:
+  habitualResidence:
+    type: object
+    description: "Contains the information of the home in which the client resides."
+    properties:
+      ownsershipType:
+        type: ownsershipType.ownsershipType
+        description: |
+          Classification of the person in the financial system. According to the days of delay that a debtor has when not paying his credit (risk of default), he receives a category, with which we identify his behavior in the payments he has with his creditors.
+        required: true
+
+      propertyType:
+        type: propertyType.propertyType
+        description: |
+          Property type. This information is required if ownershipType is OWNER.
+        required: true
+
+      value:
+        type: value.value
+        description: |
+          Value of the house in which the participant resides, if it is leased it will be the rental value, if the house is owned, it will be the value of the property.
+        required: false
+
+      stratum:
+        type: number
+        description: |
+          Socioeconomic stratum of the home in which the participant resides.
+        required: true
+

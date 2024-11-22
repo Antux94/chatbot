@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  subproduct:
+    type: object
+    description: "It´s the subproduct that is required to look up rates and calculate interest."
+    properties:
+      id:
+        type: string
+        description: |
+          Subproduct identifier.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Subproduct name.
+        required: true
+

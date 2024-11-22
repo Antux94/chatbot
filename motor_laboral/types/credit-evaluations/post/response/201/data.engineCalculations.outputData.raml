@@ -1,0 +1,26 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  evaluations: data.engineCalculations.outputData.evaluations.raml
+
+types:
+  outputData:
+    type: object
+    description: "Output data calculated by the engine."
+    properties:
+      creditEvaluationResult:
+        type: string
+        description: |
+          Result of the credit evaluation applied to the applicant.
+        required: true
+        enum: [APPROVED,DISAPPROVED]
+        (annotations.enumDescription):
+        - APPROVED: "The person passed the credit evaluation."
+        - DISAPPROVED: "The person did not pass the credit evaluation."
+
+      evaluations:
+        type: evaluations.evaluations[]
+        description: |
+          Evaluation block calculated by the risk engine for each product.
+        required: false
+

@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  relatedAccount:
+    type: object
+    description: "Parent account that groups or contains the account."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of account parent.
+        required: true
+

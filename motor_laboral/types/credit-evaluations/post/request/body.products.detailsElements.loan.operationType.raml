@@ -1,0 +1,26 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  operationType:
+    type: object
+    description: "Contains the information related to the operation type."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of gender.
+        required: true
+        enum: [CONSUMER,MORTGAGE,CARDS]
+        (annotations.enumDescription):
+        - CONSUMER: "The executed operation will be for a consumer credit."
+        - MORTGAGE: "The executed operation will be for a mortgage credit."
+        - CARDS: "The executed operation will be for a card credit."
+
+      name:
+        type: string
+        description: |
+          Description about the operation type.
+        required: true
+

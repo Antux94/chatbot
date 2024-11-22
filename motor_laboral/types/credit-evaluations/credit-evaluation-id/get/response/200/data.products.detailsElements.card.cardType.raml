@@ -1,0 +1,24 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  cardType:
+    type: object
+    description: "Card financial product type."
+    properties:
+      id:
+        type: string
+        description: |
+          Card financial product type identifier.
+        required: true
+        enum: [CREDIT_CARD]
+        (annotations.enumDescription):
+        - CREDIT_CARD: "The financial product is a credit card."
+
+      description:
+        type: string
+        description: |
+          Card financial product type description.
+        required: false
+

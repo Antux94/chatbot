@@ -1,0 +1,256 @@
+{
+  "proposal": {
+    "id": "0000001403"
+  },
+  "sanctionStatus": "OPEN",
+  "startDate": "2019-01-01",
+  "endDate": "2019-01-01",
+  "riskModelType": "RATING",
+  "analysisDate": "2016-02-28T16:41:41.090Z",
+  "dictum": {
+    "id": "DUBIOUS"
+  },
+  "economicGroup": {
+    "id": "E0000999"
+  },
+  "delegationCommittees": [
+    {
+      "id": "01",
+      "formNumber": "A0001",
+      "celebrationDate": "2019-01-01"
+    },
+    {
+      "id": "02",
+      "formNumber": "A0001",
+      "celebrationDate": "2019-01-01"
+    },
+    {
+      "id": "03",
+      "formNumber": "A0001",
+      "celebrationDate": "2019-01-01"
+    }
+  ],
+  "participants": [
+    {
+      "id": "001",
+      "identityDocument": {
+        "documentType": {
+          "id": "CC"
+        },
+        "documentNumber": "30000008000002317"
+      },
+      "fullname": "RAFAEL EDUARDO RODRIGUEZ",
+      "participantType": {
+        "id": "GUARANTOR"
+      },
+      "economicGroups": [
+        {
+          "id": "E0000999"
+        },
+        {
+          "id": "G0000999"
+        }
+      ],
+      "liabilities": [
+        {
+          "product": {
+            "id": "96"
+          },
+          "lineType": {
+            "id": "INSTALLMENT"
+          },
+          "disposed": {
+            "currency": "COP",
+            "amount": 5000000
+          },
+          "term": {
+            "number": 12,
+            "frequency": "MONTHS"
+          },
+          "contractingDate": "2016-02-28T16:41:41.090Z",
+          "maturityDate": "2016-02-28T16:41:41.090Z",
+          "status": "ENABLED"
+        },
+        {
+          "product": {
+            "id": "92"
+          },
+          "lineType": {
+            "id": "INSTALLMENT"
+          },
+          "disposed": {
+            "currency": "COP",
+            "amount": 5000000000001
+          },
+          "term": {
+            "number": 12,
+            "frequency": "MONTHS"
+          },
+          "contractingDate": "2016-02-28T16:41:41.090Z",
+          "maturityDate": "2016-02-28T16:41:41.090Z",
+          "status": "ENABLED"
+        }
+      ],
+      "sector": "TRADE"
+    }
+  ],
+  "guarantees": [
+    {
+      "guaranteeType": {
+        "id": "1",
+        "division": {
+          "id": "20"
+        }
+      },
+      "coverageAmount": {
+        "amount": 500,
+        "currency": "COP"
+      },
+      "guaranteeAmount": {
+        "currency": "COP",
+        "amount": 5000000000001
+      },
+      "coveragePercentage": 10,
+      "downPaymentPercentage": 20,
+      "purchaseOptionPercentage": 30,
+      "hasEconomicGroup": true,
+      "status": "ENABLED"
+    }
+  ],
+  "approvedRisks": [
+    {
+      "product": {
+        "id": "02"
+      },
+      "lineType": {
+        "id": "INSTALLMENT"
+      },
+      "purpose": {
+        "id": "01",
+        "name": "CREDIT DESTINED TO JUAN PEREZ BY CONCEPT TO THE GOOD CLIENT OF BANK"
+      },
+      "approvedAmount": {
+        "currency": "COP",
+        "amount": 500
+      },
+      "period": {
+        "number": 12,
+        "frequency": "MONTHS"
+      },
+      "maturityDate": "2019-01-01",
+      "gracePeriod": {
+        "frequency": "MONTHS",
+        "number": 2
+      },
+      "liquidationType": {
+        "id": "MONTHLY",
+        "description": "LIQUIDATION_DEADLINE"
+      },
+      "status": "ENABLED"
+    }
+  ],
+  "bank": {
+    "id": "0013",
+    "name": "BBVA",
+    "branch": {
+      "id": "0073"
+    }
+  },
+  "riskAnalystAgent": {
+    "user": "CE56425",
+    "bank": {
+      "id": "0013",
+      "branch": {
+        "id": "0073"
+      }
+    }
+  },
+  "authorizationBusinessAgent": {
+    "user": "CE59810",
+    "bank": {
+      "id": "0013",
+      "branch": {
+        "id": "0073"
+      }
+    }
+  },
+  "assignmentBusinessAgents": {
+    "user": "CE56096",
+    "bank": {
+      "id": "0013",
+      "branch": {
+        "id": "0073"
+      }
+    }
+  },
+  "sanctionComments": [
+    {
+      "id": 1,
+      "comment": "THE WORKING CAPITAL QUOTE INCLUDES THE FOLLOWING LINES: TRADE AND/OR BANCOLDEX (M.V./T.V.) AND/OR CREDIT AND/OR TAX CREDITS (30 D / VTO) AND/OR COMEX. (MV / TV / SV) AND/OR FINAGRO AND/OR AGROCREDITO (MV / TV / SV) AND/OR CREDIPYME NOMINA BBVA (30 D / VTO CREDIT WITH SPECIFIC DESTINATION PAYMENT OF WAGE,  ISSUING CLIENTS, BBVA) AND/OR VIRTUAL CREDIT 30 % OF THE RATE.",
+      "owner": {
+        "id": "0001",
+        "type": "APPROVED_RISK"
+      },
+      "status": "ENABLED"
+    },
+    {
+      "id": 2,
+      "comment": "THE WORKING CAPITAL QUOTE INCLUDES THE FOLLOWING LINES: TRADE AND/OR BANCOLDEX (M.V./T.V.) AND/OR CREDIT AND/OR TAX CREDITS (30 D / VTO) AND/OR COMEX. (MV / TV / SV) AND/OR FINAGRO AND/OR AGROCREDITO (MV / TV / SV) AND/OR CREDIPYME NOMINA BBVA (30 D / VTO CREDIT WITH SPECIFIC DESTINATION PAYMENT OF WAGE,  ISSUING CLIENTS, BBVA) AND/OR VIRTUAL CREDIT 30 % OF THE RATE.",
+      "owner": {
+        "id": "0001",
+        "type": "APPROVED_RISK"
+      },
+      "status": "ENABLED"
+    },
+    {
+      "id": 3,
+      "comment": "THE WORKING CAPITAL QUOTE INCLUDES THE FOLLOWING LINES: TRADE AND/OR BANCOLDEX (M.V./T.V.) AND/OR CREDIT AND/OR TAX CREDITS (30 D / VTO) AND/OR COMEX. (MV / TV / SV) AND/OR FINAGRO AND/OR AGROCREDITO (MV / TV / SV) AND/OR CREDIPYME NOMINA BBVA (30 D / VTO CREDIT WITH SPECIFIC DESTINATION PAYMENT OF WAGE,  ISSUING CLIENTS, BBVA) AND/OR VIRTUAL CREDIT 30 % OF THE RATE.",
+      "owner": {
+        "id": "0001",
+        "type": "APPROVED_RISK"
+      },
+      "status": "ENABLED"
+    }
+  ],
+  "clarifications": [
+    {
+      "id": 1,
+      "comment": "THE MANAGEMENT OF THIS OFFICE WILL HAVE TO COMPLY WITH THE ESTABLISHED BY THE RULES THAT GOVERN IT FOR THE AUTHORIZATION OF LINES.",
+      "owner": {
+        "id": "0001234567BP",
+        "type": "APPLICATION"
+      },
+      "status": "ENABLED"
+    },
+    {
+      "id": 2,
+      "comment": "THE MANAGEMENT OF THIS OFFICE WILL HAVE TO COMPLY WITH THE ESTABLISHED BY THE RULES THAT GOVERN IT FOR THE AUTHORIZATION OF LINES.",
+      "owner": {
+        "id": "0001234567BP",
+        "type": "APPLICATION"
+      },
+      "status": "ENABLED"
+    },
+    {
+      "id": 3,
+      "comment": "THE MANAGEMENT OF THIS OFFICE WILL HAVE TO COMPLY WITH THE ESTABLISHED BY THE RULES THAT GOVERN IT FOR THE AUTHORIZATION OF LINES.",
+      "owner": {
+        "id": "0001234567BP",
+        "type": "APPLICATION"
+      },
+      "status": "ENABLED"
+    }
+  ],
+  "attachments": [
+    {
+      "id": "001",
+      "url": "www.bbva/visit-report/0001.jpg"
+    },
+    {
+      "id": "002",
+      "url": "www.bbva/visit-report/0002.jpg"
+    }
+  ],
+  "riskPolicy": "KEEP"
+}
+

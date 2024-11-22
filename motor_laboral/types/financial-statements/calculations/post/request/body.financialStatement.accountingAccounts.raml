@@ -1,0 +1,30 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  amount: body.financialStatement.accountingAccounts.amount.raml
+  accountsCategory: body.financialStatement.accountingAccounts.accountsCategory.raml
+
+types:
+  accountingAccounts:
+    type: object
+    description: "Accounting accounts of the financial statement."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the account(code).
+        required: true
+
+      amount:
+        type: amount.amount
+        description: |
+          Amount associated to the account (this type of data includes amount and currency).
+        required: true
+
+      accountsCategory:
+        type: accountsCategory.accountsCategory
+        description: |
+          Information regarding the type of account, level, and group to which the financial statement belongs.
+        required: true
+
+    

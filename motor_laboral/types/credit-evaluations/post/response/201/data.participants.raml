@@ -1,0 +1,30 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  identityDocument: data.participants.identityDocument.raml
+  roleType: data.participants.roleType.raml
+
+types:
+  participants:
+    type: object
+    description: "It is the participants to which a credit evaluation is applied."
+    properties:
+      identityDocument:
+        type: identityDocument.identityDocument
+        description: |
+          Information about the identity document of the proposal participant.
+        required: true
+
+      roleType:
+        type: roleType.roleType
+        description: |
+          Role type, it refers to the role of the customer on the proposal.
+        required: false
+
+      isCustomer:
+        type: boolean
+        description: |
+          Indicator to identify in case the evaluated person is customer or not.
+        required: true
+
+    

@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  product:
+    type: object
+    description: "Contains information about product that is performing request to motor."
+    properties:
+      id:
+        type: string
+        description: |
+          Contains id associate with product that is performing request to motor.
+        required: false
+
+      name:
+        type: string
+        description: |
+          Contains name of  product that is performing request to motor.
+        required: false
+

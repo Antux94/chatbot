@@ -1,0 +1,28 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  employmentSituation:
+    type: object
+    description: "Work situation declared by the person..For example,employed worker,unemployed,civil servant,self-employed,bussiness-man,temporal contract,long-term contract,etc"
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the work situation declared by the person consulted.
+        required: true
+        enum: [DEPENDENT,INDEPENDENT,PENSIONER,OTHER,INVALID]
+        (annotations.enumDescription):
+        - DEPENDENT: "The customer has an employer."
+        - INDEPENDENT: "The customer has no formal job."
+        - PENSIONER: "The customer receives incomes from its retirement savings"
+        - OTHER: "The customer has an employment situation which does not fit with dependent, independent or pensioner."
+        - INVALID: "The customer has an employment situation which is not elegible."
+
+      name:
+        type: string
+        description: |
+          Description associated with the identifier of the work situation.
+        required: true
+

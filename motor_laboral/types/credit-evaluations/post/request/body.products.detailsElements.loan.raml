@@ -1,0 +1,239 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  scoringType: body.products.detailsElements.loan.scoringType.raml
+  evaluationType: body.products.detailsElements.loan.evaluationType.raml
+  operationType: body.products.detailsElements.loan.operationType.raml
+  partialPunctuations: body.products.detailsElements.loan.partialPunctuations.raml
+  mortgage: body.products.detailsElements.loan.mortgage.raml
+  relatedContract: body.products.detailsElements.loan.relatedContract.raml
+  responseCredit: body.products.detailsElements.loan.responseCredit.raml
+  minimumAmount: body.products.detailsElements.loan.minimumAmount.raml
+  maximumAmount: body.products.detailsElements.loan.maximumAmount.raml
+  purchaseValue: body.products.detailsElements.loan.purchaseValue.raml
+  purpose: body.products.detailsElements.loan.purpose.raml
+  initialAmount: body.products.detailsElements.loan.initialAmount.raml
+  term: body.products.detailsElements.loan.term.raml
+  installment: body.products.detailsElements.loan.installment.raml
+  good: body.products.detailsElements.loan.good.raml
+  subproduct: body.products.detailsElements.loan.subproduct.raml
+  rates: body.products.detailsElements.loan.rates.raml
+  capability: body.products.detailsElements.loan.capability.raml
+  requestImport: body.products.detailsElements.loan.requestImport.raml
+  termCredit: body.products.detailsElements.loan.termCredit.raml
+  product: body.products.detailsElements.loan.product.raml
+
+types:
+  loan:
+    type: object
+    discriminator: productType
+    discriminatorValue: LOAN
+    description: "Initial range of the amounts to be calculated."
+    properties:
+      productId:
+        type: string
+        description: |
+          Financial product id.
+        required: true
+
+      productType:
+        type: string
+        description: |
+          Financial product type.
+        required: true
+        enum: [LOAN,ACCOUNT,CARD]
+        (annotations.enumDescription):
+        - LOAN: "Product type is a LOAN"
+        - ACCOUNT: "Product type is a ACCOUNT"
+        - CARD: "Product type is a CARD"
+
+      scoringId:
+        type: string
+        description: |
+          Scoring identifier for mortgage.
+        required: false
+
+      scoringType:
+        type: scoringType.scoringType
+        description: |
+          Contains the information related to the scoring type.
+        required: false
+
+      evaluationType:
+        type: evaluationType.evaluationType
+        description: |
+          Contains the information related to the evaluation type.
+        required: false
+
+      operationType:
+        type: operationType.operationType
+        description: |
+          Contains the information related to the operation type.
+        required: false
+
+      partialPunctuations:
+        type: partialPunctuations.partialPunctuations[]
+        description: |
+          Default probability for scoring partial calculations.
+        required: false
+
+      punctuation:
+        type: number
+        description: |
+          Final scoring punctuation.
+        required: false
+
+      probabilityOfDefault:
+        type: number
+        description: |
+          Probability of default for scoring calculations.
+        required: false
+
+      dictum:
+        type: string
+        description: |
+          Identifier stage of proposal or risk engine modules.
+        required: false
+        enum: [APPROVED,REJECTED,DUBIOUS]
+        (annotations.enumDescription):
+        - APPROVED: "The proposal is approved for a requested product."
+        - REJECTED: "The proposal is rejected for a requested product."
+        - DUBIOUS: "The proposal is dubious for a requested product."
+
+      analysisDate:
+        type: datetime
+        description: |
+          String based on ISO-8601 date format for specifying the date of risk evaluation date.
+        required: false
+
+      result:
+        type: string
+        description: |
+          Result from scoring engine.
+        required: false
+        enum: [HIGH_RISK,MEDIUM_RISK,LOW_RISK]
+        (annotations.enumDescription):
+        - HIGH_RISK: "High credit risk."
+        - MEDIUM_RISK: "Medium credit risk."
+        - LOW_RISK: "Low credit risk."
+
+      dateOfApartment:
+        type: date-only
+        description: |
+          Date of antiquity of the house that is being acquired.
+        required: false
+
+      isMortage:
+        type: boolean
+        description: |
+          Indicator if the scoring is Mortgage.
+        required: true
+
+      mortgage:
+        type: mortgage.mortgage
+        description: |
+          Contains the information related to the mortgage.
+        required: false
+
+      relatedContract:
+        type: relatedContract.relatedContract
+        description: |
+          Contains information on the contract related to the object.
+        required: true
+
+      responseCredit:
+        type: responseCredit.responseCredit
+        description: |
+          Contains the evaluation response and the scoring query.
+        required: false
+
+      minimumAmount:
+        type: minimumAmount.minimumAmount
+        description: |
+          Minimum range of the amount to be calculated.
+        required: false
+
+      maximumAmount:
+        type: maximumAmount.maximumAmount
+        description: |
+          Maximum range of the amount to be calculated.
+        required: false
+
+      purchaseValue:
+        type: purchaseValue.purchaseValue
+        description: |
+          It is the total value of the item that is being acquired.
+        required: false
+
+      purpose:
+        type: purpose.purpose
+        description: |
+          Purchase destination.
+        required: false
+
+      initialAmount:
+        type: initialAmount.initialAmount
+        description: |
+          Initial amount of the loan.
+        required: false
+
+      term:
+        type: term.term
+        description: |
+          Total number of deadlines to complete the loan payment.
+        required: false
+
+      installment:
+        type: installment.installment
+        description: |
+          Loan installment.
+        required: false
+
+      good:
+        type: good.good
+        description: |
+          Good that the customer wants to buy with the granted loan.
+        required: false
+
+      financingPercent:
+        type: number
+        description: |
+          Financing percentage.
+        required: false
+
+      subproduct:
+        type: subproduct.subproduct
+        description: |
+          It´s the subproduct that is required to look up rates and calculate interest.
+        required: false
+
+      rates:
+        type: rates.rates[]
+        description: |
+          Store the different rates, which the participant may have.
+        required: false
+
+      capability:
+        type: capability.capability
+        description: |
+          Contains information about the participant's ability to pay.
+        required: false
+
+      requestImport:
+        type: requestImport.requestImport
+        description: |
+          It is the total value of the item that is being acquired, this value differs from the value that is being requested from the bank.
+        required: true
+
+      termCredit:
+        type: termCredit.termCredit
+        description: |
+          Term of the offer related to the product.
+        required: false
+
+      product:
+        type: product.product
+        description: |
+          Contains the information of the product required by the client.
+        required: false
+

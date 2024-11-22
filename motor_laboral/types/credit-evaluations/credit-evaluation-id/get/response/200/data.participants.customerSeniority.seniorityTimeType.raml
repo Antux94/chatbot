@@ -1,0 +1,20 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  seniorityTimeType:
+    type: object
+    description: "Seniority's period of the customer in the entity."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of seniority duration.
+        required: true
+        enum: [YEAR,MONTH,DAY]
+        (annotations.enumDescription):
+        - YEAR: "The event occurs each year."
+        - MONTH: "The event occurs each month."
+        - DAY: "The event occurs each day."
+

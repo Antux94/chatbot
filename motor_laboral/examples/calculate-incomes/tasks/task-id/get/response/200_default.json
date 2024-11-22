@@ -1,0 +1,89 @@
+{
+  "data": {
+    "id": "aaaaa-aaaaaa-aaaaa",
+    "result": {
+      "person": {
+        "identityDocument": {
+          "documentType": "CC",
+          "documentNumber": "1235489345"
+        },
+        "firstName": "Christian",
+        "middleName": "David",
+        "lastName": "Rojas"
+      },
+      "informationSources": [
+        {
+          "id": "SOI",
+          "isConsulted": true
+        }
+      ],
+      "totalIncomes": {
+        "amount": 100000000.25,
+        "currency": "COP"
+      },
+      "totalDeductions": {
+        "amount": 100000000.25,
+        "currency": "COP"
+      },
+      "employers": [
+        {
+          "employerInfo": {
+            "companyName": "Construcciones Diaz",
+            "identityDocument": {
+              "documentType": "NIT",
+              "documentNumber": "6451234"
+            },
+            "economicActivity": {
+              "id": "6512",
+              "name": "Seguros de vida",
+              "internationalClassification": "6512"
+            }
+          },
+          "participantInformation": {
+            "seniority": {
+              "number": 3,
+              "period": {
+                "id": "MONTH",
+                "name": "Months in the company"
+              }
+            },
+            "incomes": [
+              {
+                "id": "SALARY",
+                "name": "This type of income corresponds to the basic salary of the person consulted",
+                "incomeAmount": {
+                  "amount": 100000000.25,
+                  "currency": "COP"
+                },
+                "frecuency": "MONTHLY"
+              }
+            ],
+            "deduction": {
+              "amount": 100000000.25,
+              "currency": "COP"
+            },
+            "employmentSituation": {
+              "id": "1",
+              "name": "Pensionado de regimen de prima media con tope maximo 25 SMLMV"
+            },
+            "dateRelationship": "2021-03-03"
+          }
+        }
+      ],
+      "employmentHistory": {
+        "id": "MONTH",
+        "timeContinuity": 6,
+        "dateContinuity": "2022-08-01"
+      }
+    },
+    "status": {
+      "id": "SUCCESSFUL",
+      "name": "Completed"
+    },
+    "statusDeclaretedIncomes": {
+      "id": "MATCH",
+      "description": "Los ingresos declarados corresponden a los ingresos calculados"
+    }
+  }
+}
+

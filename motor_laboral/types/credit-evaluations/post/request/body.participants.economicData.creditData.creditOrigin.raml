@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  creditOrigin:
+    type: object
+    description: "It is the channel through which the client is requesting the credit, this field is only used as input for the individual evaluation."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the origin of the requested credit.
+        required: true
+

@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  value: data.participants.economicData.quotas.value.raml
+
+types:
+  quotas:
+    type: object
+    description: "It contains the information of the quotas that the participant has."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier with which the associated quota is specified.
+        required: true
+
+      value:
+        type: value.value
+        description: |
+          Value associated with the customer's quota.
+        required: false
+
+    

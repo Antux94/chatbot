@@ -1,0 +1,35 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  branch: data.products.detailsElements.loan.relatedContract.branch.raml
+  relationContractType: data.products.detailsElements.loan.relatedContract.relationContractType.raml
+
+types:
+  relatedContract:
+    type: object
+    description: "Contains information on the contract related to the object."
+    properties:
+      contractId:
+        type: string
+        description: |
+          Contract identifier related to scoring.
+        required: true
+
+      contractNumber:
+        type: string
+        description: |
+          Contract number related to scoring.
+        required: true
+
+      branch:
+        type: branch.branch
+        description: |
+          Branch Information.
+        required: false
+
+      relationContractType:
+        type: relationContractType.relationContractType
+        description: |
+          Contains the channel through which the service is consumed.
+        required: false
+

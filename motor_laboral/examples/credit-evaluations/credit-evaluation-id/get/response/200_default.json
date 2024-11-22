@@ -1,0 +1,428 @@
+{
+  "data": {
+    "commercialChannel": {
+      "id": "NC",
+      "name": "NUEVO MODELO DE CONTRATACIÓN"
+    },
+    "requestSource": "NUEVO MODELO DE CONTRATACIÓN",
+    "informationSources": [
+      {
+        "name": "SOI",
+        "isConsulted": true
+      },
+      {
+        "name": "APL",
+        "isConsulted": false
+      },
+      {
+        "name": "PREDICTOR DE INGRESOS",
+        "isConsulted": false
+      },
+      {
+        "name": "HDC",
+        "isConsulted": false
+      }
+    ],
+    "participants": [
+      {
+        "isCustomer": true,
+        "identityDocument": {
+          "documentType": "CC",
+          "documentNumber": "6331558"
+        },
+        "lastname": "PALACIOS",
+        "economicActivity": {
+          "id": "6910",
+          "isHighRisk": true
+        },
+        "customerSeniority": {
+          "number": 7,
+          "seniorityTimeType": {
+            "id": "YEAR"
+          }
+        },
+        "nationality": {
+          "id": "CO",
+          "name": "COLOMBIAN"
+        },
+        "gender": {
+          "id": "MALE",
+          "name": "MALE"
+        },
+        "roleType": {
+          "id": "HOLDER",
+          "name": "TITULAR"
+        },
+        "birthDate": "1954-03-03",
+        "age": 22,
+        "maritalStatus": {
+          "id": "SINGLE",
+          "name": "SINGLE"
+        },
+        "personsOnCharge": 1,
+        "familyMembersNumber": 1,
+        "bureauClassification": "G1",
+        "hasDirectDebits": true,
+        "hasPayroll": true,
+        "hasLowIncome": true,
+        "addresses": [
+          {
+            "addressType": {
+              "id": "HEADQUARTERS"
+            },
+            "location": {
+              "addressName": "701 32nd st S",
+              "city": "Birmingham",
+              "state": {
+                "id": "AL",
+                "name": "AL"
+              },
+              "country": {
+                "id": "CO",
+                "name": "COLOMBIA"
+              },
+              "zipCode": "35244"
+            }
+          }
+        ],
+        "averagePassiveBalance": {
+          "amount": 1000,
+          "currency": "COP"
+        },
+        "cashBalance": {
+          "incomeAmount": {
+            "amount": 2000,
+            "currency": "COP"
+          },
+          "finalAmount": {
+            "amount": 3000,
+            "currency": "COP"
+          },
+          "ratio": 0.7
+        },
+        "installmentIncomeRatio": 0.7,
+        "cardUsageRatio": 0.5,
+        "averageBalanceRatio": 0.3,
+        "professionalEmploymentSituation": "10001",
+        "workPlaces": [
+          {
+            "name": "TECNOPAPER S.A.S",
+            "antiquity": "12",
+            "employmentSituation": {
+              "id": "1",
+              "name": "SELF-EMPLOYED"
+            }
+          }
+        ],
+        "economicData": {
+          "habitualResidence": {
+            "ownsershipType": {
+              "id": "OWNER",
+              "name": "OWNER"
+            },
+            "propertyType": {
+              "id": "OWNER",
+              "name": "OWNER"
+            },
+            "value": {
+              "amount": 243000000,
+              "currency": "COP"
+            },
+            "stratum": 5
+          },
+          "profession": {
+            "id": "EMP",
+            "name": "EMPLEADO"
+          },
+          "bankDepositBalance": {
+            "amount": 500000000,
+            "currency": "COP"
+          },
+          "realEstatesValue": {
+            "amount": 5000000000,
+            "currency": "COP"
+          },
+          "quotas": [
+            {
+              "id": "PLAN INTEGRAL",
+              "value": {
+                "amount": 5000000,
+                "currency": "COP"
+              }
+            }
+          ],
+          "premium": {
+            "isPremium": true,
+            "value": {
+              "amount": 10000000,
+              "currency": "COP"
+            }
+          },
+          "patrimony": {
+            "amount": 7000000000,
+            "currency": "COP"
+          },
+          "occupationType": {
+            "id": "1010",
+            "name": "ABOGADO"
+          },
+          "employmentSeniority": {
+            "number": 15,
+            "seniorityTimeType": {
+              "id": "YEAR"
+            }
+          },
+          "employmentSituation": {
+            "id": "1",
+            "name": "SELF-EMPLOYED"
+          },
+          "incomes": [
+            {
+              "type": {
+                "id": "Ingreso_Variable",
+                "name": "Ingreso_Variable"
+              },
+              "value": {
+                "amount": 5000000,
+                "currency": "COP"
+              }
+            },
+            {
+              "type": {
+                "id": "Ingreso_Mensual_Soi",
+                "name": "Ingreso_Mensual_Soi"
+              },
+              "value": {
+                "amount": 15000000,
+                "currency": "COP"
+              }
+            }
+          ],
+          "expenses": [
+            {
+              "type": {
+                "id": "Gastos_Hipotecarios",
+                "name": "Gastos_Hipotecarios"
+              },
+              "value": {
+                "amount": 2000000,
+                "currency": "COP"
+              }
+            },
+            {
+              "type": {
+                "id": "Gastos_Cuotas",
+                "name": "Gastos_Cuotas"
+              },
+              "value": {
+                "amount": 1135000,
+                "currency": "COP"
+              }
+            },
+            {
+              "type": {
+                "id": "Gastos_Comerciales",
+                "name": "Gastos_Comerciales"
+              },
+              "value": {
+                "amount": 5000000,
+                "currency": "COP"
+              }
+            },
+            {
+              "type": {
+                "id": "Deducciones_Nomina",
+                "name": "Deducciones_Nomina"
+              },
+              "value": {
+                "amount": 532584,
+                "currency": "COP"
+              }
+            }
+          ],
+          "deductions": [
+            {
+              "deductionType": {
+                "id": "deductions",
+                "name": "deductions"
+              },
+              "value": {
+                "amount": 3000,
+                "currency": "COP"
+              }
+            }
+          ],
+          "creditData": {
+            "creditOrigin": {
+              "id": "NET",
+              "name": "NET"
+            },
+            "creditDestination": {
+              "id": "MORTGAGE",
+              "name": "MORTGAGE"
+            }
+          },
+          "valueOfAppraisal": {
+            "amount": 200000000,
+            "currency": "COP"
+          }
+        }
+      }
+    ],
+    "products": [
+      {
+        "detailsElements": {
+          "productId": "g6d8js3jsvy",
+          "productType": "LOAN",
+          "scoringId": "139969",
+          "scoringType": {
+            "id": "DECLARATIVE",
+            "name": "DECLARATIVE"
+          },
+          "evaluationType": {
+            "id": "INDIVIDUAL",
+            "name": "INDIVIDUAL"
+          },
+          "operationType": {
+            "id": "MORTGAGE",
+            "name": "MORTGAGE"
+          },
+          "partialPunctuations": [
+            {
+              "id": "APPROVED",
+              "value": 80
+            }
+          ],
+          "punctuation": 55,
+          "probabilityOfDefault": 10,
+          "dictum": "APPROVED",
+          "analysisDate": "2016-02-28T16:41:41.090Z",
+          "result": "MEDIUM_RISK",
+          "dateOfApartment": "1954-03-03",
+          "isMortage": true,
+          "mortgage": {
+            "isFirstLiving": true,
+            "surfaceArea": "220",
+            "buildedSurface": "100",
+            "propertyType": {
+              "id": "CHALET",
+              "name": "CHALET"
+            }
+          },
+          "good": {
+            "economicConditions": [
+              {
+                "id": "Valor_vehiculo",
+                "name": "Valor_vehiculo",
+                "value": {
+                  "amount": 100000000,
+                  "currency": "COP"
+                }
+              }
+            ]
+          },
+          "relatedContract": {
+            "contractId": "0003414106",
+            "contractNumber": "001301580003414106",
+            "branch": {
+              "id": "0073",
+              "name": "OFICINA CALLE 72"
+            },
+            "relationContractType": {
+              "id": "001",
+              "name": "GEST.MOVIL"
+            }
+          },
+          "financingPercent": 70,
+          "rates": [
+            {
+              "id": "Tasa_Formal",
+              "value": 13.93
+            },
+            {
+              "id": "GL TASA.NOMINAL",
+              "value": 13.93
+            }
+          ],
+          "capability": {
+            "isCapability": true,
+            "status": "APPROVED"
+          },
+          "requestImport": {
+            "amount": 200000000,
+            "currency": "COP"
+          },
+          "termCredit": {
+            "frequency": "MONTHLY",
+            "value": 12
+          },
+          "product": {
+            "status": {
+              "id": "NEW",
+              "name": "NEW"
+            }
+          },
+          "subproduct": {
+            "id": "VEHICULO",
+            "name": "VEHICULO"
+          },
+          "responseCredit": {
+            "probability": {
+              "id": "PROB. MORA",
+              "value": 0.02
+            },
+            "dictums": [
+              {
+                "id": "001DICT.INDV",
+                "value": {
+                  "id": "DU",
+                  "name": "DUDOSO"
+                }
+              },
+              {
+                "id": "001DICT.BURO",
+                "value": {
+                  "id": "ND",
+                  "name": "PNDTE. CIFIN"
+                }
+              },
+              {
+                "id": "001DICT.CAPAGO",
+                "value": {
+                  "id": "SU",
+                  "name": "SUFICIENTE"
+                }
+              },
+              {
+                "id": "001DICT.PERFIL",
+                "value": {
+                  "id": "AP",
+                  "name": "APROBADO"
+                }
+              }
+            ],
+            "quota": {
+              "amount": 2000000,
+              "currency": "COP"
+            }
+          },
+          "minimumAmount": {
+            "amount": 1000000,
+            "currency": "COP"
+          },
+          "maximumAmount": {
+            "amount": 50000000,
+            "currency": "COP"
+          }
+        }
+      }
+    ],
+    "status": {
+      "id": "IN_PROGRESS",
+      "nextTimeExecution": "30000"
+    },
+    "isIncomeConsolidation": true,
+    "isChallenger": false
+  }
+}
+

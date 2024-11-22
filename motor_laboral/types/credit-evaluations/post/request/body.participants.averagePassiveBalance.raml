@@ -1,0 +1,28 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  term: body.participants.averagePassiveBalance.term.raml
+
+types:
+  averagePassiveBalance:
+    type: object
+    description: "It is the average passive balance of the client in the bank."
+    properties:
+      amount:
+        type: number
+        description: |
+          Amount.
+        required: true
+
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency of the amount.
+        required: true
+
+      term:
+        type: term.term
+        description: |
+          Total number of time on which the average passive balance will be calulated.
+        required: false
+

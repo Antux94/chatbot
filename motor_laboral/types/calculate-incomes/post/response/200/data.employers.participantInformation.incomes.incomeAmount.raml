@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  incomeAmount:
+    type: object
+    description: "Income amount received by participant."
+    properties:
+      amount:
+        type: number
+        description: |
+          Monetary amount.
+        required: true
+
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency
+        required: true
+

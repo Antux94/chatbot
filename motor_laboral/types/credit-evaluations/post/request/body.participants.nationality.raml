@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  nationality:
+    type: object
+    description: "Contains the nationality of the participant."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the participant's nationality.
+        required: true
+

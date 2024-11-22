@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  taxpayerType:
+    type: object
+    description: "Taxpayer class of the company on which the person consulted has worked, it is used to classify companies in order to their quantity of employees."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of class taxpayer.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Name associated with the identifier of the class taxpayer.
+        required: false
+

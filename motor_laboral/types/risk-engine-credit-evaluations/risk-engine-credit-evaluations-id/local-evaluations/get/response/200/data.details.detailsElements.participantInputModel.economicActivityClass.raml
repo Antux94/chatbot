@@ -1,0 +1,28 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  group: data.details.detailsElements.participantInputModel.economicActivityClass.group.raml
+
+types:
+  economicActivityClass:
+    type: object
+    description: "Economic activity of the related participant."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of classes of economic activities.
+        required: true
+
+      group:
+        type: group.group
+        description: |
+          Group of classes of economic activities.
+        required: true
+
+      activityStartDate:
+        type: date-only
+        description: |
+          Participant start date of the current economic
+        required: false
+

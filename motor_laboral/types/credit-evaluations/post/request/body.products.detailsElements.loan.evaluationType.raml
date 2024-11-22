@@ -1,0 +1,20 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  evaluationType:
+    type: object
+    description: "Contains the information related to the evaluation type."
+    properties:
+      id:
+        type: string
+        description: |
+          It refers to the type of score evaluation to be executed.
+        required: true
+        enum: [GLOBAL,INDIVIDUAL,COMPLETE]
+        (annotations.enumDescription):
+        - GLOBAL: "Global scoring applies to a group of people."
+        - INDIVIDUAL: "Individual scoring applies to a single participant. This can be a guarantor, shareholder, attorney-in-fact, signature, author, owner and guardian."
+        - COMPLETE: "Elaboration of Individual and Global scoring in the same request."
+

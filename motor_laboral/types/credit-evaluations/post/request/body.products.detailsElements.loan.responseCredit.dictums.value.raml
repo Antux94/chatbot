@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  value:
+    type: object
+    description: "Contains the response of the returned opinion."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the opinion response.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Description of the response of the opinion.
+        required: true
+

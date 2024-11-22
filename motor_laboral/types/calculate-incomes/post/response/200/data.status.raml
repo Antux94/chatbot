@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  status:
+    type: object
+    description: "Validation status required before the user."
+    properties:
+      id:
+        type: string
+        description: |
+          Does not meet the necessary requirements to make the query.
+        required: false
+        example: "Not Valid"
+
+      description:
+        type: string
+        description: |
+          Whether due to technical problems, lack of access or restrictions.
+        required: false
+        example: "The Enterprise not have information to consult"
+

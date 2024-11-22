@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  riskGroup:
+    type: object
+    description: "It is an indicator of the quality of the customer according to its probability of default. It varies from 1 to 99. The higher this number, the riskier the customer."
+    properties:
+      id:
+        type: string
+        description: |
+          There is no additional information.
+        required: true
+

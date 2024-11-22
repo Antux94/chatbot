@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  profession:
+    type: object
+    description: "Contains the profession that the participant has."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the participant's profession.
+        required: true
+

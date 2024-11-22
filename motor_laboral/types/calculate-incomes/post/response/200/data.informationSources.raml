@@ -1,0 +1,29 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  informationSources:
+    type: object
+    description: "Contains the source of information with which the information is enriched. This can be SOI / APL, Income or Predictor. It's required indicating what is the first source to Query"
+    properties:
+      id:
+        type: string
+        description: |
+          Name of the information source.
+        required: true
+        enum: [SOI,APL,INCOME_PREDICTOR,QUANTUM,OVI]
+        (annotations.enumDescription):
+        - SOI: "Provider social security payments SOI."
+        - APL: "Provider social security payments APL."
+        - INCOME_PREDICTOR: "Internal platform to calculate person's incomes"
+        - QUANTUM: "Platform of Risks to calculate person's incomes"
+        - OVI: "Provider social security payment OVI"
+
+      isConsulted:
+        type: boolean
+        description: |
+          Indicator that informs if this source of information was used for the verification and enrichment of the client's declarative information.
+        required: true
+
+    

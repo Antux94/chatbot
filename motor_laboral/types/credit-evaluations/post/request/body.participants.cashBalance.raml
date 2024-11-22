@@ -1,0 +1,29 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  incomeAmount: body.participants.cashBalance.incomeAmount.raml
+  finalAmount: body.participants.cashBalance.finalAmount.raml
+
+types:
+  cashBalance:
+    type: object
+    description: "Cash balance information."
+    properties:
+      incomeAmount:
+        type: incomeAmount.incomeAmount
+        description: |
+          Estimation of income for the cash balance made by the engine. It is calculated based on fixed income (5th category) plus variable income (4th category) of which a percentage is estimated. This information is calculated by the risk engine.
+        required: false
+
+      finalAmount:
+        type: finalAmount.finalAmount
+        description: |
+          Final amount available for contracting the loan. For the cash balance is obtained from the difference of income and expenses.
+        required: false
+
+      ratio:
+        type: number
+        description: |
+          Ratio that indicates how many times the fee can be paid (cash balance between the installment).
+        required: true
+

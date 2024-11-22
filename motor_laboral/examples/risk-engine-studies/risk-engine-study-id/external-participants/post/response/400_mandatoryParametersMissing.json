@@ -1,0 +1,10 @@
+{
+  "messages": [
+    {
+      "code": "mandatoryParametersMissing",
+      "message": "Mandatory parameters not reported",
+      "type": "ERROR"
+    }
+  ]
+}
+

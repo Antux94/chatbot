@@ -1,0 +1,27 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  economicActivity:
+    type: object
+    description: "Economic activity of the company where the person works."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the economic activity of the person works.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Name associated with the identifier of the economic activity of the person works.
+        required: true
+
+      relatedCiiuCode:
+        type: string
+        description: |
+          It contains the CIIU for the economic activity of the company.
+        required: false
+

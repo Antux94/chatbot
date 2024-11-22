@@ -1,0 +1,14 @@
+{
+  "data": {
+    "identityDocument": {
+      "documentType": {
+        "id": "CC",
+        "description": "Identifier document for citizenship card."
+      },
+      "documentNumber": "123456"
+    },
+    "consultType": "OVI",
+    "isUpdated": true
+  }
+}
+

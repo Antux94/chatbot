@@ -1,0 +1,34 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  propertyType: data.products.detailsElements.loan.mortgage.propertyType.raml
+
+types:
+  mortgage:
+    type: object
+    description: "Contains the information related to the mortgage."
+    properties:
+      isFirstLiving:
+        type: boolean
+        description: |
+          Indicator if the home is the first acquired by the participant.
+        required: true
+
+      surfaceArea:
+        type: string
+        description: |
+          Area of ​​the land being acquired.
+        required: true
+
+      buildedSurface:
+        type: string
+        description: |
+          Constructed area of ​​the property being acquired.
+        required: true
+
+      propertyType:
+        type: propertyType.propertyType
+        description: |
+          Type of property that the client is acquiring, applies for Mortgage.
+        required: true
+

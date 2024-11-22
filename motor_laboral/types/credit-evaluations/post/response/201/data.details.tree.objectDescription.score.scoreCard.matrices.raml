@@ -1,0 +1,16 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  matrices:
+    type: object
+    description: "Matrix used when there are two segmentation variables. The field of the variable one would make reference to the values for one of them and the one of variable two to the values of the other, as if they were arranged in a matrix one is the axis of abscises and another that of ordinates respectively."
+    properties:
+      value:
+        type: string
+        description: |
+          Matrix value.
+        required: true
+
+    

@@ -1,0 +1,124 @@
+{
+  "financialStatement": {
+    "id": "20190523",
+    "unit": "MILLIONS",
+    "accountingAccounts": [
+      {
+        "id": "v111123654789",
+        "amount": {
+          "amount": 1236547892,
+          "currency": "COP"
+        },
+        "accountsCategory": {
+          "accountsType": {
+            "id": "ACTIVO"
+          },
+          "accountGroup": {
+            "id": "TOTAL BANCO"
+          },
+          "accountLevel": {
+            "id": "CAJA BANCOS"
+          },
+          "relatedAccount": {
+            "id": "CAJA LOCAL"
+          }
+        }
+      },
+      {
+        "id": "v111123654788",
+        "amount": {
+          "amount": 1236547892,
+          "currency": "COP"
+        },
+        "accountsCategory": {
+          "accountsType": {
+            "id": "ACTIVO"
+          },
+          "accountGroup": {
+            "id": "TOTAL BANCO"
+          },
+          "accountLevel": {
+            "id": "CAJA BANCOS"
+          },
+          "relatedAccount": {
+            "id": "CAJA LOCAL"
+          }
+        }
+      },
+      {
+        "id": "v4444654788",
+        "amount": {
+          "amount": 1236547892,
+          "currency": "COP"
+        },
+        "accountsCategory": {
+          "accountsType": {
+            "id": "ACTIVO"
+          },
+          "accountGroup": {
+            "id": "TOTAL BANCO"
+          },
+          "accountLevel": {
+            "id": "CAJA BANCOS"
+          },
+          "relatedAccount": {
+            "id": "CAJA LOCAL"
+          }
+        }
+      },
+      {
+        "id": "v11112366688",
+        "amount": {
+          "amount": 1236547892,
+          "currency": "COP"
+        },
+        "accountsCategory": {
+          "accountsType": {
+            "id": "ACTIVO"
+          },
+          "accountGroup": {
+            "id": "TOTAL BANCO"
+          },
+          "accountLevel": {
+            "id": "CAJA BANCOS"
+          },
+          "relatedAccount": {
+            "id": "CAJA LOCAL"
+          }
+        }
+      }
+    ]
+  },
+  "engineControlRiskAssessmentTool": {
+    "id": "PCO",
+    "name": "POWER_CURVE_ORIGINATION",
+    "uploadDateTime": "2016-02-28T16:41:41.090Z",
+    "versionNumber": "V12.0.1.1.0"
+  },
+  "ratios": {
+    "specificRatioMagnitudes": [
+      {
+        "id": "workingCapitalNeeds",
+        "description": "workingCapitalNeeds",
+        "classification": "ACTIVITY",
+        "ratioDetail": {
+          "detailType": "AMOUNT",
+          "value": {
+            "amount": 1550000000,
+            "currency": "EUR"
+          }
+        }
+      },
+      {
+        "id": "financialExpensesOverSales",
+        "description": "Financial Expenses OverSales",
+        "classification": "profitability",
+        "ratioDetail": {
+          "detailType": "PERCENTAGE",
+          "percentage": 1234
+        }
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  probability:
+    type: object
+    description: "They are the possible probability values ​​that can be presented for the global evaluation, this probability is used by each of the scoring participants."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of probability.
+        required: true
+
+      value:
+        type: number
+        description: |
+          Value of probability.
+        required: true
+

@@ -1,0 +1,25 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  addressType:
+    type: object
+    description: "Type of address."
+    properties:
+      id:
+        type: string
+        description: |
+          Address type identifier.
+        required: true
+        enum: [LEGAL,BUSINESS,ALTERNATIVE,HEADQUARTERS,POSTAL,WORK,HOME,VACATION]
+        (annotations.enumDescription):
+        - LEGAL: "Identifier legal address."
+        - BUSINESS: "Identifier business address."
+        - ALTERNATIVE: "Identifier alternative address."
+        - HEADQUARTERS: "Identifier of headquarters address."
+        - POSTAL: "Identifier postal address."
+        - WORK: "Identifier work address."
+        - HOME: "Identifier house address."
+        - VACATION: "Identifier vacation address."
+

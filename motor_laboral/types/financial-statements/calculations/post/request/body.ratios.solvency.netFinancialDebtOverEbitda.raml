@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  netFinancialDebtOverEbitda:
+    type: object
+    description: "Ratio that measures the capacity of the company when it comes to dealing with its financial debt based on its EBITDA generation."
+    properties:
+      percentage:
+        type: number
+        description: |
+          Percentage of the asset.
+        required: false
+
+      isCalculated:
+        type: boolean
+        description: |
+          It is calculated, if the value is true, it is because the risk tool could calculate it, otherwise its value is false and likewise it ratifies when the value is a possible 0.
+        required: true
+

@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  type:
+    type: object
+    description: "Participant's income type."
+    properties:
+      id:
+        type: string
+        description: |
+          Participant's income type identifier.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Participant's income type description.
+        required: true
+

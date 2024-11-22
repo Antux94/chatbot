@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  partialPunctuations:
+    type: object
+    description: "Default probability for scoring partial calculations."
+    properties:
+      id:
+        type: string
+        description: |
+          Partial Punctuation identifier.
+        required: true
+
+      value:
+        type: number
+        description: |
+          Punctuation for parcial model scoring calculations.
+        required: true
+
+    

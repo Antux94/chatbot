@@ -1,0 +1,28 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  term:
+    type: object
+    description: "Total number of time on which the average passive balance will be calulated."
+    properties:
+      number:
+        type: number
+        description: |
+          Total number of terms.
+        required: true
+
+      frequency:
+        type: string
+        description: |
+          Period in wich terms are defined.
+        required: true
+        enum: [DAILY,WEEKLY,BI_WEEKLY,MONTHLY,YEARLY]
+        (annotations.enumDescription):
+        - DAILY: "Daily period."
+        - WEEKLY: "Weekly period."
+        - BI_WEEKLY: "Bi-weekly period."
+        - MONTHLY: "Monthly period."
+        - YEARLY: "Yearly period."
+

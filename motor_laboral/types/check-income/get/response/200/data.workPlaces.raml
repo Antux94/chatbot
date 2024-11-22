@@ -1,0 +1,78 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  taxpayer: data.workPlaces.taxpayer.raml
+  employmentSituation: data.workPlaces.employmentSituation.raml
+  economicActivity: data.workPlaces.economicActivity.raml
+  liabilities: data.workPlaces.liabilities.raml
+  taxpayerType: data.workPlaces.taxpayerType.raml
+  novelty: data.workPlaces.novelty.raml
+  form: data.workPlaces.form.raml
+  incomes: data.workPlaces.incomes.raml
+
+types:
+  workPlaces:
+    type: object
+    description: "Company or workplaces where the customer has worked recently."
+    properties:
+      name:
+        type: string
+        description: |
+          Company or workplace of the customer.
+        required: true
+
+      antiquity:
+        type: number
+        description: |
+          Antiquity of the customer on a certain workplace reported in months
+        required: false
+
+      taxpayer:
+        type: taxpayer.taxpayer
+        description: |
+          Taxpayer to identify the workplace(enterprise) of the person consulted.
+        required: false
+
+      employmentSituation:
+        type: employmentSituation.employmentSituation
+        description: |
+          Work situation declared by the person..For example,employed worker,unemployed,civil servant,self-employed,bussiness-man,temporal contract,long-term contract,etc
+        required: false
+
+      economicActivity:
+        type: economicActivity.economicActivity
+        description: |
+          Economic activity of the company where the person works.
+        required: false
+
+      liabilities:
+        type: liabilities.liabilities[]
+        description: |
+          List of liabilities declared by the person consulted. A person's liabilities include debts, commitments or obligations of any nature or accounts payable
+        required: false
+
+      taxpayerType:
+        type: taxpayerType.taxpayerType
+        description: |
+          Taxpayer class of the company on which the person consulted has worked, it is used to classify companies in order to their quantity of employees.
+        required: false
+
+      novelty:
+        type: novelty.novelty
+        description: |
+          Describes the information reported on the entry or retirement novelty of the person consulted in the workplace, in colombia these novelties are reports issued in order to indicate when a person entered or left a company.
+        required: false
+
+      form:
+        type: form.form
+        description: |
+          Describe the type of form. Is the document that specifies the details and aspects related to the person's salary.
+        required: false
+
+      incomes:
+        type: incomes.incomes[]
+        description: |
+          List of incomes that an employee received while it was working on a workplace.
+        required: false
+
+    

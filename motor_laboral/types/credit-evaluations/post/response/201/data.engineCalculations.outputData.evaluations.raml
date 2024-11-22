@@ -1,0 +1,65 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  agreementRealInstallmentAmount: data.engineCalculations.outputData.evaluations.agreementRealInstallmentAmount.raml
+  owner: data.engineCalculations.outputData.evaluations.owner.raml
+
+types:
+  evaluations:
+    type: object
+    description: "Evaluation block calculated by the risk engine for each product."
+    properties:
+      logisticRegressionConstant:
+        type: number
+        description: |
+          It statistical constant parameter of logistic regression.Evaluation block calculated by the risk engine for each product.
+        required: false
+
+      profileProductDictum:
+        type: string
+        description: |
+          It represents the opinion on the customer profile, where the profile is determined by various customer data and serves to know whether it can meet the credit requested a product.
+        required: true
+        enum: [APPROVED,REJECTED,DUBIOUS]
+        (annotations.enumDescription):
+        - APPROVED: "The customer profile is approved for a requested product."
+        - REJECTED: "The customer profile is rejected for a requested product."
+        - DUBIOUS: "The customer profile is dubius for a requested product."
+
+      profileRejectionThreshold:
+        type: number
+        description: |
+          Value that defines the denial of the statement of profile. This value represents the threshold where, depending on where the profile is located, it will approve or not.
+        required: false
+
+      profileApprovalThreshold:
+        type: number
+        description: |
+          Value that defines the approval of the profilet. This value represents the threshold where, depending on where the profile is located, it will approve or not.
+        required: false
+
+      termScoringLoan:
+        type: number
+        description: |
+          Number of time in which the loan will be paid, can be months, years, etc. This data is calculated by the score.
+        required: false
+
+      probabilityDefault:
+        type: number
+        description: |
+          Probability of default of a client. When a client does not comply with the payment of any debt.
+        required: false
+
+      agreementRealInstallmentAmount:
+        type: agreementRealInstallmentAmount.agreementRealInstallmentAmount
+        description: |
+          Real installment amount that a client pays for an agreement made between the bank and a company. This fee has a discount agreed in the agreement.
+        required: false
+
+      owner:
+        type: owner.owner
+        description: |
+          Information about notifications related to proposal risk.
+        required: false
+
+    

@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  code: data.workPlaces.form.code.raml
+  contributor: data.workPlaces.form.contributor.raml
+
+types:
+  form:
+    type: object
+    description: "Describe the type of form. Is the document that specifies the details and aspects related to the person's salary."
+    properties:
+      code:
+        type: code.code
+        description: |
+          Information of the code that describes the type of form issued.
+        required: true
+
+      contributor:
+        type: contributor.contributor
+        description: |
+          Contributor related on the form.
+        required: false
+

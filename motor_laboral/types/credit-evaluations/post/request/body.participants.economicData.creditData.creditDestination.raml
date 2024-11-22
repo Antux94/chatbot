@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  creditDestination:
+    type: object
+    description: "Contains the destination of the requested credit, this field is used for the entry of individual evaluation."
+    properties:
+      id:
+        type: string
+        description: |
+          Credit destination identifier.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Credit destination name.
+        required: true
+

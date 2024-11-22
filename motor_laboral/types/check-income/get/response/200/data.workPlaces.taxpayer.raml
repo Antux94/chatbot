@@ -1,0 +1,28 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  documentType: data.workPlaces.taxpayer.documentType.raml
+
+types:
+  taxpayer:
+    type: object
+    description: "Taxpayer to identify the workplace(enterprise) of the person consulted."
+    properties:
+      documentType:
+        type: documentType.documentType
+        description: |
+          Identification document  of the taxpayer
+        required: true
+
+      documentNumber:
+        type: string
+        description: |
+          axpayer identification number to identify the company.
+        required: true
+
+      checkDigit:
+        type: string
+        description: |
+          It contains the verification code given by the DIAN (Colombian government agency responsible for financial regulation and tax collection.) for the documents of the affiliated companies in Colombia.
+        required: false
+

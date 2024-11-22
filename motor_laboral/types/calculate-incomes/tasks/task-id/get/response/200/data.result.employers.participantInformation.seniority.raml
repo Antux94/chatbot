@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  period: data.result.employers.participantInformation.seniority.period.raml
+
+types:
+  seniority:
+    type: object
+    description: "Seniority of the participant in the company."
+    properties:
+      number:
+        type: number
+        description: |
+          Seniority's number of period of the participant in the company.
+        required: true
+        example: 3
+
+      period:
+        type: period.period
+        description: |
+          Seniority's period of the participant in the company.
+        required: true
+

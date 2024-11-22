@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  geolocation:
+    type: object
+    description: "Geographic coordinates of a point."
+    properties:
+      latitude:
+        type: number
+        description: |
+          Geographic coordinate that indicates the north-south position of a point regarding the Equator.
+        required: true
+
+      longitude:
+        type: number
+        description: |
+          Geographic coordinate that indicates the east-west position of a point regarding the Prime Meridian.
+        required: true
+

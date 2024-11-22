@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  country:
+    type: object
+    description: "Country where the location is placed."
+    properties:
+      id:
+        type: string
+        description: |
+          ISO 3166-1 alpha-2 code for specify the country identifier.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Geographic country name.
+        required: true
+

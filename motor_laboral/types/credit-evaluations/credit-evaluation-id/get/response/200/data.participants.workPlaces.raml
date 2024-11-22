@@ -1,0 +1,29 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  employmentSituation: data.participants.workPlaces.employmentSituation.raml
+
+types:
+  workPlaces:
+    type: object
+    description: "Contains the information about companies or workplaces where the customer has been working.."
+    properties:
+      name:
+        type: string
+        description: |
+          Company or workplace name of the customer.
+        required: true
+
+      antiquity:
+        type: string
+        description: |
+          Antiquity of the customer working with the company.
+        required: false
+
+      employmentSituation:
+        type: employmentSituation.employmentSituation
+        description: |
+          Work situation declared by the person..For example,employed worker,unemployed,civil servant,self-employed,bussiness-man,temporal contract,long-term contract,etc.
+        required: false
+
+    

@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  incomeAmount:
+    type: object
+    description: "Type of liability declared by the person consulted."
+    properties:
+      amount:
+        type: number
+        description: |
+          Amount of customer income.
+        required: true
+
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency related to income customer.
+        required: true
+

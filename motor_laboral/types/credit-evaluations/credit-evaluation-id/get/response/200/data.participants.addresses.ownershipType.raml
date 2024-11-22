@@ -1,0 +1,24 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  ownershipType:
+    type: object
+    description: "Property relationship with the business customer."
+    properties:
+      id:
+        type: string
+        description: |
+          It informs if the property is owned, leased or of any partner of the company.
+        required: true
+        enum: [RENTED,OWNER,FAMILY,MORTGAGED,USUFRUCT,SUBSIDIZED,OTHER]
+        (annotations.enumDescription):
+        - RENTED: "Indicator rented home."
+        - OWNER: "Indicator own home."
+        - FAMILY: "Indicator family home."
+        - MORTGAGED: "Indicator mortgaged home."
+        - USUFRUCT: "Indicator usufruct home. Usufruct is a right by one person over the property of another."
+        - SUBSIDIZED: "Indicator subsidized home."
+        - OTHER: "Indicator other property type."
+

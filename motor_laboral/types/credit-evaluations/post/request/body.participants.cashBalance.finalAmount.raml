@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  finalAmount:
+    type: object
+    description: "Final amount available for contracting the loan. For the cash balance is obtained from the difference of income and expenses."
+    properties:
+      amount:
+        type: number
+        description: |
+          Amount.
+        required: true
+
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency of the amount.
+        required: true
+

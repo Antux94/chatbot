@@ -1,0 +1,19 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  scoringType:
+    type: object
+    description: "Contains the information related to the scoring type."
+    properties:
+      id:
+        type: string
+        description: |
+          It refers to the type of score to be executed.
+        required: true
+        enum: [DECLARATIVE,FORMAL]
+        (annotations.enumDescription):
+        - DECLARATIVE: "Declarative scoring refers to values  entered in their entirety by the user."
+        - FORMAL: "Formal scoring refers to values ​​consulted or enriched by reliable data sources such as third parties."
+

@@ -1,0 +1,24 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  employerInfo: data.employers.employerInfo.raml
+  participantInformation: data.employers.participantInformation.raml
+
+types:
+  employers:
+    type: object
+    description: "Employers that the employee has"
+    properties:
+      employerInfo:
+        type: employerInfo.employerInfo
+        description: |
+          Information about the company where the person works.
+        required: true
+
+      participantInformation:
+        type: participantInformation.participantInformation
+        description: |
+          Information about the participant
+        required: true
+
+    

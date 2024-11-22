@@ -1,0 +1,37 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  result: data.result.raml
+  status: data.status.raml
+  statusDeclaretedIncomes: data.statusDeclaretedIncomes.raml
+
+types:
+  data:
+    type: object
+    description: ""
+    properties:
+      id:
+        type: string
+        description: |
+          Async task identifier.
+        required: true
+        example: "aaaaa-aaaaaa-aaaaa"
+
+      result:
+        type: result.result
+        description: |
+          Contains the result of calcute when the task is completed.
+        required: false
+
+      status:
+        type: status.status
+        description: |
+          Status of the async task ticket.
+        required: true
+
+      statusDeclaretedIncomes:
+        type: statusDeclaretedIncomes.statusDeclaretedIncomes
+        description: |
+          Indicates the status of income verification.
+        required: false
+

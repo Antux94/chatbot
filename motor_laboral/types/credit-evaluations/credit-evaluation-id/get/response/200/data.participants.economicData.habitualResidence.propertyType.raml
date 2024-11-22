@@ -1,0 +1,27 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  propertyType:
+    type: object
+    description: "Property type. This information is required if ownershipType is OWNER."
+    properties:
+      id:
+        type: string
+        description: |
+          Type of home in which the participant resides.
+        required: true
+        enum: [RENTED,OWNER,COMMUNITY,OTHERS]
+        (annotations.enumDescription):
+        - RENTED: "Indicator rented home."
+        - OWNER: "Indicator own home."
+        - COMMUNITY: "Indicator community home."
+        - OTHERS: "Others."
+
+      name:
+        type: string
+        description: |
+          House description in which the participant resides.
+        required: true
+

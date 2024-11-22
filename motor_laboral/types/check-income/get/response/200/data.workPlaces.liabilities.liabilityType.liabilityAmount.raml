@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  liabilityAmount:
+    type: object
+    description: "Information of a certain liability deducted from a person´s salary"
+    properties:
+      amount:
+        type: number
+        description: |
+          Monetary value of the liability.
+        required: true
+
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency related to liability.
+        required: true
+

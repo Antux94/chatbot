@@ -1,0 +1,26 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  termCredit:
+    type: object
+    description: "Term of the offer related to the product."
+    properties:
+      frequency:
+        type: string
+        description: |
+          Term frequency.
+        required: true
+        enum: [DAILY,MONTHLY,YEARLY]
+        (annotations.enumDescription):
+        - DAILY: "Daily period."
+        - MONTHLY: "Monthly period."
+        - YEARLY: "Yearly period."
+
+      value:
+        type: number
+        description: |
+          Term value.
+        required: true
+

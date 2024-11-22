@@ -1,0 +1,88 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  partialPunctuations: data.products.detailsElements.loan.partialPunctuations.raml
+  relatedContract: data.products.detailsElements.loan.relatedContract.raml
+
+types:
+  loan:
+    type: object
+    discriminator: productType
+    discriminatorValue: LOAN
+    description: "Initial range of the amounts to be calculated."
+    properties:
+      productId:
+        type: string
+        description: |
+          Financial product id.
+        required: true
+
+      productType:
+        type: string
+        description: |
+          Financial product type.
+        required: true
+        enum: [LOAN,ACCOUNT,CARD]
+        (annotations.enumDescription):
+        - LOAN: "Product type is a LOAN"
+        - ACCOUNT: "Product type is a ACCOUNT"
+        - CARD: "Product type is a CARD"
+
+      scoringId:
+        type: string
+        description: |
+          Scoring identifier for mortgage.
+        required: false
+
+      partialPunctuations:
+        type: partialPunctuations.partialPunctuations[]
+        description: |
+          Default probability for scoring partial calculations.
+        required: false
+
+      punctuation:
+        type: number
+        description: |
+          Final scoring punctuation.
+        required: false
+
+      probabilityOfDefault:
+        type: number
+        description: |
+          Probability of default for scoring calculations.
+        required: false
+
+      dictum:
+        type: string
+        description: |
+          Identifier stage of proposal or risk engine modules.
+        required: false
+        enum: [APPROVED,REJECTED,DUBIOUS]
+        (annotations.enumDescription):
+        - APPROVED: "The proposal is approved for a requested product."
+        - REJECTED: "The proposal is rejected for a requested product."
+        - DUBIOUS: "The proposal is dubious for a requested product."
+
+      analysisDate:
+        type: datetime
+        description: |
+          String based on ISO-8601 date format for specifying the date of risk evaluation date.
+        required: false
+
+      result:
+        type: string
+        description: |
+          Result from scoring engine.
+        required: false
+        enum: [HIGH_RISK,MEDIUM_RISK,LOW_RISK]
+        (annotations.enumDescription):
+        - HIGH_RISK: "High credit risk."
+        - MEDIUM_RISK: "Medium credit risk."
+        - LOW_RISK: "Low credit risk."
+
+      relatedContract:
+        type: relatedContract.relatedContract
+        description: |
+          Contains information on the contract related to the object.
+        required: true
+

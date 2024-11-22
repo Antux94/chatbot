@@ -1,0 +1,271 @@
+{
+  "sanctionStatus": "FINISHED",
+  "sanctionStartDate": "2020-10-01",
+  "sanctionEndDate": "2020-10-10",
+  "riskModelType": "SCORING",
+  "analysisDate": "2016-02-28T16:41:41.090Z",
+  "dictum": {
+    "id": "APPROVED"
+  },
+  "economicGroup": {
+    "id": "G0000176"
+  },
+  "customersLimitAmount": {
+    "currency": "COP",
+    "amount": 111111999990003
+  },
+  "groupLimitAmount": {
+    "currency": "COP",
+    "amount": 111111999990002
+  },
+  "othersLimitAmount": {
+    "currency": "COP",
+    "amount": 111111966990001
+  },
+  "othersLimitGroupAmount": {
+    "currency": "COP",
+    "amount": 111198899000004
+  },
+  "delegationCommittees": [
+    {
+      "id": "01",
+      "formNumber": "E6661",
+      "celebrationDate": "2014-12-01"
+    },
+    {
+      "id": "02",
+      "formNumber": "R8881",
+      "celebrationDate": "2014-12-01"
+    }
+  ],
+  "participants": [
+    {
+      "id": "001",
+      "identityDocument": {
+        "documentType": {
+          "id": "CC"
+        },
+        "documentNumber": "30000008000002317"
+      },
+      "fullname": "RAFAEL EDUARDO RODRIGUEZ",
+      "participantType": {
+        "id": "HOLDER"
+      },
+      "economicGroups": [
+        {
+          "id": "E0000113"
+        },
+        {
+          "id": "E0000114"
+        }
+      ],
+      "liabilities": [
+        {
+          "id": "1",
+          "product": {
+            "id": "95"
+          },
+          "lineType": {
+            "id": "PUNCTUAL"
+          },
+          "disposed": {
+            "currency": "COP",
+            "amount": 90000000
+          },
+          "term": {
+            "number": 12,
+            "frequency": "MONTHS"
+          },
+          "contractingDate": "2016-02-28T16:41:41.090Z",
+          "maturityDate": "2016-02-28T16:41:41.090Z",
+          "status": "ENABLED"
+        },
+        {
+          "id": "2",
+          "product": {
+            "id": "89"
+          },
+          "lineType": {
+            "id": "INSTALLMENT"
+          },
+          "disposed": {
+            "currency": "COP",
+            "amount": 6612300
+          },
+          "term": {
+            "number": 12,
+            "frequency": "MONTHS"
+          },
+          "contractingDate": "2016-02-28T16:41:41.090Z",
+          "maturityDate": "2016-02-28T16:41:41.090Z",
+          "status": "ENABLED"
+        }
+      ],
+      "sector": "INDUSTRY"
+    }
+  ],
+  "guarantees": [
+    {
+      "id": "1",
+      "guaranteeType": {
+        "id": "1",
+        "division": {
+          "id": "20",
+          "name": "divisionName"
+        }
+      },
+      "coverageAmount": {
+        "amount": 500,
+        "currency": "COP"
+      },
+      "guaranteeAmount": {
+        "currency": "COP",
+        "amount": 500
+      },
+      "coveragePercentage": 10,
+      "downPaymentPercentage": 20,
+      "purchaseOptionPercentage": 30,
+      "hasEconomicGroup": true,
+      "status": "ENABLED"
+    }
+  ],
+  "approvedRisks": [
+    {
+      "id": "3",
+      "product": {
+        "id": "14",
+        "name": "CAPITAL DE TRABAJO"
+      },
+      "lineType": {
+        "id": "INSTALLMENT",
+        "name": "LINEA CORTO PLAZO"
+      },
+      "purpose": {
+        "id": "01"
+      },
+      "approvedAmount": {
+        "currency": "COP",
+        "amount": 500
+      },
+      "period": {
+        "number": 12,
+        "frequency": "MONTHS"
+      },
+      "maturityDate": "2019-01-01",
+      "gracePeriod": {
+        "frequency": "MONTHS",
+        "number": 2
+      },
+      "liquidationType": {
+        "id": "ANNUAL"
+      },
+      "status": "ENABLED"
+    }
+  ],
+  "bank": {
+    "id": "0013",
+    "branch": {
+      "id": "0073"
+    }
+  },
+  "riskAnalystAgent": {
+    "user": "CE56425",
+    "name": "CESAR ALI",
+    "bank": {
+      "id": "0013",
+      "branch": {
+        "id": "0073"
+      }
+    }
+  },
+  "authorizationBusinessAgent": {
+    "user": "CE59810",
+    "name": "CESAR ALI",
+    "bank": {
+      "id": "0013",
+      "branch": {
+        "id": "0073"
+      }
+    }
+  },
+  "assignmentBusinessAgents": {
+    "user": "CE56096",
+    "name": "CESAR ALI",
+    "bank": {
+      "id": "0013",
+      "branch": {
+        "id": "0073"
+      }
+    }
+  },
+  "sanctionComments": [
+    {
+      "id": 1,
+      "comment": "THE WORKING CAPITAL QUOTE INCLUDES THE FOLLOWING LINES: TRADE AND/OR BANCOLDEX (M.V./T.V.) AND/OR CREDIT AND/OR TAX CREDITS (30 D / VTO) AND/OR COMEX. (MV / TV / SV) AND/OR FINAGRO AND/OR AGROCREDITO (MV / TV / SV) AND/OR CREDIPYME NOMINA BBVA (30 D / VTO CREDIT WITH SPECIFIC DESTINATION PAYMENT OF WAGE,  ISSUING CLIENTS, BBVA) AND/OR VIRTUAL CREDIT 30 % OF THE RATE.",
+      "owner": {
+        "id": "0001",
+        "type": "APPROVED_RISK"
+      },
+      "status": "ENABLED"
+    },
+    {
+      "id": 2,
+      "comment": "THE WORKING CAPITAL QUOTE INCLUDES THE FOLLOWING LINES: TRADE AND/OR BANCOLDEX (M.V./T.V.) AND/OR CREDIT AND/OR TAX CREDITS (30 D / VTO) AND/OR COMEX. (MV / TV / SV) AND/OR FINAGRO AND/OR AGROCREDITO (MV / TV / SV) AND/OR CREDIPYME NOMINA BBVA (30 D / VTO CREDIT WITH SPECIFIC DESTINATION PAYMENT OF WAGE,  ISSUING CLIENTS, BBVA) AND/OR VIRTUAL CREDIT 30 % OF THE RATE.",
+      "owner": {
+        "id": "0001",
+        "type": "APPROVED_RISK"
+      },
+      "status": "ENABLED"
+    },
+    {
+      "id": 3,
+      "comment": "THE WORKING CAPITAL QUOTE INCLUDES THE FOLLOWING LINES: TRADE AND/OR BANCOLDEX (M.V./T.V.) AND/OR CREDIT AND/OR TAX CREDITS (30 D / VTO) AND/OR COMEX. (MV / TV / SV) AND/OR FINAGRO AND/OR AGROCREDITO (MV / TV / SV) AND/OR CREDIPYME NOMINA BBVA (30 D / VTO CREDIT WITH SPECIFIC DESTINATION PAYMENT OF WAGE,  ISSUING CLIENTS, BBVA) AND/OR VIRTUAL CREDIT 30 % OF THE RATE.",
+      "owner": {
+        "id": "0001",
+        "type": "APPROVED_RISK"
+      },
+      "status": "ENABLED"
+    }
+  ],
+  "clarifications": [
+    {
+      "id": 4,
+      "comment": "THE MANAGEMENT OF THIS OFFICE WILL HAVE TO COMPLY WITH THE ESTABLISHED BY THE RULES THAT GOVERN IT FOR THE AUTHORIZATION OF LINES.",
+      "owner": {
+        "id": "0001234567BP",
+        "type": "APPLICATION"
+      },
+      "status": "ENABLED"
+    },
+    {
+      "id": 5,
+      "comment": "THE MANAGEMENT OF THIS OFFICE WILL HAVE TO COMPLY WITH THE ESTABLISHED BY THE RULES THAT GOVERN IT FOR THE AUTHORIZATION OF LINES.",
+      "owner": {
+        "id": "0001234567BP",
+        "type": "APPLICATION"
+      },
+      "status": "ENABLED"
+    },
+    {
+      "id": 6,
+      "comment": "THE MANAGEMENT OF THIS OFFICE WILL HAVE TO COMPLY WITH THE ESTABLISHED BY THE RULES THAT GOVERN IT FOR THE AUTHORIZATION OF LINES.",
+      "owner": {
+        "id": "0001234567BP",
+        "type": "APPLICATION"
+      },
+      "status": "ENABLED"
+    }
+  ],
+  "attachments": [
+    {
+      "id": "001",
+      "url": "www.bbva/visit-report/0001.jpg"
+    },
+    {
+      "id": "002",
+      "url": "www.bbva/visit-report/0002.jpg"
+    }
+  ],
+  "riskPolicy": "KEEP"
+}
+

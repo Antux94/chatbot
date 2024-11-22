@@ -1,0 +1,28 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  value: body.ratios.specificRatioMagnitudes.ratioDetail.valueRatio.value.raml
+
+types:
+  valueRatio:
+    type: object
+    discriminator: detailType
+    discriminatorValue: AMOUNT
+    description: "Monetary value of ratio."
+    properties:
+      detailType:
+        type: string
+        description: |
+          Details or notice code.
+        required: true
+        enum: [AMOUNT,PERCENTAGE]
+        (annotations.enumDescription):
+        - AMOUNT: "Identifier of monetary value."
+        - PERCENTAGE: "Identify when is percentage value."
+
+      value:
+        type: value.value
+        description: |
+          Monetary value of a ratio.
+        required: true
+

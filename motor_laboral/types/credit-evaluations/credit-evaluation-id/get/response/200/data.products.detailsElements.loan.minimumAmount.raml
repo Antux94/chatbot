@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  minimumAmount:
+    type: object
+    description: "Minimum range of the amount to be calculated."
+    properties:
+      amount:
+        type: number
+        description: |
+          Minimum amount from range.
+        required: true
+
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency related to the amount.
+        required: true
+

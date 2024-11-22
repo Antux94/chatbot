@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  commercialChannel:
+    type: object
+    description: "Channel through which scoring is requested."
+    properties:
+      id:
+        type: string
+        description: |
+          Channel identifier.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Channel name.
+        required: true
+

@@ -1,0 +1,28 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  documentType:
+    type: object
+    description: "Identity document information of the customer."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the document type for customer
+        required: true
+        enum: [CC,TI,CE,RUT,PASSPORT]
+        (annotations.enumDescription):
+        - CC: "Identifier document for citizenship card."
+        - TI: "Identifier document for younger."
+        - CE: "Identifier document for a foreign person."
+        - RUT: "Identifier national identity document."
+        - PASSPORT: "Identifier document passport."
+
+      description:
+        type: string
+        description: |
+          Description of document type for the customer.
+        required: false
+

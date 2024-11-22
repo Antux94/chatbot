@@ -1,0 +1,26 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  capability:
+    type: object
+    description: "Contains information about the participant's ability to pay."
+    properties:
+      isCapability:
+        type: boolean
+        description: |
+          Indicates if the participant has the ability to pay.
+        required: true
+
+      status:
+        type: string
+        description: |
+          it means about the status of the payment capability.
+        required: true
+        enum: [APPROVED,SCHEDULE,VIABILITY]
+        (annotations.enumDescription):
+        - APPROVED: "It is when the execution was completed successfully and the customer has capability."
+        - SCHEDULE: "It is when the execution has failed and the customer doesn't have capability or not found in SOI or income predictor."
+        - VIABILITY: "It is when the customer is unable to pay in Income Predictor"
+

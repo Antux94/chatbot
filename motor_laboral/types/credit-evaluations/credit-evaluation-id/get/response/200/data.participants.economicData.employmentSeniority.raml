@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  seniorityTimeType: data.participants.economicData.employmentSeniority.seniorityTimeType.raml
+
+types:
+  employmentSeniority:
+    type: object
+    description: "Employment seniority of the person."
+    properties:
+      number:
+        type: number
+        description: |
+          Employment seniority number of the person.
+        required: true
+
+      seniorityTimeType:
+        type: seniorityTimeType.seniorityTimeType
+        description: |
+          Period of seniority of the person working.
+        required: true
+

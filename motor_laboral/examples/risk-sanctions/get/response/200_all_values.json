@@ -1,0 +1,394 @@
+{
+  "data": {
+    "id": "001",
+    "proposal": {
+      "id": "0000001403"
+    },
+    "sanctionStatus": "FINISHED",
+    "startDate": "2020-10-01",
+    "endDate": "2020-10-10",
+    "riskModelType": "SCORING",
+    "analysisDate": "2016-02-28T16:41:41.090Z",
+    "dictum": {
+      "id": "APPROVED",
+      "name": "APROBADO"
+    },
+    "economicGroup": {
+      "id": "G0000176",
+      "name": "KENWORTH"
+    },
+    "customersLimitAmount": {
+      "currency": "COP",
+      "amount": 1111999990003
+    },
+    "groupLimitAmount": {
+      "currency": "COP",
+      "amount": 1111999990002
+    },
+    "othersLimitAmount": {
+      "currency": "COP",
+      "amount": 1111966990001
+    },
+    "othersLimitGroupAmount": {
+      "currency": "COP",
+      "amount": 1198899000004
+    },
+    "delegationCommittees": [
+      {
+        "id": "01",
+        "formNumber": "E6661",
+        "celebrationDate": "2014-12-01"
+      },
+      {
+        "id": "02",
+        "formNumber": "R8881",
+        "celebrationDate": "2014-12-01"
+      },
+      {
+        "id": "03",
+        "formNumber": "A0001",
+        "celebrationDate": "2019-01-01"
+      }
+    ],
+    "participants": [
+      {
+        "id": "0",
+        "identityDocument": {
+          "documentType": {
+            "id": "NIT",
+            "name": "NIT PERSONA JURIDICA"
+          },
+          "documentNumber": "3000000800000231"
+        },
+        "fullname": "PEDRO ESTEBAN        CASTILLO             CASTILLO",
+        "participantType": {
+          "id": "HOLDER"
+        },
+        "economicGroups": [
+          {
+            "id": "E0000113",
+            "name": "HOSPITAL SUSANA LOPEZ DE VALENCIA ESE"
+          },
+          {
+            "id": "E0000114",
+            "name": "PLASTICOS TRUHER SA"
+          },
+          {
+            "id": "E0000999",
+            "name": "CELSA"
+          },
+          {
+            "id": "G0000999",
+            "name": "HOSPITAL SAN VICENTE DE PAUL DE SAN"
+          }
+        ],
+        "liabilities": [
+          {
+            "id": "001",
+            "product": {
+              "id": "95",
+              "name": "GARANTIAS"
+            },
+            "lineType": {
+              "id": "PUNCTUAL",
+              "name": "PUNTUAL"
+            },
+            "disposed": {
+              "currency": "COP",
+              "amount": 90000000
+            },
+            "term": {
+              "number": 12,
+              "frequency": "MONTHS"
+            },
+            "contractingDate": "2016-02-28T16:41:41.090Z",
+            "maturityDate": "2016-02-28T16:41:41.090Z",
+            "status": "ENABLED"
+          },
+          {
+            "id": "002",
+            "product": {
+              "id": "89",
+              "name": "FACTORING"
+            },
+            "lineType": {
+              "id": "INSTALLMENT",
+              "name": "CUPO"
+            },
+            "disposed": {
+              "currency": "COP",
+              "amount": 6612300
+            },
+            "term": {
+              "number": 12,
+              "frequency": "MONTHS"
+            },
+            "contractingDate": "2016-02-28T16:41:41.090Z",
+            "maturityDate": "2016-02-28T16:41:41.090Z",
+            "status": "ENABLED"
+          }
+        ],
+        "sector": "TRADE"
+      }
+    ],
+    "guarantees": [
+      {
+        "id": "001",
+        "guaranteeType": {
+          "id": "1",
+          "name": "VIVIENDA",
+          "division": {
+            "id": "20",
+            "name": "LEASING"
+          }
+        },
+        "coverageAmount": {
+          "amount": 500,
+          "currency": "COP"
+        },
+        "guaranteeAmount": {
+          "currency": "COP",
+          "amount": 500
+        },
+        "coveragePercentage": 10,
+        "downPaymentPercentage": 20,
+        "purchaseOptionPercentage": 30,
+        "hasEconomicGroup": true,
+        "status": "ENABLED"
+      },
+      {
+        "id": "002",
+        "guaranteeType": {
+          "id": "2",
+          "name": "VIVIENDA",
+          "division": {
+            "id": "20",
+            "name": "LEASING"
+          }
+        },
+        "coverageAmount": {
+          "amount": 500,
+          "currency": "COP"
+        },
+        "guaranteeAmount": {
+          "currency": "COP",
+          "amount": 500
+        },
+        "coveragePercentage": 10,
+        "downPaymentPercentage": 20,
+        "purchaseOptionPercentage": 30,
+        "hasEconomicGroup": true,
+        "status": "ENABLED"
+      }
+    ],
+    "approvedRisks": [
+      {
+        "id": "003",
+        "product": {
+          "id": "14",
+          "name": "C D T"
+        },
+        "lineType": {
+          "id": "INSTALLMENT",
+          "name": "CUPO"
+        },
+        "purpose": {
+          "id": "01",
+          "name": "CREDIT DESTINED TO JUAN PEREZ BY CONCEPT TO THE GOOD CLIENT OF BANK"
+        },
+        "approvedAmount": {
+          "currency": "COP",
+          "amount": 500
+        },
+        "period": {
+          "number": 12,
+          "frequency": "MONTHS"
+        },
+        "maturityDate": "2019-01-01",
+        "gracePeriod": {
+          "frequency": "MONTHS",
+          "number": 2
+        },
+        "liquidationType": {
+          "id": "ANNUAL",
+          "description": "ANUAL"
+        },
+        "status": "ENABLED",
+        "limits": [
+          {
+            "id": "16512",
+            "subLimit": {
+              "id": "0116512"
+            },
+            "line": {
+              "id": "0116512",
+              "level": {
+                "id": "0116512"
+              },
+              "sequential": "1234"
+            }
+          }
+        ]
+      },
+      {
+        "id": "004",
+        "product": {
+          "id": "37",
+          "name": "BANKTRADE - PRESTAMOS"
+        },
+        "lineType": {
+          "id": "INSTALLMENT",
+          "name": "CUPO"
+        },
+        "purpose": {
+          "id": "01",
+          "name": "CREDIT DESTINED TO JUAN PEREZ BY CONCEPT TO THE GOOD CLIENT OF BANK"
+        },
+        "approvedAmount": {
+          "currency": "COP",
+          "amount": 500
+        },
+        "period": {
+          "number": 12,
+          "frequency": "MONTHS"
+        },
+        "maturityDate": "2019-01-01",
+        "gracePeriod": {
+          "frequency": "MONTHS",
+          "number": 2
+        },
+        "liquidationType": {
+          "id": "ANNUAL",
+          "description": "ANUAL"
+        },
+        "status": "ENABLED"
+      }
+    ],
+    "bank": {
+      "id": "0013",
+      "name": "BBVA COLOMBIA",
+      "branch": {
+        "id": "0767",
+        "name": "ENLACE DE APLICATIVO"
+      }
+    },
+    "riskAnalystAgent": {
+      "user": "CE56425",
+      "name": "CESAR ALI",
+      "position": {
+        "id": "ANA",
+        "name": "ANALISTA"
+      },
+      "bank": {
+        "id": "0013",
+        "name": "BBVA COLOMBIA",
+        "branch": {
+          "id": "0767",
+          "name": "ENLACE DE APLICATIVO"
+        }
+      }
+    },
+    "authorizationBusinessAgent": {
+      "user": "CE59810",
+      "name": "CESAR ALI",
+      "position": {
+        "id": "ANA",
+        "name": "ANALISTA"
+      },
+      "bank": {
+        "id": "0013",
+        "name": "BBVA COLOMBIA",
+        "branch": {
+          "id": "0767",
+          "name": "ENLACE DE APLICATIVO"
+        }
+      }
+    },
+    "assignmentBusinessAgents": {
+      "user": "CE56096",
+      "name": "CESAR ALI",
+      "position": {
+        "id": "ANA",
+        "name": "ANALISTA"
+      },
+      "bank": {
+        "id": "0013",
+        "name": "BBVA COLOMBIA",
+        "branch": {
+          "id": "0767",
+          "name": "ENLACE DE APLICATIVO"
+        }
+      }
+    },
+    "sanctionComments": [
+      {
+        "id": 1,
+        "comment": "THE WORKING CAPITAL QUOTE INCLUDES THE FOLLOWING LINES: TRADE AND/OR BANCOLDEX (M.V./T.V.) AND/OR CREDIT AND/OR TAX CREDITS (30 D / VTO) AND/OR COMEX. (MV / TV / SV) AND/OR FINAGRO AND/OR AGROCREDITO (MV / TV / SV) AND/OR CREDIPYME NOMINA BBVA (30 D / VTO CREDIT WITH SPECIFIC DESTINATION PAYMENT OF WAGE,  ISSUING CLIENTS, BBVA) AND/OR VIRTUAL CREDIT 30 % OF THE RATE.",
+        "owner": {
+          "id": "0001",
+          "type": "APPROVED_RISK"
+        },
+        "status": "ENABLED"
+      },
+      {
+        "id": 2,
+        "comment": "THE WORKING CAPITAL QUOTE INCLUDES THE FOLLOWING LINES: TRADE AND/OR BANCOLDEX (M.V./T.V.) AND/OR CREDIT AND/OR TAX CREDITS (30 D / VTO) AND/OR COMEX. (MV / TV / SV) AND/OR FINAGRO AND/OR AGROCREDITO (MV / TV / SV) AND/OR CREDIPYME NOMINA BBVA (30 D / VTO CREDIT WITH SPECIFIC DESTINATION PAYMENT OF WAGE,  ISSUING CLIENTS, BBVA) AND/OR VIRTUAL CREDIT 30 % OF THE RATE.",
+        "owner": {
+          "id": "0001",
+          "type": "APPROVED_RISK"
+        },
+        "status": "ENABLED"
+      },
+      {
+        "id": 3,
+        "comment": "THE WORKING CAPITAL QUOTE INCLUDES THE FOLLOWING LINES: TRADE AND/OR BANCOLDEX (M.V./T.V.) AND/OR CREDIT AND/OR TAX CREDITS (30 D / VTO) AND/OR COMEX. (MV / TV / SV) AND/OR FINAGRO AND/OR AGROCREDITO (MV / TV / SV) AND/OR CREDIPYME NOMINA BBVA (30 D / VTO CREDIT WITH SPECIFIC DESTINATION PAYMENT OF WAGE,  ISSUING CLIENTS, BBVA) AND/OR VIRTUAL CREDIT 30 % OF THE RATE.",
+        "owner": {
+          "id": "0001",
+          "type": "APPROVED_RISK"
+        },
+        "status": "ENABLED"
+      }
+    ],
+    "clarifications": [
+      {
+        "id": 4,
+        "comment": "THE MANAGEMENT OF THIS OFFICE WILL HAVE TO COMPLY WITH THE ESTABLISHED BY THE RULES THAT GOVERN IT FOR THE AUTHORIZATION OF LINES.",
+        "owner": {
+          "id": "0001234567BP",
+          "type": "APPLICATION"
+        },
+        "status": "ENABLED"
+      },
+      {
+        "id": 5,
+        "comment": "THE MANAGEMENT OF THIS OFFICE WILL HAVE TO COMPLY WITH THE ESTABLISHED BY THE RULES THAT GOVERN IT FOR THE AUTHORIZATION OF LINES.",
+        "owner": {
+          "id": "0001234567BP",
+          "type": "APPLICATION"
+        },
+        "status": "ENABLED"
+      },
+      {
+        "id": 6,
+        "comment": "THE MANAGEMENT OF THIS OFFICE WILL HAVE TO COMPLY WITH THE ESTABLISHED BY THE RULES THAT GOVERN IT FOR THE AUTHORIZATION OF LINES.",
+        "owner": {
+          "id": "0001234567BP",
+          "type": "APPLICATION"
+        },
+        "status": "ENABLED"
+      }
+    ],
+    "attachments": [
+      {
+        "id": "001",
+        "url": "www.bbva/visit-report/0001.jpg"
+      },
+      {
+        "id": "002",
+        "url": "www.bbva/visit-report/0002.jpg"
+      }
+    ],
+    "riskPolicy": "INCREASES"
+  }
+}
+

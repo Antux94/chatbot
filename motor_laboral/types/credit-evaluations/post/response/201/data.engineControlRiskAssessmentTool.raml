@@ -1,0 +1,45 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  engineControlRiskAssessmentTool:
+    type: object
+    description: "Control object of the decision process flow executed."
+    properties:
+      alias:
+        type: string
+        description: |
+          The short name of the Decision Process Flow to be executed.
+        required: true
+
+      signature:
+        type: string
+        description: |
+          Security password check to ensure the correct Decision Process Flow is executed.
+        required: true
+
+      dataLogLevel:
+        type: number
+        description: |
+          Trace level to be used for this execution.
+        required: false
+
+      version:
+        type: number
+        description: |
+          The version number of the Decision Process Flow.
+        required: true
+
+      objective:
+        type: string
+        description: |
+          Full or descriptive name of the alias, based on the name of the alias a decision process flow will be executed.
+        required: true
+
+      editionDate:
+        type: datetime
+        description: |
+          String based on ISO-8601 for specifying the date and time the Decision Process Flow was deployed.
+        required: true
+

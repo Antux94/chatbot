@@ -1,21 +1,18 @@
-
-
 import streamlit as st
 import requests
-#from streamlit_lottie import st_lottie
+
 from PIL import Image
 from io import BytesIO
 import zipfile
 import os
 import shutil
-#import scaffolding
+import scaffolding
 import streamlit as st
 import time
 import math
 import streamlit as st
 import pandas as pd
 import numpy as np
-#import snowflake.connector
 import streamlit_option_menu
 from streamlit_option_menu import option_menu
 from datetime import datetime
@@ -55,43 +52,6 @@ with st.sidebar:
     )
 
 #--------------------------------------------------------------------------------------------------------------SIDEBAR
-
-
-import subprocess
-
-
-
-def run_install_script():
-
-    bat_file = "/chatbot/install.sh"
-        # Ejecutar el archivo .bat con Popen
-    process = subprocess.Popen([bat_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, shell=True)
-
-    # Mostrar la salida en tiempo real
-    while True:
-        output = process.stdout.readline()
-        if output == "" and process.poll() is not None:
-            break
-        if output:
-            print(output.strip())
-        
-        return output.strip()
-
-    # Mostrar errores (si los hay)
-    err = process.stderr.read()
-    if err:
-        print(err.strip())
-        return err.strip()
-
-st.title('Instalación de Maven')
-
-if st.button('Ejecutar script de instalación'):
-    output = run_install_script()
-    print("output : " + str(output))
-    st.text_area('Salida del script', str(output))
-
-
-#---------------------------------------------------------------------------------------------------------------MAVEN
 
 # Añadir una selectbox al sidebar
 cliente = st.sidebar.selectbox(
@@ -272,7 +232,7 @@ if selected == "Inicio":
           #while (st.session_state['cantidad_componentes'] < 100):
           #  progress_bar.progress(math.floor(st.session_state['cantidad_componentes']))
 
-          #scaffolding.genScaffolding()
+          scaffolding.gen_scaffolding()
 
           # Mostrar un mensaje cuando se complete el proceso
           datetime_final = datetime.now()

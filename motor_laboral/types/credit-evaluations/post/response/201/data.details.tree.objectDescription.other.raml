@@ -1,0 +1,34 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  other:
+    type: object
+    discriminator: objectDescriptionType
+    discriminatorValue: OTHER
+    description: ""
+    properties:
+      objectDescriptionType:
+        type: string
+        description: |
+          Type of the engine object associated with tree leaf where the application has passed through.
+        required: true
+        enum: [OTHER,SCORE,DECISION_SETTER]
+        (annotations.enumDescription):
+        - OTHER: "It refers to a other kind of object within the tool (not a Score or decision setter wich contains additional fields to consider). It includes, value setters, Index tables Treatment tables and Scripts."
+        - SCORE: "It refers to a score object within the tool."
+        - DECISION_SETTER: "It refers to a Decision setter object within the tool."
+
+      id:
+        type: string
+        description: |
+          Identifier of the component associated to the tree leaf where the application has passed through.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Name of the component associated to the tree leaf where the application has passed through.
+        required: false
+

@@ -1,0 +1,80 @@
+{
+  "data": {
+    "customer": {
+      "identityDocument": {
+        "documentType": {
+          "id": "CC",
+          "description": "Identifier document for citizenship card."
+        },
+        "documentNumber": "123456"
+      },
+      "firstName": "Juan",
+      "middleName": "Antonio",
+      "lastName": "Lopez",
+      "secondLastName": "Perez"
+    },
+    "consultType": "CIE",
+    "workPlaces": [
+      {
+        "name": "BBVA",
+        "taxpayer": {
+          "documentType": {
+            "id": "CC",
+            "description": "CC"
+          },
+          "documentNumber": "905015644"
+        },
+        "economicActivity": {
+          "id": "6910",
+          "name": "Actividades Juridicas"
+        },
+        "taxpayerType": {
+          "id": "A001",
+          "name": "Dependiente"
+        },
+        "novelty": {
+          "entry": "X",
+          "retirement": "X"
+        },
+        "form": {
+          "code": {
+            "id": "A38541",
+            "name": "Planilla pagos"
+          },
+          "contributor": {
+            "id": "E",
+            "name": "Planilla Empleados"
+          }
+        },
+        "incomes": [
+          {
+            "income": {
+              "id": "INTEGRAL",
+              "name": "Integral salary",
+              "incomeAmount": {
+                "amount": 1265000,
+                "currency": "COP"
+              }
+            }
+          }
+        ],
+        "employmentSituation": {
+          "id": "DEPENDENT",
+          "name": "DEPENDENT"
+        },
+        "liabilities": [
+          {
+            "liabilityType": {
+              "id": "PARAFISCAL",
+              "liabilityAmount": {
+                "amount": 1250654,
+                "currency": "COP"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+

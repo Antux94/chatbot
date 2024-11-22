@@ -1,0 +1,10 @@
+{
+  "data": {
+    "identityDocument": {
+      "documentNumber": "123456789",
+      "documentType": "CC"
+    },
+    "incomes": 3700000
+  }
+}
+

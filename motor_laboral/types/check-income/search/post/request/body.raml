@@ -1,0 +1,34 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  identityDocument: body.identityDocument.raml
+
+types:
+  body:
+    type: object
+    description: ""
+    properties:
+      identityDocument:
+        type: identityDocument.identityDocument
+        description: |
+          Document type of the customer.
+        required: true
+
+      consultType:
+        type: string
+        description: |
+          Type of query that was made according to the external entity
+        required: false
+        enum: [OVI,CIS,CIE,VIP]
+        (annotations.enumDescription):
+        - OVI: "Initials standing for “Orquestador de validador de Ingreso” spanish for Income Validation Orchestrator"
+        - CIS: "Initials standing for “Consulta Ingreso Simplificada” spanish for Simplified Income Query"
+        - CIE: "Initials standing for “Consulta Ingreso Extendida” spanish for Extended Income Query"
+        - VIP: "Initials standing for “Validador de Ingresos Plus” spanish for Incomes Validator Plus"
+
+      isUpdated:
+        type: boolean
+        description: |
+          Indicates if is needed to consult the latest information available from the external entity
+        required: false
+

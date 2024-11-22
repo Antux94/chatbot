@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  statusDeclaretedIncomes:
+    type: object
+    description: "Indicates the status of income verification."
+    properties:
+      id:
+        type: string
+        description: |
+          The declared income matches the calculated income.
+        required: false
+        example: "MATCH"
+
+      description:
+        type: string
+        description: |
+          Provides a detailed overview of the income verification status.
+        required: false
+        example: "Los ingresos declarados corresponden a los ingresos calculados"
+

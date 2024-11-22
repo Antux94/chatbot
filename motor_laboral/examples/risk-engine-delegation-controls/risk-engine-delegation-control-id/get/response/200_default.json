@@ -1,0 +1,164 @@
+{
+  "data": {
+    "id": "0001",
+    "proposal": {
+      "id": "9000000011",
+      "riskStudyStage": {
+        "id": "DELEGATION"
+      }
+    },
+    "details": [
+      {
+        "detailsElements": {
+          "detailsType": "DELEGATION_INPUT",
+          "proposal": {
+            "customersLimitAmount": {
+              "currency": "COP",
+              "amount": 1000000000
+            },
+            "groupLimitAmount": {
+              "currency": "COP",
+              "amount": 1000000000
+            },
+            "othersLimitAmount": {
+              "currency": "COP",
+              "amount": 1000000000
+            },
+            "sanction": {
+              "riskModelType": "SCORING",
+              "dictum": "APPROVED"
+            }
+          },
+          "participants": [
+            {
+              "identityDocument": {
+                "documentType": "CC",
+                "documentNumber": "10000000001005730"
+              },
+              "roleType": {
+                "id": "HOLDER"
+              },
+              "historicalArrears": {
+                "riskStage": "STAGE_ONE"
+              },
+              "economicActivity": {
+                "id": "12363",
+                "isHighRisk": true
+              },
+              "canEvaluatePublicResponsability": true,
+              "scoring": {
+                "dictum": "APPROVED"
+              },
+              "rating": {
+                "shortScaleValue": "AAA",
+                "longScaleValue": "BB",
+                "homologationQualification": "AAA+"
+              },
+              "financialStatements": [
+                {
+                  "id": "002263",
+                  "startDate": "2019-02-12",
+                  "endDate": "2019-04-12",
+                  "status": {
+                    "id": "VALIDATED"
+                  },
+                  "accountingAccounts": [
+                    {
+                      "id": "V_040107",
+                      "balance": {
+                        "currency": "COP",
+                        "amount": 1000000000
+                      },
+                      "accountsCategory": {
+                        "accountsType": {
+                          "id": "NOT_APPLY"
+                        },
+                        "accountGroup": {
+                          "id": "NOT_APPLY"
+                        },
+                        "accountLevel": {
+                          "id": "NOT_APPLY"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "attributions": [
+            {
+              "id": "01",
+              "name": "Risk attribution",
+              "attributionConfigurations": [
+                {
+                  "id": "01",
+                  "riskModelType": "SCORING",
+                  "riskStage": "STAGE_ONE",
+                  "highRiskEconomicActivity": true,
+                  "canEvaluatePublicResponsability": true,
+                  "canEvaluateRefinancing": true,
+                  "segment": "PYMES",
+                  "customersLimitAmount": {
+                    "currency": "COP",
+                    "minimumAmount": 1000000000,
+                    "maximumAmount": 2000000000
+                  },
+                  "groupLimitAmount": {
+                    "currency": "COP",
+                    "minimumAmount": 1000000000,
+                    "maximumAmount": 2000000000
+                  },
+                  "othersLimitAmount": {
+                    "currency": "COP",
+                    "minimumAmount": 1000000000,
+                    "maximumAmount": 2000000000
+                  },
+                  "scoringAllowed": {
+                    "dictum": "APPROVED"
+                  },
+                  "canAssumeRiskOperation": true
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "detailsElements": {
+          "detailsType": "DELEGATION_OUTPUT",
+          "analysisDate": "2020-03-20",
+          "businessRatingQualification": {
+            "identityDocument": {
+              "documentType": "CC",
+              "documentNumber": "10000010406850440"
+            },
+            "ratingAllowed": {
+              "scaleValue": "HIGH"
+            }
+          },
+          "riskDelegationProfiles": [
+            {
+              "id": "GER",
+              "name": "GERENTE",
+              "riskAnalystAgents": [
+                {
+                  "id": "C917451",
+                  "name": "JUAN ANDRES"
+                },
+                {
+                  "id": "C804037",
+                  "name": "FRANCISCO PEREZ"
+                }
+              ],
+              "canAssumeRiskOperation": true,
+              "canAttributeRiskoperation": true,
+              "levelDelegation": "LEVEL_1"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+

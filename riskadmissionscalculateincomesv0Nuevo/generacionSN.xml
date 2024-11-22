@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<assembly>
+    <id>sn</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <!--Se debe colocar el empaquetado del proyecto-->
+            <directory>target/classes/com/bbva/ccol/riskadmissionscalculateincomes/business</directory>
+            <outputDirectory>com/bbva/ccol/riskadmissionscalculateincomes/business</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <!--Se debe colocar el empaquetado del proyecto-->
+            <directory>target/classes/com/bbva/ccol/riskadmissionscalculateincomes/business/v0/dao</directory>
+            <outputDirectory>com/bbva/ccol/riskadmissionscalculateincomes/business/v0/dao</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>target/classes/META-INF</directory>
+            <outputDirectory>META-INF</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>

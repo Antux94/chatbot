@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  initialAmount:
+    type: object
+    description: "Initial amount of the loan."
+    properties:
+      amount:
+        type: number
+        description: |
+          Initial monetary amount.
+        required: true
+
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency related to the initial amount.
+        required: true
+

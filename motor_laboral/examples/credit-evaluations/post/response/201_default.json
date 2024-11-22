@@ -1,0 +1,246 @@
+{
+  "data": {
+    "informationSources": [
+      {
+        "name": "SOI",
+        "isConsulted": true
+      },
+      {
+        "name": "APL",
+        "isConsulted": false
+      },
+      {
+        "name": "PREDICTOR DE INGRESOS",
+        "isConsulted": false
+      },
+      {
+        "name": "HDC",
+        "isConsulted": false
+      }
+    ],
+    "participants": [
+      {
+        "identityDocument": {
+          "documentType": "CC",
+          "documentNumber": "11111111"
+        },
+        "isCustomer": true
+      }
+    ],
+    "products": [
+      {
+        "detailsElements": {
+          "productId": "101020",
+          "productType": "LOAN",
+          "scoringId": "139969",
+          "partialPunctuations": [
+            {
+              "id": "APPROVED",
+              "value": 80
+            }
+          ],
+          "punctuation": 55,
+          "probabilityOfDefault": 10,
+          "dictum": "APPROVED",
+          "analysisDate": "2016-02-28T16:41:41.090Z",
+          "result": "MEDIUM_RISK",
+          "relatedContract": {
+            "contractId": "0010",
+            "contractNumber": "0015"
+          }
+        }
+      }
+    ],
+    "engineControlRiskAssessmentTool": {
+      "alias": "Credit evaluation",
+      "dataLogLevel": 0,
+      "signature": "ry564734",
+      "version": 0,
+      "objective": "Credit evaluation",
+      "editionDate": "2016-02-28T16:41:41.090Z"
+    },
+    "engineCalculations": {
+      "outputData": {
+        "creditEvaluationResult": "APPROVED",
+        "evaluations": [
+          {
+            "logisticRegressionConstant": 2,
+            "profileProductDictum": "APPROVED",
+            "profileRejectionThreshold": 0.2,
+            "profileApprovalThreshold": 0.4,
+            "termScoringLoan": 0.2,
+            "probabilityDefault": 0.4,
+            "agreementRealInstallmentAmount": {
+              "amount": 800,
+              "currency": "PEN"
+            },
+            "owner": {
+              "id": "1",
+              "ownerType": "PARTICIPANT"
+            }
+          }
+        ]
+      }
+    },
+    "details": {
+      "tree": [
+        {
+          "treeId": "fadf854e",
+          "treeType": "INITIALIZATION_VARIABLES",
+          "treeName": "Inicializacion Variable Tree",
+          "nodeId": "1",
+          "nodeName": "INIVAR01",
+          "outcomeId": "1",
+          "outcomeName": "Inicialización variable",
+          "testGroupName": "Inicialización variable",
+          "owner": {
+            "id": "1",
+            "ownerType": "PARTICIPANT"
+          },
+          "objectDescription": {
+            "objectDescriptionType": "OTHER",
+            "id": "dfd8d30e",
+            "name": "Inicialización variable"
+          }
+        },
+        {
+          "treeId": "60a9c118",
+          "treeType": "DATA_VALIDATION",
+          "treeName": "Validación datos Tree",
+          "nodeId": "1",
+          "nodeName": "VALDAT01",
+          "outcomeId": "1",
+          "outcomeName": "VALDAT",
+          "testGroupName": "Validación datos",
+          "owner": {
+            "id": "1",
+            "ownerType": "PARTICIPANT"
+          },
+          "objectDescription": {
+            "objectDescriptionType": "DECISION_SETTER",
+            "id": "re43212w",
+            "name": "Decision Setter Tree",
+            "originDecisionClass": "Rechazar",
+            "originDecisionText": "Rechazar",
+            "codes": [
+              {
+                "value": "DI05"
+              }
+            ]
+          }
+        },
+        {
+          "treeId": "f58c9c1f",
+          "treeType": "FINAL_CALCULATIONS",
+          "treeName": "Cálculos finales Tree",
+          "nodeId": "1",
+          "nodeName": "Cálculos Finales",
+          "outcomeId": "1",
+          "outcomeName": "Cálculos Finales",
+          "testGroupName": "Cálculos Finales",
+          "owner": {
+            "id": "1",
+            "ownerType": "PARTICIPANT"
+          },
+          "objectDescription": {
+            "objectDescriptionType": "OTHER",
+            "id": "f58c9c1f",
+            "name": "Cálculos Finales"
+          }
+        },
+        {
+          "treeId": "39e336d1",
+          "treeType": "PROBABILITY_MODEL",
+          "treeName": "Modelo Probabilidad Tree",
+          "nodeId": "1",
+          "nodeName": "Modelo Probabilidad",
+          "outcomeId": "1",
+          "outcomeName": "Modelo Probabilidad",
+          "testGroupName": "Modelo Probabilidad",
+          "owner": {
+            "id": "1",
+            "ownerType": "PARTICIPANT"
+          },
+          "objectDescription": {
+            "objectDescriptionType": "OTHER",
+            "id": "ab5c42d2",
+            "name": "Modelo Probabilidad"
+          }
+        },
+        {
+          "treeId": "7a8b4c0e",
+          "treeType": "GUARANTEE_RULES",
+          "treeName": "Reglas de garantía Tree",
+          "nodeId": "1",
+          "nodeName": "Reglas de garantía",
+          "outcomeId": "1",
+          "outcomeName": "Reglas de garantía",
+          "testGroupName": "Reglas de garantía Input",
+          "owner": {
+            "id": "1",
+            "ownerType": "PARTICIPANT"
+          },
+          "objectDescription": {
+            "objectDescriptionType": "OTHER",
+            "id": "4657j4h4",
+            "name": "Reglas de garantía Input"
+          }
+        },
+        {
+          "treeId": "7a8b4c0e",
+          "treeType": "DECISION_RULES",
+          "treeName": "Reglas de decisión tree ",
+          "nodeId": "1",
+          "nodeName": "Reglas de decisión ",
+          "outcomeId": "1",
+          "outcomeName": "Reglas de decisión ",
+          "testGroupName": "Reglas de decisión ",
+          "owner": {
+            "id": "1",
+            "ownerType": "PARTICIPANT"
+          },
+          "objectDescription": {
+            "objectDescriptionType": "OTHER",
+            "id": "454re3svc",
+            "name": "Reglas de decisión "
+          }
+        },
+        {
+          "treeId": "7a8b4c0e",
+          "treeType": "SCORING",
+          "treeName": "Puntaje",
+          "nodeId": "1",
+          "nodeName": "Puntaje",
+          "outcomeId": "1",
+          "outcomeName": "Puntaje",
+          "testGroupName": "Puntaje",
+          "owner": {
+            "id": "1",
+            "ownerType": "PARTICIPANT"
+          },
+          "objectDescription": {
+            "objectDescriptionType": "SCORE",
+            "id": "4543evbh",
+            "name": "Puntaje",
+            "score": 0.035893,
+            "scoreCard": [
+              {
+                "element": "Edad situación vivienda",
+                "value": "3201",
+                "outcome": "Grupo3",
+                "partialScore": 0.035893
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "status": {
+      "id": "IN_PROGRESS",
+      "nextTimeExecution": "30000"
+    },
+    "isIncomeConsolidation": true,
+    "isChallenger": false
+  }
+}
+

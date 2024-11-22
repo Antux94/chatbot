@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  rates:
+    type: object
+    description: "Store the different rates, which the participant may have."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the rate to be related.
+        required: true
+
+      value:
+        type: number
+        description: |
+          Related rate value.
+        required: true
+
+    

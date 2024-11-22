@@ -1,0 +1,62 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  commercialChannel: data.commercialChannel.raml
+  informationSources: data.informationSources.raml
+  participants: data.participants.raml
+  products: data.products.raml
+  status: data.status.raml
+
+types:
+  data:
+    type: object
+    description: ""
+    properties:
+      commercialChannel:
+        type: commercialChannel.commercialChannel
+        description: |
+          Channel through which scoring is requested.
+        required: false
+
+      requestSource:
+        type: string
+        description: |
+          Source from which the request comes (social networks, events).
+        required: false
+
+      informationSources:
+        type: informationSources.informationSources[]
+        description: |
+          Contains the source of information with which the information is enriched. This can be SOI / APL, Income Predictor or HDC.
+        required: false
+
+      participants:
+        type: participants.participants[]
+        description: |
+          It is the participants to which a credit evaluation is applied.
+        required: true
+
+      products:
+        type: products.products[]
+        description: |
+          Detailed information according to the product type.
+        required: true
+
+      status:
+        type: status.status
+        description: |
+          Contains the status of the execution of all the choreography towards third parties.
+        required: true
+
+      isIncomeConsolidation:
+        type: boolean
+        description: |
+          Determines if the user's income is consolidated.
+        required: false
+
+      isChallenger:
+        type: boolean
+        description: |
+          Determine the policy strategy for user validation.
+        required: false
+

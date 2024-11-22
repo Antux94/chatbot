@@ -1,0 +1,33 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  novelty:
+    type: object
+    description: "Describes the information reported on the entry or retirement novelty of the person consulted in the workplace, in colombia these novelties are reports issued in order to indicate when a person entered or left a company."
+    properties:
+      entry:
+        type: string
+        description: |
+          Novelty entry of the person consulted.
+        required: true
+
+      entryDate:
+        type: datetime
+        description: |
+          String based on ISO-8601 date format for providing the date when the query was made.
+        required: false
+
+      retirement:
+        type: string
+        description: |
+          Novelty Retirement  of the person consulted.
+        required: false
+
+      retirementDate:
+        type: datetime
+        description: |
+          String based on ISO-8601 date format for providing the date when the query was made.
+        required: false
+

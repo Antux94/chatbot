@@ -1,0 +1,15 @@
+{
+  "messages": [
+    {
+      "code": "mandatoryParametersMissing",
+      "message": "Mandatory Parameters Missing",
+      "parameters": [
+        {
+          "name": "economicActivity"
+        }
+      ],
+      "type": "ERROR"
+    }
+  ]
+}
+

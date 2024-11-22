@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  documentType: body.identityDocument.documentType.raml
+
+types:
+  identityDocument:
+    type: object
+    description: "Document type of the customer."
+    properties:
+      documentType:
+        type: documentType.documentType
+        description: |
+          Identity document information of the customer.
+        required: true
+
+      documentNumber:
+        type: string
+        description: |
+          Identification number of customer
+        required: true
+

@@ -1,0 +1,36 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  engineControlRiskAssessmentTool:
+    type: object
+    description: "Information of the tool of the execution of financial calculations."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique engine control risk assessment tool identifier.
+        required: true
+        enum: [PCO]
+        (annotations.enumDescription):
+        - PCO: "Power Curve Origination."
+
+      name:
+        type: string
+        description: |
+          Tool Version name.
+        required: true
+
+      uploadDateTime:
+        type: datetime
+        description: |
+          String based on ISO-8601 date format for providing the tool Upload Date & Time.
+        required: true
+
+      versionNumber:
+        type: string
+        description: |
+          Tool version number.
+        required: true
+

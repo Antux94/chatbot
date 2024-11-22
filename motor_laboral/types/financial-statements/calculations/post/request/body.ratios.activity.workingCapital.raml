@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  amount: body.ratios.activity.workingCapital.amount.raml
+
+types:
+  workingCapital:
+    type: object
+    description: "Working capital, also known as net working capital, is the difference between a company’s current assets, like cash, accounts receivable (customers’ unpaid bills) and inventories of raw materials and finished goods, and its current liabilities, like accounts payable."
+    properties:
+      amount:
+        type: amount.amount
+        description: |
+          Monetary amount.
+        required: false
+
+      isCalculated:
+        type: boolean
+        description: |
+          It is calculated, if the value is true, it is because the risk tool could calculate it, otherwise its value is false and likewise it ratifies when the value is a possible 0.
+        required: true
+

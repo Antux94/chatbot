@@ -1,0 +1,29 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  value: data.products.detailsElements.loan.good.economicConditions.value.raml
+
+types:
+  economicConditions:
+    type: object
+    description: "It’s economic conditions that the acquired good can have."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the economic condition of the acquired good.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Description of the economic condition of the acquired good, its possible values ​​are the value of the vehicle.
+        required: true
+
+      value:
+        type: value.value
+        description: |
+          Value of the economic condition.
+        required: false
+
+    

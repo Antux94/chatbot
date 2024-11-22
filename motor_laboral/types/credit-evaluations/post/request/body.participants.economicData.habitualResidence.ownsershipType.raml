@@ -1,0 +1,26 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  ownsershipType:
+    type: object
+    description: "Classification of the person in the financial system. According to the days of delay that a debtor has when not paying his credit (risk of default), he receives a category, with which we identify his behavior in the payments he has with his creditors."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of ownership type.
+        required: true
+        enum: [RENTED,OWNER,FAMILY,MORTGAGED,USUFRUCT,SUBSIDIZED,LEASING,SPOUSE,OTHERS]
+        (annotations.enumDescription):
+        - RENTED: "Indicator rented home."
+        - OWNER: "Indicator own home."
+        - FAMILY: "Indicator family home."
+        - MORTGAGED: "Indicator mortgaged home."
+        - USUFRUCT: "Indicator usufruct home. Usufruct is a right by one person over the property of another."
+        - SUBSIDIZED: "Indicator subsidized home."
+        - LEASING: "Rent with purchase right."
+        - SPOUSE: "Owned by the spouse of the customer."
+        - OTHERS: "Others types."
+

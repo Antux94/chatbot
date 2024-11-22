@@ -1,0 +1,17 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  income: data.workPlaces.incomes.income.raml
+
+types:
+  incomes:
+    type: object
+    description: "List of incomes that an employee received while it was working on a workplace."
+    properties:
+      income:
+        type: income.income
+        description: |
+          Information of a certain income received by the employee.
+        required: true
+
+    

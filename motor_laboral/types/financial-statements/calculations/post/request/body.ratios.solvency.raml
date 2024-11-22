@@ -1,0 +1,72 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  financingExpensesToSales: body.ratios.solvency.financingExpensesToSales.raml
+  interestCoverageWithEbitda: body.ratios.solvency.interestCoverageWithEbitda.raml
+  netFinancialDebtOverEbitda: body.ratios.solvency.netFinancialDebtOverEbitda.raml
+  interestCoverageWithEbitdaAndProvisions: body.ratios.solvency.interestCoverageWithEbitdaAndProvisions.raml
+  equityToLongTermAssets: body.ratios.solvency.equityToLongTermAssets.raml
+  equityToAssets: body.ratios.solvency.equityToAssets.raml
+  debtToEquity: body.ratios.solvency.debtToEquity.raml
+  debtToAssets: body.ratios.solvency.debtToAssets.raml
+  debtToIncome: body.ratios.solvency.debtToIncome.raml
+
+types:
+  solvency:
+    type: object
+    description: "Grouping solvency ratios."
+    properties:
+      financingExpensesToSales:
+        type: financingExpensesToSales.financingExpensesToSales
+        description: |
+          This ratio comparises the financing expenses to the amount of sales of the period.
+        required: true
+
+      interestCoverageWithEbitda:
+        type: interestCoverageWithEbitda.interestCoverageWithEbitda
+        description: |
+          Interest coverage with EBITDA ratio.
+        required: true
+
+      netFinancialDebtOverEbitda:
+        type: netFinancialDebtOverEbitda.netFinancialDebtOverEbitda
+        description: |
+          Ratio that measures the capacity of the company when it comes to dealing with its financial debt based on its EBITDA generation.
+        required: true
+
+      interestCoverageWithEbitdaAndProvisions:
+        type: interestCoverageWithEbitdaAndProvisions.interestCoverageWithEbitdaAndProvisions
+        description: |
+          Interest coverage with EBITDA ratio and the amount of stock and investment provisions.
+        required: true
+
+      equityToLongTermAssets:
+        type: equityToLongTermAssets.equityToLongTermAssets
+        description: |
+          This ratio indicates which percentages of a company's long-term assets are owned by the shareholders instead of leveraged avoiding the risk of coming under the control of debtholders (such as banks) in the event of bankruptcy.
+        required: true
+
+      equityToAssets:
+        type: equityToAssets.equityToAssets
+        description: |
+          This ratio indicates which percentages of a company's total assets are owned by the shareholders instead of leveraged avoiding the risk of coming under the control of debtholders (such as banks) in the event of bankruptcy.
+        required: true
+
+      debtToEquity:
+        type: debtToEquity.debtToEquity
+        description: |
+          This ratio indicates the level of leverage, which implies the ability of the company to repay its obligations.
+        required: true
+
+      debtToAssets:
+        type: debtToAssets.debtToAssets
+        description: |
+          It measures the amount of total assets that are financed by debt instead of investors. In other words, it shows what percentage of assets is funded by borrowing compared with the percentage of resources that are funded by the investors.
+        required: true
+
+      debtToIncome:
+        type: debtToIncome.debtToIncome
+        description: |
+          Is the percentage of the company´s gross monthly income that goes to paying its monthly debt payments.
+        required: true
+

@@ -1,0 +1,24 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  deductionType: data.participants.economicData.deductions.deductionType.raml
+  value: data.participants.economicData.deductions.value.raml
+
+types:
+  deductions:
+    type: object
+    description: "Information about the discounts made to the payroll."
+    properties:
+      deductionType:
+        type: deductionType.deductionType
+        description: |
+          Participant´s deductions type.
+        required: true
+
+      value:
+        type: value.value
+        description: |
+          Contains the value associated with the deduction type.
+        required: false
+
+    

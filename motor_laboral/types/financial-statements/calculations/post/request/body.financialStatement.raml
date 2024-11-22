@@ -1,0 +1,34 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  accountingAccounts: body.financialStatement.accountingAccounts.raml
+
+types:
+  financialStatement:
+    type: object
+    description: "Financial statement related to business."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique statement identifier.
+        required: true
+
+      unit:
+        type: string
+        description: |
+          Unit of the system of separation of prices and measures in which the amounts of the financial statement are expressed.
+        required: true
+        enum: [MILLIONS,THOUSANDS,THOUSANDS_MILLIONS,UNITS]
+        (annotations.enumDescription):
+        - MILLIONS: "Numerical scale that represents a money amount where the current value is multiplied by one million."
+        - THOUSANDS: "Numerical scale that represents a money amount where the current value is multiplied by one thousand."
+        - THOUSANDS_MILLIONS: "Numerical scale that represents a money amount where the current value is multiplied by one billion."
+        - UNITS: "Numerical scale which each financial statement amounts is represented by literal units, this means that the amounts are expressed on an individual manner."
+
+      accountingAccounts:
+        type: accountingAccounts.accountingAccounts[]
+        description: |
+          Accounting accounts of the financial statement.
+        required: true
+

@@ -1,0 +1,42 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  valueRatioRatiodetail: body.ratios.specificRatioMagnitudes.ratioDetail.valueRatio.raml
+  percentageRatioRatiodetail: body.ratios.specificRatioMagnitudes.ratioDetail.percentageRatio.raml
+
+types:
+  specificRatioMagnitudes:
+    type: object
+    description: "Ratios and magnitudes calculated by engine."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique id to identify the ratio or magnitude.
+        required: true
+
+      description:
+        type: string
+        description: |
+          Describes the classification of the ratio.
+        required: false
+
+      isCalculated:
+        type: boolean
+        description: |
+          It is calculated, if the value is true, it is because the risk tool could calculate it, otherwise its value is false and likewise it ratifies when the value is a possible 0.
+        required: true
+
+      classification:
+        type: string
+        description: |
+          Description of ratio’s type or magnitude’s type.
+        required: true
+
+      ratioDetail:
+        type: valueRatioRatiodetail.valueRatio | percentageRatioRatiodetail.percentageRatio
+        description: |
+          Amount associated to the account (this type of data includes amount and currency).
+        required: true
+
+    

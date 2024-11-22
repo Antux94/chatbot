@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  informationSources:
+    type: object
+    description: "Contains the source of information with which the information is enriched. This can be SOI / APL, Income Predictor or HDC."
+    properties:
+      name:
+        type: string
+        description: |
+          Name of the information source.
+        required: true
+
+      isConsulted:
+        type: boolean
+        description: |
+          Indicator that informs if this source of information was used for the verification and enrichment of the client's declarative information.
+        required: true
+
+    

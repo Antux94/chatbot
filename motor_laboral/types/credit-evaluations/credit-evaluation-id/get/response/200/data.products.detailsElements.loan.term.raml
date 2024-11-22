@@ -1,0 +1,26 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  term:
+    type: object
+    description: "Total number of deadlines to complete the loan payment."
+    properties:
+      number:
+        type: number
+        description: |
+          Total number of terms.
+        required: true
+
+      frequency:
+        type: string
+        description: |
+          Period in which terms are defined.
+        required: true
+        enum: [DAILY,MONTHLY,YEARLY]
+        (annotations.enumDescription):
+        - DAILY: "Daily period."
+        - MONTHLY: "Monthly period."
+        - YEARLY: "Yearly period."
+

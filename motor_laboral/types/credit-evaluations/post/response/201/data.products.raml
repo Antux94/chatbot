@@ -1,0 +1,19 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  loanDetailselements: data.products.detailsElements.loan.raml
+  accountDetailselements: data.products.detailsElements.account.raml
+  cardDetailselements: data.products.detailsElements.card.raml
+
+types:
+  products:
+    type: object
+    description: "Detailed information according to the product type."
+    properties:
+      detailsElements:
+        type: loanDetailselements.loan | accountDetailselements.account | cardDetailselements.card
+        description: |
+          Detailed information according to the product type.
+        required: true
+
+    

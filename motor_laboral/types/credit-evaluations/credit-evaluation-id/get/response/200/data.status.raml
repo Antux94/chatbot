@@ -1,0 +1,26 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  status:
+    type: object
+    description: "Contains the status of the execution of all the choreography towards third parties."
+    properties:
+      id:
+        type: string
+        description: |
+          Execution status identifier.
+        required: true
+        enum: [IN_PROGRESS,CANCELLED,FINISHED]
+        (annotations.enumDescription):
+        - IN_PROGRESS: "The execution is in progress and the time in which the service should be launched again is returned."
+        - CANCELLED: "The execution of the choreography failed."
+        - FINISHED: "The execution of the choreography ended successfully."
+
+      nextTimeExecution:
+        type: string
+        description: |
+          Total time in which the service should be re-executed.
+        required: true
+

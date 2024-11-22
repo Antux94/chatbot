@@ -1,3 +1,11 @@
-streamlit
-openai
+streamlit~=1.40.1
+openai~=1.55.0
 streamlit_option_menu
+langchain~=0.3.7
+langchain_core
+langchain_openai
+langchain-core~=0.3.19
+langchain-openai~=0.2.9
+pandas~=2.2.3
+numpy~=1.26.4
+python-dotenv

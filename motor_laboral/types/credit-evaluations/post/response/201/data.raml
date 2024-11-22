@@ -1,0 +1,70 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  informationSources: data.informationSources.raml
+  participants: data.participants.raml
+  products: data.products.raml
+  engineControlRiskAssessmentTool: data.engineControlRiskAssessmentTool.raml
+  engineCalculations: data.engineCalculations.raml
+  details: data.details.raml
+  status: data.status.raml
+
+types:
+  data:
+    type: object
+    description: ""
+    properties:
+      informationSources:
+        type: informationSources.informationSources[]
+        description: |
+          Contains the source of information with which the information is enriched. This can be SOI / APL, Income Predictor or HDC.
+        required: false
+
+      participants:
+        type: participants.participants[]
+        description: |
+          It is the participants to which a credit evaluation is applied.
+        required: true
+
+      products:
+        type: products.products[]
+        description: |
+          Detailed information according to the product type.
+        required: true
+
+      engineControlRiskAssessmentTool:
+        type: engineControlRiskAssessmentTool.engineControlRiskAssessmentTool
+        description: |
+          Control object of the decision process flow executed.
+        required: false
+
+      engineCalculations:
+        type: engineCalculations.engineCalculations
+        description: |
+          Data calculated by the risk engine based on the input information.
+        required: false
+
+      details:
+        type: details.details
+        description: |
+          It contains the vectors with the control variables returned by the risk assessment engine.
+        required: false
+
+      status:
+        type: status.status
+        description: |
+          Contains the status of the execution of all the choreography towards third parties.
+        required: true
+
+      isIncomeConsolidation:
+        type: boolean
+        description: |
+          Determines if the user's income is consolidated.
+        required: false
+
+      isChallenger:
+        type: boolean
+        description: |
+          Determine the policy strategy for user validation.
+        required: false
+

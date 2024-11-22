@@ -1,0 +1,41 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  liabilityAmount: data.workPlaces.liabilities.liabilityType.liabilityAmount.raml
+
+types:
+  liabilityType:
+    type: object
+    description: "Type of liability declared by the person consulted."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the liability declared by the person consulted.
+        required: true
+        enum: [ARL,HEALTH,PENSION,PARAFISCAL,FAMILY]
+        (annotations.enumDescription):
+        - ARL: "Payments destined to manage labor accidents of the employee, the ARL entities in Colombia care and manage workers who have an accident or become ill due to causes inherent to the development of their work."
+        - HEALTH: "Payments destined to public health."
+        - PENSION: "Payments destined to retirement savings of the employee."
+        - PARAFISCAL: "Payments destined to cover parafiscals costs."
+        - FAMILY: "Payments to familiar contributions of the employee."
+
+      description:
+        type: string
+        description: |
+          Descriptions associated to the type of liability.
+        required: false
+
+      liabilityAmount:
+        type: liabilityAmount.liabilityAmount
+        description: |
+          Information of a certain liability deducted from a person´s salary
+        required: true
+
+      paymentDate:
+        type: datetime
+        description: |
+          Date on which the obligation has been payed.
+        required: false
+

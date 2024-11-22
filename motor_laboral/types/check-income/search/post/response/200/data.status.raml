@@ -1,0 +1,26 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  status:
+    type: object
+    description: "Status of the operation that has been created."
+    properties:
+      id:
+        type: string
+        description: |
+          Status of the operation that has been created.
+        required: true
+        enum: [INIT,ERROR,FINISH]
+        (annotations.enumDescription):
+        - INIT: "The external entity service has been consulted and it is awaiting response."
+        - ERROR: "The external service has not responded succesfully."
+        - FINISH: "The external service has responded and its information could be consulted."
+
+      name:
+        type: string
+        description: |
+          Name of the operation status.
+        required: false
+

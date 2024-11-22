@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  value: data.products.detailsElements.loan.good.value.raml
+  economicConditions: data.products.detailsElements.loan.good.economicConditions.raml
+
+types:
+  good:
+    type: object
+    description: "Good that the customer wants to buy with the granted loan."
+    properties:
+      value:
+        type: value.value
+        description: |
+          Price of the good.
+        required: false
+
+      economicConditions:
+        type: economicConditions.economicConditions[]
+        description: |
+          It’s economic conditions that the acquired good can have.
+        required: false
+

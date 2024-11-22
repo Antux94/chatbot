@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  declaredFixedIncome:
+    type: object
+    description: "Fixed income declared by the customer."
+    properties:
+      amount:
+        type: number
+        description: |
+          Fixed income amount.
+        required: true
+
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency of the fixed income amount.
+        required: true
+

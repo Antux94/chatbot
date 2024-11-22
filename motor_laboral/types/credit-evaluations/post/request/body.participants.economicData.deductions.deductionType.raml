@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  deductionType:
+    type: object
+    description: "Participant´s deductions type."
+    properties:
+      id:
+        type: string
+        description: |
+          Participant´s deductions type identifier.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Participant´s deductions type description.
+        required: true
+

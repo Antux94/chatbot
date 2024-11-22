@@ -1,0 +1,28 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  status:
+    type: object
+    description: "Status of the async task ticket."
+    properties:
+      id:
+        type: string
+        description: |
+          Information identifier of the task status.
+        required: true
+        enum: [PROCESSING,SUCCESSFUL,FAILURE]
+        (annotations.enumDescription):
+        - PROCESSING: "Interaction in process with the third party."
+        - SUCCESSFUL: "Interaction with the third party is over."
+        - FAILURE: "Interaction with the third party failed."
+        example: "SUCCESSFUL"
+
+      name:
+        type: string
+        description: |
+          Information about the status of the task.
+        required: true
+        example: "Completed"
+

@@ -1,0 +1,240 @@
+{
+  "commercialChannel": {
+    "id": "NC",
+    "name": "NUEVO MODELO DE CONTRATACIÓN"
+  },
+  "requestSource": "NUEVO MODELO DE CONTRATACIÓN",
+  "participants": [
+    {
+      "identityDocument": {
+        "documentType": "CC",
+        "documentNumber": "6331558"
+      },
+      "economicActivity": {
+        "id": "1G",
+        "isHighRisk": true
+      },
+      "lastname": "PALACIOS",
+      "customerSeniority": {
+        "number": 7,
+        "seniorityTimeType": {
+          "id": "YEAR"
+        }
+      },
+      "nationality": {
+        "id": "CO"
+      },
+      "gender": {
+        "id": "MALE"
+      },
+      "roleType": {
+        "id": "HOLDER"
+      },
+      "birthDate": "1954-03-03",
+      "maritalStatus": {
+        "id": "SINGLE",
+        "name": "SINGLE"
+      },
+      "personsOnCharge": 1,
+      "familyMembersNumber": 1,
+      "bureauClassification": "G1",
+      "hasDirectDebits": true,
+      "hasPayroll": true,
+      "hasLowIncome": true,
+      "addresses": [
+        {
+          "addressType": {
+            "id": "HEADQUARTERS"
+          },
+          "location": {
+            "addressName": "701 32nd st S",
+            "city": "Birmingham",
+            "state": {
+              "id": "AL"
+            },
+            "country": {
+              "id": "US"
+            },
+            "zipCode": "35244"
+          }
+        }
+      ],
+      "averagePassiveBalance": {
+        "amount": 1000,
+        "currency": "COP"
+      },
+      "cashBalance": {
+        "incomeAmount": {
+          "amount": 2000,
+          "currency": "COP"
+        },
+        "finalAmount": {
+          "amount": 3000,
+          "currency": "COP"
+        },
+        "ratio": 0.7
+      },
+      "installmentIncomeRatio": 0.7,
+      "cardUsageRatio": 0.5,
+      "averageBalanceRatio": 0.3,
+      "professionalEmploymentSituation": "10001",
+      "economicData": {
+        "habitualResidence": {
+          "ownsershipType": {
+            "id": "OWNER"
+          },
+          "propertyType": {
+            "id": "OWNER"
+          },
+          "value": {
+            "amount": 243000000,
+            "currency": "COP"
+          },
+          "stratum": 5
+        },
+        "profession": {
+          "id": "EMP"
+        },
+        "bankDepositBalance": {
+          "amount": 500000000,
+          "currency": "COP"
+        },
+        "realEstatesValue": {
+          "amount": 5000000000,
+          "currency": "COP"
+        },
+        "quotas": [
+          {
+            "id": "PLAN INTEGRAL",
+            "value": {
+              "amount": 5000000,
+              "currency": "COP"
+            }
+          }
+        ],
+        "premium": {
+          "isPremium": true,
+          "value": {
+            "amount": 10000000,
+            "currency": "COP"
+          }
+        },
+        "patrimony": {
+          "amount": 7000000000,
+          "currency": "COP"
+        },
+        "occupationType": {
+          "id": "1010",
+          "name": "OCCUPATION"
+        },
+        "employmentSeniority": {
+          "number": 15,
+          "seniorityTimeType": {
+            "id": "YEAR"
+          }
+        },
+        "employmentSituation": {
+          "id": "1",
+          "name": "Empleado"
+        },
+        "creditData": {
+          "creditOrigin": {
+            "id": "NET"
+          },
+          "creditDestination": {
+            "id": "MORTGAGE",
+            "name": "MORTGAGE"
+          }
+        },
+        "valueOfAppraisal": {
+          "amount": 200000000,
+          "currency": "COP"
+        },
+        "deductions": [
+          {
+            "deductionType": {
+              "id": "deductions",
+              "name": "deductions"
+            },
+            "value": {
+              "amount": 3000,
+              "currency": "COP"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "products": [
+    {
+      "detailsElements": {
+        "productId": "g6d8js3jsvy",
+        "productType": "LOAN",
+        "scoringId": "139969",
+        "scoringType": {
+          "id": "DECLARATIVE"
+        },
+        "evaluationType": {
+          "id": "INDIVIDUAL"
+        },
+        "operationType": {
+          "id": "MORTGAGE",
+          "name": "MORTGAGE"
+        },
+        "dateOfApartment": "1954-03-03",
+        "isMortage": true,
+        "mortgage": {
+          "isFirstLiving": true,
+          "surfaceArea": "220",
+          "buildedSurface": "100",
+          "propertyType": {
+            "id": "CHALET"
+          }
+        },
+        "good": {
+          "economicConditions": [
+            {
+              "id": "Valor_vehiculo",
+              "value": {
+                "amount": 100000000,
+                "currency": "COP"
+              }
+            }
+          ]
+        },
+        "financingPercent": 70,
+        "requestImport": {
+          "amount": 200000000,
+          "currency": "COP"
+        },
+        "term": {
+          "frequency": "MONTHLY",
+          "value": 12
+        },
+        "product": {
+          "status": {
+            "id": "NEW"
+          }
+        },
+        "subproduct": {
+          "id": "VEHICULO"
+        },
+        "minimumAmount": {
+          "amount": 1000000,
+          "currency": "COP"
+        },
+        "maximumAmount": {
+          "amount": 50000000,
+          "currency": "COP"
+        },
+        "relatedContract": {
+          "contractId": "000015",
+          "contractNumber": "00000010"
+        }
+      }
+    }
+  ],
+  "isIncomeConsolidation": true,
+  "isChallenger": false
+}
+

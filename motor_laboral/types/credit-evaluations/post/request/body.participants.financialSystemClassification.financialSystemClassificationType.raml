@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  financialSystemClassificationType:
+    type: object
+    description: "Financial system classification type."
+    properties:
+      id:
+        type: string
+        description: |
+          Financial system classification type identifier.
+        required: true
+        enum: [NORMAL,WITH_POTENTIAL_PROBLEMS,DEFICIENT,DOUBT,LOSS,NOT_CLASSIFIED]
+        (annotations.enumDescription):
+        - NORMAL: "When the client pays punctually or there is a delay that does not exceed 8 days."
+        - WITH_POTENTIAL_PROBLEMS: "When arrears in payments go between 9 and 30 days."
+        - DEFICIENT: "When the customer has payment delays between 31 and 60 days"
+        - DOUBT: "When paid between 61 and 120 days after the due date."
+        - LOSS: "When the customer has payment delays that exceed 120 days."
+        - NOT_CLASSIFIED: "When the person is not in the financial system."
+

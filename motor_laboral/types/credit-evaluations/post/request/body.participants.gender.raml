@@ -1,0 +1,19 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  gender:
+    type: object
+    description: "The person gender."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of gender.
+        required: true
+        enum: [MALE,FEMALE]
+        (annotations.enumDescription):
+        - MALE: "Male gender."
+        - FEMALE: "Female gender."
+

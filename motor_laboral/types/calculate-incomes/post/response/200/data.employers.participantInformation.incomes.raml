@@ -1,0 +1,46 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  incomeAmount: data.employers.participantInformation.incomes.incomeAmount.raml
+
+types:
+  incomes:
+    type: object
+    description: "Report participant incomes by employer"
+    properties:
+      id:
+        type: string
+        description: |
+          Income type.
+        required: true
+        enum: [SALARY,RENT,SALES,SERVICES]
+        (annotations.enumDescription):
+        - SALARY: "Salary incomes."
+        - RENT: "Incomes from rent payments."
+        - SALES: "Incomes from sales."
+        - SERVICES: "Incomes from services rendered."
+
+      name:
+        type: string
+        description: |
+          Description incomen type.
+        required: true
+
+      incomeAmount:
+        type: incomeAmount.incomeAmount
+        description: |
+          Income amount received by participant.
+        required: true
+
+      frecuency:
+        type: string
+        description: |
+          Description of periodicity to income.
+        required: true
+        enum: [DAILY,BIWEEKLY,MONTHLY]
+        (annotations.enumDescription):
+        - DAILY: "Daily periodicity."
+        - BIWEEKLY: "Biweekly periodicity."
+        - MONTHLY: "Monthly periodicity."
+
+    

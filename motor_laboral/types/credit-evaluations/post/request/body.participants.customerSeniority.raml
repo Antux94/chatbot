@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  seniorityTimeType: body.participants.customerSeniority.seniorityTimeType.raml
+
+types:
+  customerSeniority:
+    type: object
+    description: "Seniority of the customer in the financial entity."
+    properties:
+      number:
+        type: number
+        description: |
+          National code of economic activity of minimum level assigned to customers when registering in customers. Local field of geography (CNAE on Spain, ISIC on Spain, NAIC in US ..).
+        required: true
+
+      seniorityTimeType:
+        type: seniorityTimeType.seniorityTimeType
+        description: |
+          Seniority's period of the customer in the entity.
+        required: true
+

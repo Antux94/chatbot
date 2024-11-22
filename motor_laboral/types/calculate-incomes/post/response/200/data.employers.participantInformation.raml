@@ -1,0 +1,43 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  seniority: data.employers.participantInformation.seniority.raml
+  incomes: data.employers.participantInformation.incomes.raml
+  deduction: data.employers.participantInformation.deduction.raml
+  employmentSituation: data.employers.participantInformation.employmentSituation.raml
+
+types:
+  participantInformation:
+    type: object
+    description: "Information about the participant"
+    properties:
+      seniority:
+        type: seniority.seniority
+        description: |
+          Seniority of the participant in the company.
+        required: true
+
+      incomes:
+        type: incomes.incomes[]
+        description: |
+          Report participant incomes by employer
+        required: true
+
+      deduction:
+        type: deduction.deduction
+        description: |
+          Report participant deduction by employer
+        required: true
+
+      employmentSituation:
+        type: employmentSituation.employmentSituation
+        description: |
+          Employment status of the participant with the employer
+        required: true
+
+      dateRelationship:
+        type: date-only
+        description: |
+          String based on ISO-8601 for specifying the date of entry or relationship with the employers
+        required: true
+

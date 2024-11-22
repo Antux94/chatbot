@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  totalAmount: body.participants.cardCreditLine.totalAmount.raml
+  availableAmount: body.participants.cardCreditLine.availableAmount.raml
+
+types:
+  cardCreditLine:
+    type: object
+    description: "Card credit line that the person has with the bank."
+    properties:
+      totalAmount:
+        type: totalAmount.totalAmount
+        description: |
+          Total amount of the credit line of the credit cards that the person has with the bank.
+        required: false
+
+      availableAmount:
+        type: availableAmount.availableAmount
+        description: |
+          Available amount of the credit line of the credit cards that the person has with the bank.
+        required: false
+

@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  roa:
+    type: object
+    description: "The return on assets (ROA) shows the percentage of how profitable a company's assets are in generating revenue."
+    properties:
+      percentage:
+        type: number
+        description: |
+          Percentage of the asset.
+        required: false
+
+      isCalculated:
+        type: boolean
+        description: |
+          It is calculated, if the value is true, it is because the risk tool could calculate it, otherwise its value is false and likewise it ratifies when the value is a possible 0.
+        required: true
+

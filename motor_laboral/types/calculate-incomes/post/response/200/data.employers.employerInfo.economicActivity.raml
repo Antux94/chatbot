@@ -1,0 +1,27 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  economicActivity:
+    type: object
+    description: "Economic activity of the company where the person works."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the economic activity
+        required: true
+
+      name:
+        type: string
+        description: |
+          Description type of activity
+        required: true
+
+      internationalClassification:
+        type: string
+        description: |
+          Description related to uniform code international classification of economic activities. It's commonly called CIIU.
+        required: true
+

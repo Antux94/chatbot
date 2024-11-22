@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  availableAmount:
+    type: object
+    description: "Available amount of the credit line of the credit cards that the person has with the bank."
+    properties:
+      amount:
+        type: number
+        description: |
+          Monetary amount of the available credit line.
+        required: true
+
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency of the available credit line amount.
+        required: true
+

@@ -1,0 +1,30 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  conditions:
+    type: object
+    description: "Conditions to opening product."
+    properties:
+      id:
+        type: string
+        description: |
+          Identification of condition.
+        required: true
+        example: "0011"
+
+      openingAmount:
+        type: number
+        description: |
+          Range of the amount to be calculated to opening product.
+        required: true
+        example: 1500000
+
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency related to the amount.
+        required: true
+        example: "COP"
+

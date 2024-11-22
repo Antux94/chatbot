@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  occupationType:
+    type: object
+    description: "Customer occupation or professional classification. For example, draftsman, lawyer, teacher, etc."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of customer occupation.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Description of the participant's profession.
+        required: true
+

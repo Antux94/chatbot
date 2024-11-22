@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  value:
+    type: object
+    description: "Monetary value associated with the consolidated."
+    properties:
+      amount:
+        type: number
+        description: |
+          Amount of consolidated.
+        required: true
+
+      currency:
+        type: string
+        description: |
+          String based on ISO-8601 for specifying the consolidated.
+        required: true
+

@@ -1,0 +1,16 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  tree: data.details.tree.raml
+
+types:
+  details:
+    type: object
+    description: "It contains the vectors with the control variables returned by the risk assessment engine."
+    properties:
+      tree:
+        type: tree.tree[]
+        description: |
+          Details about the segmentation followed in the tool.
+        required: true
+

@@ -1,0 +1,357 @@
+{
+  "data": [
+    {
+      "identityDocument": {
+        "documentType": "CC",
+        "documentNumber": "0000000303203300"
+      },
+      "commerceChamberEnrollment": {
+        "status": "ACTIVE",
+        "registrationDate": "2017-12-31",
+        "renewalYear": "1980",
+        "registrationCity": "BOGOTA",
+        "owners": [
+          {
+            "ownerType": {
+              "id": "EXECUTIVE",
+              "name": "Executive of the company"
+            },
+            "fullName": "ANDRES GRADO",
+            "identityDocument": {
+              "documentType": "CC",
+              "documentNumber": "000000040440340"
+            },
+            "limitations": "las cl�usulas, deberes y facultades que tiene el representante legal"
+          }
+        ],
+        "contactDetails": [
+          {
+            "contact": "BBVA@BBVA.COM",
+            "contactType": "EMAIL"
+          },
+          {
+            "contact": "CALLE 12 #32-24",
+            "contactType": "ADDRESS"
+          },
+          {
+            "contact": "BBVA.COM.CO",
+            "contactType": "WEB_PAGE"
+          }
+        ]
+      },
+      "partnershipValidity": "2017-12-07",
+      "hasSeizedProducts": false,
+      "business": {
+        "employessInformation": {
+          "employeesNumber": 120,
+          "paidCapital": {
+            "currency": "COP",
+            "amount": 123.123
+          }
+        },
+        "exports": {
+          "value": {
+            "exportInformation": {
+              "currency": "COP",
+              "amount": 12312
+            },
+            "dateMovements": "2017-03-03"
+          }
+        },
+        "imports": {
+          "value": {
+            "importsInformation": {
+              "currency": "COP",
+              "amount": 123.123
+            },
+            "dateMovements": "2017-03-03"
+          }
+        },
+        "financialInformation": {
+          "accountingAccounts": [
+            {
+              "name": "TOTAL ACTIVOS",
+              "balanceByYear": [
+                {
+                  "year": "1982",
+                  "imports": [
+                    {
+                      "currency": "COP",
+                      "totalValue": 0
+                    }
+                  ]
+                },
+                {
+                  "year": "1983",
+                  "imports": [
+                    {
+                      "currency": "COP",
+                      "totalValue": 0
+                    }
+                  ]
+                }
+              ],
+              "horizontalAnalysis": "0%",
+              "sourceFinancialInformation": "balance"
+            },
+            {
+              "name": "TOTAL PASIVOS",
+              "balanceByYear": [
+                {
+                  "year": "1982",
+                  "imports": [
+                    {
+                      "currency": "COP",
+                      "totalValue": 0
+                    }
+                  ]
+                },
+                {
+                  "year": "1983",
+                  "imports": [
+                    {
+                      "currency": "COP",
+                      "totalValue": 0
+                    }
+                  ]
+                }
+              ],
+              "horizontalAnalysis": "0%",
+              "sourceFinancialInformation": "balance"
+            },
+            {
+              "name": "TOTAL PATRIMONIO LIQ",
+              "balanceByYear": [
+                {
+                  "year": "1982",
+                  "imports": [
+                    {
+                      "currency": "COP",
+                      "totalValue": 13456
+                    }
+                  ]
+                },
+                {
+                  "year": "1983",
+                  "imports": [
+                    {
+                      "currency": "COP",
+                      "totalValue": 1245
+                    }
+                  ]
+                }
+              ],
+              "horizontalAnalysis": "0%",
+              "sourceFinancialInformation": "N.A"
+            },
+            {
+              "name": "TOTAL INGRESOS OPERA",
+              "balanceByYear": [
+                {
+                  "year": "1982",
+                  "imports": [
+                    {
+                      "currency": "COP",
+                      "totalValue": 1230
+                    }
+                  ]
+                },
+                {
+                  "year": "1983",
+                  "imports": [
+                    {
+                      "currency": "COP",
+                      "totalValue": 43220
+                    }
+                  ]
+                }
+              ],
+              "horizontalAnalysis": "24%",
+              "sourceFinancialInformation": "balance"
+            },
+            {
+              "name": "UTILIDAD NETA",
+              "balanceByYear": [
+                {
+                  "year": "1982",
+                  "imports": [
+                    {
+                      "currency": "COP",
+                      "totalValue": 0
+                    }
+                  ]
+                },
+                {
+                  "year": "1983",
+                  "imports": [
+                    {
+                      "currency": "COP",
+                      "totalValue": 0
+                    }
+                  ]
+                }
+              ],
+              "horizontalAnalysis": "0%",
+              "sourceFinancialInformation": "balance"
+            }
+          ],
+          "reportDate": "2022-10-25",
+          "creditScore": 890,
+          "statusDocument": {
+            "id": "001",
+            "name": "Prueba",
+            "reason": "CANCELED_BY_DOUBLE"
+          },
+          "balance": {
+            "shortTerm": {
+              "currency": "COP",
+              "amount": 1500000
+            },
+            "longTerm": {
+              "currency": "COP",
+              "amount": 1500000
+            }
+          },
+          "indebtednessLevel": "high",
+          "bankingCompliance": "default ",
+          "punctualityPayment": "high"
+        }
+      },
+      "externalReportEntities": [
+        {
+          "name": "BBVA",
+          "cutOffDate": "2020-11-09",
+          "hasArrears": true
+        },
+        {
+          "name": "BBC",
+          "cutOffDate": "2020-10-15",
+          "hasArrears": true
+        },
+        {
+          "name": "BOGOTA",
+          "cutOffDate": "2020-11-23",
+          "hasArrears": true
+        }
+      ],
+      "externalFinancialInformation": {
+        "reportDate": "2020-02-11",
+        "creditScore": 0,
+        "statusDocument": {
+          "id": "Canceled",
+          "name": "Canceled by double attempt",
+          "reason": "CANCELED_BY_DOUBLE"
+        },
+        "balance": {
+          "shortTerm": {
+            "currency": "COP",
+            "amount": 16980
+          },
+          "longTerm": {
+            "currency": "COP",
+            "amount": 401580
+          },
+          "debtTotalPrincipal": {
+            "currency": "COP",
+            "amount": 401580
+          },
+          "guarantorTotalAmount": {
+            "currency": "COP",
+            "amount": 401580
+          },
+          "arrearPrincipalAmount": {
+            "currency": "COP",
+            "amount": 401580
+          }
+        },
+        "indebtednessLevel": "High",
+        "bankingCompliance": "PROCESANDO",
+        "punctualityPayment": "High",
+        "tracking": {
+          "value": 5,
+          "period": {
+            "unit": "MONTHS",
+            "number": 3
+          }
+        },
+        "maximumExtinguishedContracts": 10,
+        "sectors": [
+          {
+            "id": "FINANCIAL",
+            "paymentBehavior": "X N 3 2 1 B N N N N N N N N 1 N 1 N 1",
+            "extinctObligationsNumber": 8,
+            "obligationAmounts": [
+              {
+                "id": "ARREARS_AMOUNT",
+                "amount": {
+                  "currency": "COP",
+                  "amount": 0.33
+                }
+              },
+              {
+                "id": "MAXIMUM_ARREARS_AMOUNT",
+                "amount": {
+                  "currency": "COP",
+                  "amount": 99.95
+                }
+              },
+              {
+                "id": "ANNUAL_FINANCIAL_DEBT",
+                "amount": {
+                  "currency": "COP",
+                  "amount": 44.88
+                }
+              }
+            ],
+            "obligationsValues": [
+              {
+                "id": "PERIODS_NUMBER_WITH_DELAY",
+                "value": 3,
+                "period": {
+                  "unit": "MONTHS",
+                  "number": 55
+                }
+              },
+              {
+                "id": "MAXIMUM_ARREARS_PERIODS",
+                "value": 9,
+                "period": {
+                  "unit": "MONTHS",
+                  "number": 1
+                }
+              }
+            ],
+            "arrearsObligationsNumber": 45,
+            "punctuations": [
+              {
+                "id": "1",
+                "punctuationDate": "2018-02-11",
+                "debtParcialAmount": {
+                  "currency": "COP",
+                  "amount": 401580
+                },
+                "qualification": [
+                  {
+                    "id": "A",
+                    "value": "2"
+                  },
+                  {
+                    "id": "B",
+                    "value": "4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "hasSeizedContracts": true,
+        "hasObligationsRestructured": false,
+        "bureauOperator": "CIFIN",
+        "negativeReason": "N1, N4,N5",
+        "positiveReason": "null",
+        "scoreCreditVision": "A"
+      }
+    }
+  ]
+}
+

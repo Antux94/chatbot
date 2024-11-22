@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  financialSystemClassificationType: data.participants.financialSystemClassification.financialSystemClassificationType.raml
+  debtAmount: data.participants.financialSystemClassification.debtAmount.raml
+
+types:
+  financialSystemClassification:
+    type: object
+    description: "Classification of the person in the financial system. According to the days of delay that a debtor has when not paying his credit (risk of default), he receives a category, with which we identify his behavior in the payments he has with his creditors."
+    properties:
+      financialSystemClassificationType:
+        type: financialSystemClassificationType.financialSystemClassificationType
+        description: |
+          Financial system classification type.
+        required: true
+
+      debtAmount:
+        type: debtAmount.debtAmount
+        description: |
+          Debt amount that the person has with the financial system.
+        required: false
+

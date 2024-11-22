@@ -1,0 +1,56 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  identityDocument: body.person.identityDocument.raml
+  laboralInformation: body.person.laboralInformation.raml
+
+types:
+  person:
+    type: object
+    description: "Person associated with calculation."
+    properties:
+      identityDocument:
+        type: identityDocument.identityDocument
+        description: |
+          Identity document information.
+        required: true
+
+      firstName:
+        type: string
+        description: |
+          First name of the Customer.
+        required: true
+
+        (annotations.customControlAttributes):
+        - kind: ENCRYPTION_AND_DECRYPTION
+          country: CO
+          inFunction: decypher
+        - kind: AUDITABLE_DATA
+          country: CO
+      middleName:
+        type: string
+        description: |
+          Middle name of the Customer .
+        required: false
+
+        (annotations.customControlAttributes):
+        - kind: AUDITABLE_DATA
+          country: CO
+      lastName:
+        type: string
+        description: |
+          Last name of the participant.
+        required: true
+
+        (annotations.customControlAttributes):
+        - kind: ENCRYPTION_AND_DECRYPTION
+          country: CO
+          inFunction: decypher
+        - kind: AUDITABLE_DATA
+          country: CO
+      laboralInformation:
+        type: laboralInformation.laboralInformation
+        description: |
+          It´s an object must contains the laboral information of employee.
+        required: false
+

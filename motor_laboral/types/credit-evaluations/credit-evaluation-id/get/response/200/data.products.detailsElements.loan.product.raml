@@ -1,0 +1,16 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  status: data.products.detailsElements.loan.product.status.raml
+
+types:
+  product:
+    type: object
+    description: "Contains the information of the product required by the client."
+    properties:
+      status:
+        type: status.status
+        description: |
+          State in which the good that is being acquired is.
+        required: true
+

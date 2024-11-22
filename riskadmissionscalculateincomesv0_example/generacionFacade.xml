@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<assembly>
+    <id>facade</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <!-- Se debe colocar el empaquetado del proyecto-->
+            <directory>target/classes/com/bbva/ccol/riskadmissionscalculateincomes/facade</directory>
+            <outputDirectory>com/bbva/ccol/riskadmissionscalculateincomes/facade</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>

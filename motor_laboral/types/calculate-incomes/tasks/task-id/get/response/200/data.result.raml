@@ -1,0 +1,51 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  person: data.result.person.raml
+  informationSources: data.result.informationSources.raml
+  totalIncomes: data.result.totalIncomes.raml
+  totalDeductions: data.result.totalDeductions.raml
+  employers: data.result.employers.raml
+  employmentHistory: data.result.employmentHistory.raml
+
+types:
+  result:
+    type: object
+    description: "Contains the result of calcute when the task is completed."
+    properties:
+      person:
+        type: person.person
+        description: |
+          Person associated with calculation.
+        required: true
+
+      informationSources:
+        type: informationSources.informationSources[]
+        description: |
+          Contains the source of information with which the information is enriched. This can be SOI / APL, Income or Predictor. It's required indicating what is the first source to Query
+        required: true
+
+      totalIncomes:
+        type: totalIncomes.totalIncomes
+        description: |
+          Total incomes from all employers
+        required: true
+
+      totalDeductions:
+        type: totalDeductions.totalDeductions
+        description: |
+          Total deductions from all employers
+        required: true
+
+      employers:
+        type: employers.employers[]
+        description: |
+          Employers that the employee has
+        required: true
+
+      employmentHistory:
+        type: employmentHistory.employmentHistory
+        description: |
+          Information about employment history.
+        required: false
+
