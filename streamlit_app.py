@@ -72,17 +72,21 @@ def run_install_script():
             break
         if output:
             print(output.strip())
+        
+        return output.strip()
 
     # Mostrar errores (si los hay)
     err = process.stderr.read()
     if err:
         print(err.strip())
+        return err.strip()
 
 st.title('Instalación de Maven')
 
 if st.button('Ejecutar script de instalación'):
     output = run_install_script()
-    st.text_area('Salida del script', output)
+    print("output : " + str(output))
+    st.text_area('Salida del script', str(output))
 
 
 #---------------------------------------------------------------------------------------------------------------MAVEN
