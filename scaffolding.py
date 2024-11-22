@@ -13,7 +13,7 @@ import generatorTest
 
 
 #Copia de plantilla original
-plantillaCopy.copia_plantilla()
+#plantillaCopy.copia_plantilla()
 
 
 def crear_carpetas(rutas):
