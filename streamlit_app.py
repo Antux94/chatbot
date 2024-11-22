@@ -56,6 +56,37 @@ with st.sidebar:
 
 #--------------------------------------------------------------------------------------------------------------SIDEBAR
 
+
+import subprocess
+
+def run_install_script():
+
+    bat_file = "/workspaces/chatbot/install.sh"
+        # Ejecutar el archivo .bat con Popen
+    process = subprocess.Popen([bat_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, shell=True)
+
+    # Mostrar la salida en tiempo real
+    while True:
+        output = process.stdout.readline()
+        if output == "" and process.poll() is not None:
+            break
+        if output:
+            print(output.strip())
+
+    # Mostrar errores (si los hay)
+    err = process.stderr.read()
+    if err:
+        print(err.strip())
+
+st.title('Instalación de Maven')
+
+if st.button('Ejecutar script de instalación'):
+    output = run_install_script()
+    st.text_area('Salida del script', output)
+
+
+#---------------------------------------------------------------------------------------------------------------MAVEN
+
 # Añadir una selectbox al sidebar
 cliente = st.sidebar.selectbox(
     'Cliente',
