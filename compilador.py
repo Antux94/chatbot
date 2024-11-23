@@ -35,9 +35,9 @@ def compilar():
     print("UBICACION------------------: " + ubicacion)
 
 
-    os.chdir(ubicacion)
+    #os.chdir(ubicacion)
 
-    bat_file = "install.sh"
+    bat_file = f"{ubicacion}/install.sh"
     print("bat_file" + bat_file)
 
     # Parámetro de entrada (ruta al archivo .java)

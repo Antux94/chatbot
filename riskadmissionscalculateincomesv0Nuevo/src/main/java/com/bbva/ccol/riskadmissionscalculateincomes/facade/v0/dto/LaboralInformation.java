@@ -17,7 +17,7 @@ public class LaboralInformation {
     }
     
     public String getCompanyId() {
-        return companyId;
+        return this.companyId;
     }
     
     public void setCompanyId(String companyId) {
@@ -25,7 +25,7 @@ public class LaboralInformation {
     }
     
     public Integer getDeclaratedIncome() {
-        return declaratedIncome;
+        return this.declaratedIncome;
     }
     
     public void setDeclaratedIncome(Integer declaratedIncome) {
