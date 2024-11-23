@@ -1,7 +1,8 @@
 echo hello
 
 
-#cd /workspaces/chatbot
+cd /mount/src/chatbot
+
 pwd
 
 export JAVA_HOME=jdk1.8.0_202
