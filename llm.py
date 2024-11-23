@@ -42,7 +42,7 @@ def generateJsonFromRaml(raml_service):
 
 
     # Acceder y imprimir el contenido
-    #print(response.content)
+    print(response.content)
     #print(response)
     #print(type(response.content))
 
@@ -60,10 +60,10 @@ def generateJsonFromRaml(raml_service):
     #TODO: QUEDA PENDIENTE HACERLO PARA EL GET
     description_value = json_object["post"]["body"]["application/json"]["type"]
 
-    #print(description_value)
+    print(description_value)
 
     mainDtoSerice = str(description_value).split(".")[-2]
-    #print(mainDtoSerice)
+    print(mainDtoSerice)
 
     return mainDtoSerice
 
