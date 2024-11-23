@@ -84,7 +84,7 @@ def gen_scaffolding():
 #gen_scaffolding()
 
 
-#compilador.compilar()
+    compilador.compilar()
 
 
 #mappper = "C:/Users/SURAMERICANA/PycharmProjects/asoAsistantMaster/asoasistantv1/riskadmissionscalculateincomesv0Nuevo/target/generated-sources/annotations/com/bbva/ccol/riskadmissionscalculateincomes/facade/v0/mapper/IPostRiskAdmissionsCalculateIncomesMapperImpl.java"

@@ -27,7 +27,8 @@ def compilar():
     #print(result.stderr)
 
     # Ruta al archivo .bat
-    bat_file = "compilar.bat"
+    bat_file = "/workspaces/chatbot/install.sh"
+    print("bat_file" + bat_file)
 
     # Parámetro de entrada (ruta al archivo .java)
     #java_file = "C:/Users/SURAMERICANA/OneDrive/Desktop/HolaMundo.java"

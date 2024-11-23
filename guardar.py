@@ -29,10 +29,18 @@ def guardar_dtos(ubicacion, carpeta, nombre_archivo, json):
   #    os.makedirs(carpeta_destino_temp)
 
   # Ruta del archivo que deseas guardar
+  
+  print("CARPETAS.......................")
+  print(carpeta_destino)
+  print(nombre_archivo)
+  print("CARPETAS.......................")
+
   ruta_archivo = os.path.join(carpeta_destino, nombre_archivo)
   #ruta_archivo_temp = os.path.join(carpeta_destino, nombre_archivo)
 
-  pos = ruta_archivo.rfind('\\')
+  pos = ruta_archivo.rfind('/')
+  print("POS.......................")
+  print(pos)
 
   # Dividir la cadena
   parte1 = ruta_archivo[:pos]

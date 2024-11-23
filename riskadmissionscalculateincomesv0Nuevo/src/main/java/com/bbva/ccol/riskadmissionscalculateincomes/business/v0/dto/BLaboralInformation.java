@@ -7,8 +7,16 @@ public class BLaboralInformation {
     private String companyId;
     private Integer declaratedIncome;
     
+    public BLaboralInformation() {
+    }
+    
+    public BLaboralInformation(String companyId, Integer declaratedIncome) {
+        this.companyId = companyId;
+        this.declaratedIncome = declaratedIncome;
+    }
+    
     public String getCompanyId() {
-        return companyId;
+        return this.companyId;
     }
     
     public void setCompanyId(String companyId) {
@@ -16,7 +24,7 @@ public class BLaboralInformation {
     }
     
     public Integer getDeclaratedIncome() {
-        return declaratedIncome;
+        return this.declaratedIncome;
     }
     
     public void setDeclaratedIncome(Integer declaratedIncome) {
