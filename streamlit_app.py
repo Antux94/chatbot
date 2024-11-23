@@ -150,6 +150,8 @@ if selected == "Inicio":
     st.markdown(banner_html, unsafe_allow_html=True)
 
 
+
+
     # Verificar si 'zip_generated' ya está en la sesión. Si no, inicializarlo en False.
     if 'zip_generated' not in st.session_state:
         st.session_state.zip_generated = False
@@ -269,10 +271,6 @@ if selected == "Inicio":
               #st.sidebar.title('Motor Laboral')
               st.success('¡Proceso completado!')
               #print("DOWNLOAD: " + str(download))
-
-
-
-
 
 
 
@@ -478,3 +476,7 @@ if selected == "Siscoba Bot":
         msg = response.choices[0].message.content
         st.session_state.messages.append({"role": "assistant", "content": msg})
         st.chat_message("assistant").write(msg)
+
+
+
+
