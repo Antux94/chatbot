@@ -25,7 +25,9 @@ def leerApiRamml(ruta):
         print(f"{index + 1}. {match}")
 
     # Get user input for selection
-    selected_index = int(input("Select an option: ")) - 1
+    #TODO: CAMBIAR SELECCION DE INDEX
+    selected_index = 0
+    #selected_index = int(input("Select an option: ")) - 1
 
     # Access the selected match
     selected_match = matches[selected_index]
