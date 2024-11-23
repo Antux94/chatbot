@@ -1,0 +1,73 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  period: data.participants.ratings.period.raml
+  partialPunctuations: data.participants.ratings.partialPunctuations.raml
+  toolSubmodel: data.participants.ratings.toolSubmodel.raml
+
+types:
+  ratings:
+    type: object
+    description: "List of ratings for period in a customer."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique identifier rating for a customer.
+        required: true
+
+      period:
+        type: period.period
+        description: |
+          Associated period to the financial statement. Represents the period covered by this.
+        required: false
+
+      partialPunctuations:
+        type: partialPunctuations.partialPunctuations[]
+        description: |
+          Parcial Punctuations information.
+        required: false
+
+      toolSubmodel:
+        type: toolSubmodel.toolSubmodel
+        description: |
+          Information about the model execution tool.
+        required: false
+
+      punctuation:
+        type: number
+        description: |
+          Final rating Punctuation.
+        required: true
+
+      defaultProbability:
+        type: number
+        description: |
+          Default probability for rating calculations.
+        required: true
+
+      shortScaleValue:
+        type: string
+        description: |
+          Rating of a business expressed in BBVA's master short scale (Standalone Rating).
+        required: true
+
+      longScaleValue:
+        type: string
+        description: |
+          Rating of a business expressed in BBVA's master short scale (Standalone Rating).
+        required: true
+
+      homologationCalification:
+        type: string
+        description: |
+          Homologation calification, this scale is for to check delegation. Example CO: 6 posibles values: (AA,A,BB,B,CC,C) CS: Only applies to CO
+        required: false
+
+      analysisDate:
+        type: datetime
+        description: |
+          String based on ISO-8601 date format for specifying the date of risk evaluation date.
+        required: true
+
+    

@@ -1,0 +1,28 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  delegationCommittees:
+    type: object
+    description: "Information about the committee encharge to made the delegation."
+    properties:
+      id:
+        type: string
+        description: |
+          unique delegation committee identifier.
+        required: true
+
+      formNumber:
+        type: string
+        description: |
+          number of form or record of the delegation committee.
+        required: true
+
+      celebrationDate:
+        type: date-only
+        description: |
+          celebrationDate
+        required: true
+
+    

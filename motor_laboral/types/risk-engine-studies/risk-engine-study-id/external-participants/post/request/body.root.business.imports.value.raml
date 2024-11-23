@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  importsInformation: body.root.business.imports.value.importsInformation.raml
+
+types:
+  value:
+    type: object
+    description: "Imports value."
+    properties:
+      importsInformation:
+        type: importsInformation.importsInformation
+        description: |
+          Imports information.
+        required: true
+
+      dateMovements:
+        type: date-only
+        description: |
+          Is the last year in which I register imports or exports before the Dian.
+        required: true
+

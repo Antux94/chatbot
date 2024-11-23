@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  subLimit:
+    type: object
+    description: "Detailed SubLimits approved by risks."
+    properties:
+      id:
+        type: string
+        description: |
+          Associated SubLimit identifier.
+        required: true
+

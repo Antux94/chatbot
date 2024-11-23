@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  bank: body.assignmentBusinessAgents.bank.raml
+
+types:
+  assignmentBusinessAgents:
+    type: object
+    description: "Information about the agent in charge of assignment the proposal to other agent with other profile."
+    properties:
+      user:
+        type: string
+        description: |
+          User responsible for assigning. Responsable to do the sanction.
+        required: true
+
+      bank:
+        type: bank.bank
+        description: |
+          Bank where the proposal information is registered
+        required: false
+

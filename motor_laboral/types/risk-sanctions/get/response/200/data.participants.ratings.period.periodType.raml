@@ -1,0 +1,19 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  periodType:
+    type: object
+    description: "Information about the period covered by the financial statement (one year or less than one year)."
+    properties:
+      id:
+        type: string
+        description: |
+          Balance sheet indicator applied in the financial statement.
+        required: true
+        enum: [ANNUAL,PARTIAL]
+        (annotations.enumDescription):
+        - ANNUAL: "The balance covers a period of 12 months."
+        - PARTIAL: "The balance covers a period of less than 12 months."
+

@@ -1,0 +1,45 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  identityDocument:
+    type: object
+    description: "Identity document of the participant."
+    properties:
+      documentType:
+        type: string
+        description: |
+          This field is used to distinguish the different type of document needed to identify the participant depending its situation
+        required: true
+        enum: [PASSPORT,NIF,RESIDENTIAL_PASS,DNI,RUC,NIT,CURP,INE,DL,STATE_ID,DIPLOMATIC,FOREIGNERS,MILITARY,POLICE,RUT,ARC,EAD,CC,CI,SOC,CE,ESD]
+        (annotations.enumDescription):
+        - PASSPORT: "Identifier document passport."
+        - NIF: "Identifier document fiscal identification number."
+        - RESIDENTIAL_PASS: "Identifier document residence."
+        - DNI: "Identifier national identity document."
+        - RUC: "Identifier document single tax registration."
+        - NIT: "Identifier document tax identification number."
+        - CURP: "Unique Population Registry Code."
+        - INE: "National Electoral Institute Code."
+        - DL: "Drivers License Number."
+        - STATE_ID: "State Issued Identification."
+        - DIPLOMATIC: "Identifier document issued to members of diplomatic missions residing in."
+        - FOREIGNERS: "Identifier card for foreign residents."
+        - MILITARY: "Identifier document that accredits the military situation."
+        - POLICE: "Police Identification Card Identifier."
+        - RUT: "Identifier national identity document."
+        - ARC: "Alien registration card."
+        - EAD: "Employment authorization document."
+        - CC: "Identifier document for citizenship card."
+        - CI: "Civil Identification Card."
+        - SOC: "Social security identification."
+        - CE: "Foreigner ID."
+        - ESD: "Identifier document tax identification foreigner number."
+
+      documentNumber:
+        type: string
+        description: |
+          Identity number of customer.
+        required: true
+

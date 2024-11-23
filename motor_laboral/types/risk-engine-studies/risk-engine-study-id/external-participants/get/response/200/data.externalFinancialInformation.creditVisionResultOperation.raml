@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  creditVisionResultOperation:
+    type: object
+    description: "Credivition resol operation."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique identifire of de credivition.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Name of operation resol operation.
+        required: true
+

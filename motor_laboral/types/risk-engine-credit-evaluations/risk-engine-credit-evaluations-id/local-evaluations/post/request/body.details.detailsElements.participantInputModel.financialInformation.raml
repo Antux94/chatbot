@@ -1,0 +1,29 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  tracking: body.details.detailsElements.participantInputModel.financialInformation.tracking.raml
+  sectors: body.details.detailsElements.participantInputModel.financialInformation.sectors.raml
+
+types:
+  financialInformation:
+    type: object
+    description: "Object that contains all information about qualitative info used to execute rating."
+    properties:
+      tracking:
+        type: tracking.tracking
+        description: |
+          Represents number of times the financial information is consulted of customer.
+        required: false
+
+      maximumExtinguishedContracts:
+        type: number
+        description: |
+          maximum number of extinguished Contracts
+        required: false
+
+      sectors:
+        type: sectors.sectors[]
+        description: |
+          Score that the natural or legal person has in the risk centers.
+        required: false
+

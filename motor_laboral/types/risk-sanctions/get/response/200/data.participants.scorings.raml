@@ -1,0 +1,52 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  partialPunctuations: data.participants.scorings.partialPunctuations.raml
+
+types:
+  scorings:
+    type: object
+    description: "Information the scoring decision model."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique identifier rating for a customer.
+        required: true
+
+      partialPunctuations:
+        type: partialPunctuations.partialPunctuations[]
+        description: |
+          Default probability for scoring partial calculations.
+        required: false
+
+      punctuation:
+        type: number
+        description: |
+          Final scoring Punctuation.
+        required: true
+
+      defaultProbability:
+        type: number
+        description: |
+          Default probability for scoring calculations.
+        required: true
+
+      dictum:
+        type: string
+        description: |
+          Identifier stage of proposal or risk engine modules.
+        required: false
+        enum: [APPROVED,REJECTED,DUBIOUS]
+        (annotations.enumDescription):
+        - APPROVED: "The customer profile is approved for a requested product."
+        - REJECTED: "The customer profile is rejected for a requested product."
+        - DUBIOUS: "The customer profile is dubious for a requested product."
+
+      analysisDate:
+        type: datetime
+        description: |
+          String based on ISO-8601 date format for specifying the date of risk evaluation date.
+        required: true
+
+    

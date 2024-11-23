@@ -1,0 +1,24 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  term:
+    type: object
+    description: "Total number of time on which the average passive balance will be calculated."
+    properties:
+      number:
+        type: number
+        description: |
+          Total number of terms.
+        required: true
+
+      frequency:
+        type: string
+        description: |
+          Period in which terms are defined.
+        required: true
+        enum: [MONTHS]
+        (annotations.enumDescription):
+        - MONTHS: "The period is expressed in Months."
+

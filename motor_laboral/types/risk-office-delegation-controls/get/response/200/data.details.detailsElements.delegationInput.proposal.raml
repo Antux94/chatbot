@@ -1,0 +1,37 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  customersLimitAmount: data.details.detailsElements.delegationInput.proposal.customersLimitAmount.raml
+  groupLimitAmount: data.details.detailsElements.delegationInput.proposal.groupLimitAmount.raml
+  othersLimitAmount: data.details.detailsElements.delegationInput.proposal.othersLimitAmount.raml
+  requestedAmount: data.details.detailsElements.delegationInput.proposal.requestedAmount.raml
+
+types:
+  proposal:
+    type: object
+    description: "Information about the risk proposal which is going to be analyzed."
+    properties:
+      customersLimitAmount:
+        type: customersLimitAmount.customersLimitAmount
+        description: |
+          Monetary amount of the customers limit that can be evaluated on the profile retrieved.
+        required: false
+
+      groupLimitAmount:
+        type: groupLimitAmount.groupLimitAmount
+        description: |
+          Monetary amount of the customers limit that can be evaluated on the profile retrieved.
+        required: false
+
+      othersLimitAmount:
+        type: othersLimitAmount.othersLimitAmount
+        description: |
+          Monetary amount of the customers limit that can be evaluated on the profile retrieved.
+        required: false
+
+      requestedAmount:
+        type: requestedAmount.requestedAmount
+        description: |
+          Requested amount object.
+        required: false
+

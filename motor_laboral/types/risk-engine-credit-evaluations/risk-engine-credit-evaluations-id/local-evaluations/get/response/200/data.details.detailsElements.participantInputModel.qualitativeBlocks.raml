@@ -1,0 +1,35 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  qualitativeVariables: data.details.detailsElements.participantInputModel.qualitativeBlocks.qualitativeVariables.raml
+
+types:
+  qualitativeBlocks:
+    type: object
+    description: "Object that contains all information about qualitative info used to execute rating."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique identifier of financial statement.
+        required: true
+
+      startDate:
+        type: date-only
+        description: |
+          String based on ISO-8601 date format for providing the first day of the period the qualitative information (start date).
+        required: true
+
+      endDate:
+        type: date-only
+        description: |
+          String based on ISO-8601 date format for providing the last day of the period the qualitative information (deadline).
+        required: true
+
+      qualitativeVariables:
+        type: qualitativeVariables.qualitativeVariables[]
+        description: |
+          Qualitative variables.
+        required: true
+
+    

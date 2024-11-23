@@ -1,0 +1,35 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  balanceByYear: data.business.financialInformation.accountingAccounts.balanceByYear.raml
+
+types:
+  accountingAccounts:
+    type: object
+    description: "Information on the accounts of a participant."
+    properties:
+      name:
+        type: string
+        description: |
+          Main accounting accounts Financial Statements.
+        required: true
+
+      balanceByYear:
+        type: balanceByYear.balanceByYear[]
+        description: |
+          Years to which the information belongs to the accounts
+        required: true
+
+      horizontalAnalysis:
+        type: string
+        description: |
+          The horizontal analysis determines what was the growth or decrease of an account in a given period. It is the analysis that allows to determine if the behavior of the company in a period was good, regular or bad.
+        required: true
+
+      sourceFinancialInformation:
+        type: string
+        description: |
+          Financial information source
+        required: true
+
+    

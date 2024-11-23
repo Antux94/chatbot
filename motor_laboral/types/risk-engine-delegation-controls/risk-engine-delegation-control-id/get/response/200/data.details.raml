@@ -1,0 +1,18 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  delegationInputDetailselements: data.details.detailsElements.delegationInput.raml
+  delegationOutputDetailselements: data.details.detailsElements.delegationOutput.raml
+
+types:
+  details:
+    type: object
+    description: "Details used as list of details elements that represent the possible information for a delegation control in a risk study."
+    properties:
+      detailsElements:
+        type: delegationInputDetailselements.delegationInput | delegationOutputDetailselements.delegationOutput
+        description: |
+          Posibles values of details elements.
+        required: true
+
+    

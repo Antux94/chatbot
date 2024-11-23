@@ -1,0 +1,29 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  installments: body.details.detailsElements.proposalOutputModel.products.installments.raml
+
+types:
+  products:
+    type: object
+    description: "Products information of proposals."
+    properties:
+      id:
+        type: string
+        description: |
+          Product title identifier, it refers to the credit line of the product.
+        required: true
+
+      installments:
+        type: installments.installments
+        description: |
+          Installments calculate for product
+        required: true
+
+      approximateAverageRate:
+        type: number
+        description: |
+          Approximate average rate.
+        required: true
+
+    

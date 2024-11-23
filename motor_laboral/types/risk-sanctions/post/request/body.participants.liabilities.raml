@@ -1,0 +1,50 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  product: body.participants.liabilities.product.raml
+  lineType: body.participants.liabilities.lineType.raml
+  disposed: body.participants.liabilities.disposed.raml
+  term: body.participants.liabilities.term.raml
+
+types:
+  liabilities:
+    type: object
+    description: "current participant's obligations"
+    properties:
+      product:
+        type: product.product
+        description: |
+          Product associated with current obligations.
+        required: true
+
+      lineType:
+        type: lineType.lineType
+        description: |
+          Group of global product aggregated by risk definition.
+        required: true
+
+      disposed:
+        type: disposed.disposed
+        description: |
+          Is the monetary amount that have been used by the customer since the period started until now.
+        required: false
+
+      term:
+        type: term.term
+        description: |
+          Total number of time on which the average passive balance will be calculated.
+        required: false
+
+      contractingDate:
+        type: datetime
+        description: |
+          String based on ISO-8601 date format for providing  the first day of the economic period in which the product was contracted.
+        required: true
+
+      maturityDate:
+        type: datetime
+        description: |
+          String based on ISO-8601 date format for providing the last day of the economic period when the contract finish.
+        required: true
+
+    

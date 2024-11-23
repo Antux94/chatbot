@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  accountsType:
+    type: object
+    description: "Type of the accounting account."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of accounting account type.
+        required: true
+

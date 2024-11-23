@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  linesType:
+    type: object
+    description: "Relationship between the line and guarantee."
+    properties:
+      id:
+        type: string
+        description: |
+          Line identifier.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Name of the line.
+        required: false
+
+    

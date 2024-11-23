@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  documentType: body.participants.identityDocument.documentType.raml
+
+types:
+  identityDocument:
+    type: object
+    description: "Information about proposal participants identification"
+    properties:
+      documentType:
+        type: documentType.documentType
+        description: |
+          Document type of the participant
+        required: false
+
+      documentNumber:
+        type: string
+        description: |
+          Document number of the participant.
+        required: true
+

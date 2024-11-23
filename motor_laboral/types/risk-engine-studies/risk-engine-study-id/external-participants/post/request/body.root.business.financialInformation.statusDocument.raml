@@ -1,0 +1,43 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  statusDocument:
+    type: object
+    description: "Current status of the document"
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier associated with the state of the document.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Name associated with the state of the document. This name is used to describe the status of the document.
+        required: true
+
+      reason:
+        type: string
+        description: |
+          Reason for the transition of document states.
+        required: true
+        enum: [CANCELED_BY_DOUBLE,CANCELED_BY_EXTRAN,CANCELED_BY_INTENT,CANCELED_BY_BAD_E,CANCELED_BY_MINORI,CANCELED_BY_DEATH,DOCUMENT_NOT_EXPEDITED,IN_PROCESS_OF_ELABOR,FOREIGN,FAKE_IDENTITY,JUDICIAL_INTERDICTION,MINORITY_OF_AGE,DEATH_BY_HEADLINE,DOES_NOT_APPLY]
+        (annotations.enumDescription):
+        - CANCELED_BY_DOUBLE: "Canceled by double attempt."
+        - CANCELED_BY_EXTRAN: "Canceled by foreigners."
+        - CANCELED_BY_INTENT: "Canceled by attempted impersonation."
+        - CANCELED_BY_BAD_E: "Canceled due to poor processing."
+        - CANCELED_BY_MINORI: "Canceled by minority."
+        - CANCELED_BY_DEATH: "Canceled due to death not issued."
+        - DOCUMENT_NOT_EXPEDITED: "Document not issued."
+        - IN_PROCESS_OF_ELABOR: "In the process of preparation."
+        - FOREIGN: "Immigration."
+        - FAKE_IDENTITY: "Fake identity."
+        - JUDICIAL_INTERDICTION: "Bad processing."
+        - MINORITY_OF_AGE: "Minority of age."
+        - DEATH_BY_HEADLINE: "Death of the holder."
+        - DOES_NOT_APPLY: "Does not apply."
+

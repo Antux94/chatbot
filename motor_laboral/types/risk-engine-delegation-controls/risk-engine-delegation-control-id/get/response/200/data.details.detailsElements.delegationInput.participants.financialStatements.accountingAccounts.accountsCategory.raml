@@ -1,0 +1,30 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  accountsType: data.details.detailsElements.delegationInput.participants.financialStatements.accountingAccounts.accountsCategory.accountsType.raml
+  accountGroup: data.details.detailsElements.delegationInput.participants.financialStatements.accountingAccounts.accountsCategory.accountGroup.raml
+  accountLevel: data.details.detailsElements.delegationInput.participants.financialStatements.accountingAccounts.accountsCategory.accountLevel.raml
+
+types:
+  accountsCategory:
+    type: object
+    description: "Information regarding the type of account, level, and group to which the financial statement belongs."
+    properties:
+      accountsType:
+        type: accountsType.accountsType
+        description: |
+          Type of the accounting account.
+        required: false
+
+      accountGroup:
+        type: accountGroup.accountGroup
+        description: |
+          Code of the grouping of the account, serves to differentiate the type (active, passive ...).
+        required: true
+
+      accountLevel:
+        type: accountLevel.accountLevel
+        description: |
+          Level of the account for its visualization (it is the tabulation).
+        required: false
+

@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  economicActivity:
+    type: object
+    description: "Economic activity information."
+    properties:
+      id:
+        type: string
+        description: |
+          National code of economic activity of minimum level assigned to customers when registering in customers. Local field of geography (CNAE on Spain, ISIC on Spain, NAIC in US ..).
+        required: true
+
+      isHighRisk:
+        type: boolean
+        description: |
+          Indicator of economic activities considered as high risk.
+        required: true
+

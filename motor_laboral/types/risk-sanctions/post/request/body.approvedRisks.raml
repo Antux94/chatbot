@@ -1,0 +1,75 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  product: body.approvedRisks.product.raml
+  lineType: body.approvedRisks.lineType.raml
+  approvedAmount: body.approvedRisks.approvedAmount.raml
+  period: body.approvedRisks.period.raml
+  gracePeriod: body.approvedRisks.gracePeriod.raml
+  liquidationType: body.approvedRisks.liquidationType.raml
+  purpose: body.approvedRisks.purpose.raml
+
+types:
+  approvedRisks:
+    type: object
+    description: "Refers to the new obligation that the customer has just acquired with the bank."
+    properties:
+      product:
+        type: product.product
+        description: |
+          Acquired product description.
+        required: false
+
+      lineType:
+        type: lineType.lineType
+        description: |
+          Group of global product aggregated by risk definition.
+        required: false
+
+      approvedAmount:
+        type: approvedAmount.approvedAmount
+        description: |
+          Information about the approved amount of the obligations acquired with the bank.
+        required: true
+
+      period:
+        type: period.period
+        description: |
+          Information about the approval risk period
+        required: false
+
+      maturityDate:
+        type: date-only
+        description: |
+          String based on ISO-8601 date format for providing the last day to make use of the approved risk.
+        required: true
+
+      gracePeriod:
+        type: gracePeriod.gracePeriod
+        description: |
+          Grace period for approval risk. A grace period is the provision that allows payment to be received for a certain period of time after the actual due date. During this period, no late fees are charged, and the late payment does not result in default or cancellation of the obligation.
+        required: false
+
+      liquidationType:
+        type: liquidationType.liquidationType
+        description: |
+          Product liquidation data
+        required: false
+
+      status:
+        type: string
+        description: |
+          Identify when an approved risk is enabled o disabled.
+        required: false
+        enum: [ENABLED,DISABLED]
+        (annotations.enumDescription):
+        - ENABLED: "Identify when a approved risk is enabled."
+        - DISABLED: "Identify when a approved risk is disabled."
+
+      purpose:
+        type: purpose.purpose
+        description: |
+          Credit destiny information.
+        required: false
+
+    

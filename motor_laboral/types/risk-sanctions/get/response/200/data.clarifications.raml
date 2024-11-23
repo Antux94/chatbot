@@ -1,0 +1,40 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  owner: data.clarifications.owner.raml
+
+types:
+  clarifications:
+    type: object
+    description: "Clarifications about the sanction business rules."
+    properties:
+      id:
+        type: number
+        description: |
+          Clarifications identifier.
+        required: true
+
+      comment:
+        type: string
+        description: |
+          Description of the comment.
+        required: true
+
+      owner:
+        type: owner.owner
+        description: |
+          Information about owner clarifications.
+        required: true
+
+      status:
+        type: string
+        description: |
+          Identify when the comment is enabled or disabled.
+        required: true
+        enum: [ENABLED,DISABLED,BLOCKED]
+        (annotations.enumDescription):
+        - ENABLED: "Identify the clarifications that are enabled."
+        - DISABLED: "Identify the clarifications that are disabled."
+        - BLOCKED: "Identify when the clarifications can not change the status."
+
+    

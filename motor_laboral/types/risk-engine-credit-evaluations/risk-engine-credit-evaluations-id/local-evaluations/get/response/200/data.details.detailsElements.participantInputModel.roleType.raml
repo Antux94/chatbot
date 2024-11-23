@@ -1,0 +1,27 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  roleType:
+    type: object
+    description: "Role type, it refers to the role of the customer on the proposal."
+    properties:
+      id:
+        type: string
+        description: |
+          To identify if the owner  is a holder, other intervening parties, shareholders or economic group. Variable that indicates the kind of participation that the registered identification number presents for the credit application (Holder / Debtor in solidarity, shareholder, economic group).
+        required: true
+        enum: [HOLDER,GUARANTOR,ECONOMIC_GROUPS,SHAREHOLDER]
+        (annotations.enumDescription):
+        - HOLDER: "It refers to the account owner."
+        - GUARANTOR: "Person who guarantees or places the guarantee on the operation."
+        - ECONOMIC_GROUPS: "It refer when a participant is an economic group."
+        - SHAREHOLDER: "It refer when a participant is a shareholder."
+
+      name:
+        type: string
+        description: |
+          Description of the role type.
+        required: false
+

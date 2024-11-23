@@ -1,0 +1,20 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  dictum:
+    type: object
+    description: "Final automatic sanction made by risk tool."
+    properties:
+      id:
+        type: string
+        description: |
+          Final automatic sanction made by risk tool.
+        required: true
+        enum: [APPROVED,REJECTED,DUBIOUS]
+        (annotations.enumDescription):
+        - APPROVED: "The customer profile is approved for a requested product."
+        - REJECTED: "The customer profile is rejected for a requested product."
+        - DUBIOUS: "The customer profile is dubious for a requested product."
+

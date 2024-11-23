@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  customersLimitAmount:
+    type: object
+    description: "Monetary amount of the customers limit that can be evaluated on the profile retrieved."
+    properties:
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency.
+        required: true
+
+      amount:
+        type: number
+        description: |
+          Monetary amount.
+        required: true
+

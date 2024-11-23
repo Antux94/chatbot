@@ -1,0 +1,29 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  proposal: data.proposal.raml
+  details: data.details.raml
+
+types:
+  data:
+    type: object
+    description: ""
+    properties:
+      id:
+        type: string
+        description: |
+          Unique identifier delegation control.
+        required: true
+
+      proposal:
+        type: proposal.proposal
+        description: |
+          Risk proposal to be analyzed.
+        required: true
+
+      details:
+        type: details.details[]
+        description: |
+          Details used as list of details elements that represent the possible information for a delegation control in a risk study.
+        required: true
+

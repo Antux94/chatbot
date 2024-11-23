@@ -1,0 +1,42 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  documentType:
+    type: object
+    description: "Document type of the participant"
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the document type.
+        required: true
+        enum: [PASSPORT,NIF,RESIDENTIAL_PASS,DNI,RUC,NIT,CURP,INE,DL,STATE_ID,DIPLOMATIC,FOREIGNERS,MILITARY,POLICE,RUT,ARC,EAD,CC,CI]
+        (annotations.enumDescription):
+        - PASSPORT: "Identifier document passport."
+        - NIF: "Identifier document fiscal identification number."
+        - RESIDENTIAL_PASS: "Identifier document residence."
+        - DNI: "Identifier national identity document."
+        - RUC: "Identifier document single tax registration."
+        - NIT: "Identifier document tax identification number."
+        - CURP: "Unique Population Registry Code."
+        - INE: "National Electoral Institute Code."
+        - DL: "Drivers License Number."
+        - STATE_ID: "State Issued Identification."
+        - DIPLOMATIC: "Identifier document issued to members of diplomatic missions residing in."
+        - FOREIGNERS: "Identifier card for foreign residents."
+        - MILITARY: "Identifier document that accredits the military situation."
+        - POLICE: "Police Identification Card Identifier."
+        - RUT: "Identifier national identity document."
+        - ARC: "Alien registration card."
+        - EAD: "Employment authorization document."
+        - CC: "Identifier document for citizenship card."
+        - CI: "Civil Identification Card."
+
+      name:
+        type: string
+        description: |
+          Description of the document type.
+        required: true
+

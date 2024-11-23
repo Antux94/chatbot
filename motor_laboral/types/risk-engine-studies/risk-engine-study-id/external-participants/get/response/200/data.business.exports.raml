@@ -1,0 +1,16 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  value: data.business.exports.value.raml
+
+types:
+  exports:
+    type: object
+    description: "Is the value that the client registers before the Dian for each of these items in a determined period comprised of 12 months."
+    properties:
+      value:
+        type: value.value
+        description: |
+          Exports value.
+        required: true
+

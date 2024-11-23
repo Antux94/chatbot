@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  debtToAssets:
+    type: object
+    description: "It measures the amount of total assets that are financed by debt instead of investors. In other words, it shows what percentage of assets is funded by borrowing compared with the percentage of resources that are funded by the investors."
+    properties:
+      percentage:
+        type: number
+        description: |
+          Percentage of the asset.
+        required: true
+

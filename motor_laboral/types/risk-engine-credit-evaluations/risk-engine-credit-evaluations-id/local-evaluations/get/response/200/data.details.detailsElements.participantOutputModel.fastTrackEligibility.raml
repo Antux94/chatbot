@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  fastTrackEligibility:
+    type: object
+    description: "Fast track eligibility information"
+    properties:
+      probablityWithUnpaid:
+        type: number
+        description: |
+          Probability of default with unpaids.
+        required: true
+
+      probablityWithoutUnpaid:
+        type: number
+        description: |
+          Probability of default without unpaids.
+        required: true
+

@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  riskDelegationProfiles:
+    type: object
+    description: "Data of the risk delegation profiles of the proposal."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the profile that is able to perform risk delegations.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Role the risk delegation agent
+        required: true
+
+    

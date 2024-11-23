@@ -1,0 +1,28 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  amount: body.details.detailsElements.participantInputModel.financialInformation.sectors.obligationAmounts.amount.raml
+
+types:
+  obligationAmounts:
+    type: object
+    description: "Amounts of financial obligations."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the possible amounts about abligations.
+        required: true
+        enum: [ARREARS_AMOUNT,MAXIMUM_ARREARS_AMOUNT,ANNUAL_FINANCIAL_DEBT]
+        (annotations.enumDescription):
+        - ARREARS_AMOUNT: "Arrears value of obligations."
+        - MAXIMUM_ARREARS_AMOUNT: "Maximum value in arrears of obligations."
+        - ANNUAL_FINANCIAL_DEBT: "Annual fee for financial debt."
+
+      amount:
+        type: amount.amount
+        description: |
+          Default value of obligations.
+        required: true
+
+    

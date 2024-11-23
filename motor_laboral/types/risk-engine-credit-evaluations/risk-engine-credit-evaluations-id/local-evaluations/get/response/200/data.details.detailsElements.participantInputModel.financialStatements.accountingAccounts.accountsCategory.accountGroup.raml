@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  accountGroup:
+    type: object
+    description: "Code of the grouping of the account, serves to differentiate the type (active, passive ...)."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the grouping code.
+        required: true
+

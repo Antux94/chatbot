@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  paidCapital:
+    type: object
+    description: "Capital canceled by shareholders."
+    properties:
+      currency:
+        type: string
+        description: |
+          Type of currency
+        required: true
+
+      amount:
+        type: number
+        description: |
+          Subscribed capital that has been effectively canceled by the shareholders.
+        required: true
+

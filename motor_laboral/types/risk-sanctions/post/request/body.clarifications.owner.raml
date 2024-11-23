@@ -1,0 +1,25 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  owner:
+    type: object
+    description: "Information about owner clarifications."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the owner. When the owner is a Participant is the identity document, when is approved_risk is the id, when is a liability is the identity document + liability id, when is a guarantee is the guarantee id.
+        required: true
+
+      type:
+        type: string
+        description: |
+          Owner type description.
+        required: true
+        enum: [PARTICIPANT,APPLICATION]
+        (annotations.enumDescription):
+        - PARTICIPANT: "Identify when the owner's clarification is a participant."
+        - APPLICATION: "Identify when the owner's clarification is for a proposal."
+

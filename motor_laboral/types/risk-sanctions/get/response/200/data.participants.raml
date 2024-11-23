@@ -1,0 +1,75 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  identityDocument: data.participants.identityDocument.raml
+  participantType: data.participants.participantType.raml
+  economicGroups: data.participants.economicGroups.raml
+  liabilities: data.participants.liabilities.raml
+  ratings: data.participants.ratings.raml
+  scorings: data.participants.scorings.raml
+
+types:
+  participants:
+    type: object
+    description: "Information about proposal participants"
+    properties:
+      id:
+        type: string
+        description: |
+          Consecutive to list the participants.
+        required: true
+
+      identityDocument:
+        type: identityDocument.identityDocument
+        description: |
+          Information about proposal participants identification
+        required: true
+
+      fullname:
+        type: string
+        description: |
+          Name of the participant.
+        required: false
+
+      participantType:
+        type: participantType.participantType
+        description: |
+          Participant role type, it refers to a participant, guarantor, shareholder or economic group.
+        required: true
+
+      economicGroups:
+        type: economicGroups.economicGroups[]
+        description: |
+          Information about the economic group in wich is sanctioning the proposal.
+        required: false
+
+      liabilities:
+        type: liabilities.liabilities[]
+        description: |
+          current participant's obligations
+        required: false
+
+      ratings:
+        type: ratings.ratings[]
+        description: |
+          List of ratings for period in a customer.
+        required: false
+
+      scorings:
+        type: scorings.scorings[]
+        description: |
+          Information the scoring decision model.
+        required: false
+
+      sector:
+        type: string
+        description: |
+          Economic sector to which the customer corresponds. Sectors are determined according to the set of productive and commercial activities to which the client is dedicated (or the company for which he works).
+        required: false
+        enum: [INDUSTRY,SERVICES,TRADE]
+        (annotations.enumDescription):
+        - INDUSTRY: "Industrial sector."
+        - SERVICES: "Services sector."
+        - TRADE: "Trading Sector."
+
+    

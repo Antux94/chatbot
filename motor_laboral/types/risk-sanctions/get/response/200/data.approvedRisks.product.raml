@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  product:
+    type: object
+    description: "Acquired product description."
+    properties:
+      id:
+        type: string
+        description: |
+          Product identifier associated with current obligations.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Product name associated with current obligations.
+        required: false
+

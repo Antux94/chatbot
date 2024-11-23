@@ -1,0 +1,27 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  rating:
+    type: object
+    description: "Rating information for a period of the customer."
+    properties:
+      shortScaleValue:
+        type: string
+        description: |
+          Rating of a business expressed in BBVA's master short scale (Standalone Rating).
+        required: true
+
+      longScaleValue:
+        type: string
+        description: |
+          Rating of a business expressed in BBVA's master short scale (Standalone Rating).
+        required: true
+
+      homologationQualification:
+        type: string
+        description: |
+          Homologation qualification, this scale is for to check delegation. Example CO: 6 posibles values: (AA,A,BB,B,CC,C) CS: Only applies to CO
+        required: true
+

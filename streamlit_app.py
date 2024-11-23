@@ -157,7 +157,7 @@ if selected == "Inicio":
     print("DOWNLOAD-1: " + str(st.session_state.zip_generated))
 
     # Uso del método para comprimir la carpeta '/content/ccol_calculate-incomes'
-    directory_path = '/content/ccol_calculate-incomes'
+    directory_path = '/ccol_calculate-incomes'
 
     # Función para crear un archivo zip en memoria
     def get_zip_file(directory_path):
@@ -190,7 +190,7 @@ if selected == "Inicio":
     if uploaded_file is not None:
 
         # Ruta donde quieres descomprimir los archivos
-        extract_path = '/content/motor_laboral'  # Puedes cambiar esto por la ruta que prefieras
+        extract_path = 'motor_laboral'  # Puedes cambiar esto por la ruta que prefieras
 
         # Crear la carpeta si no existe
         if not os.path.exists(extract_path):

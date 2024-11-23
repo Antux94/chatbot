@@ -1,0 +1,25 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  lineType:
+    type: object
+    description: "Group of global product aggregated by risk definition."
+    properties:
+      id:
+        type: string
+        description: |
+          Product line type id  associated with current obligations.
+        required: true
+        enum: [INSTALLMENT,PUNCTUAL]
+        (annotations.enumDescription):
+        - INSTALLMENT: "The operation is requested as a installment; that is to say; which may be used several times during its term."
+        - PUNCTUAL: "The operation is requested as a punctual operation; that is to say; that can only be used once during its validity."
+
+      name:
+        type: string
+        description: |
+          Product line type name associated with current obligations.
+        required: true
+

@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  ratingAllowed:
+    type: object
+    description: "Information the scoring decision model."
+    properties:
+      scaleValue:
+        type: string
+        description: |
+          Decision of the rating model with which it can be attributed.
+        required: true
+        enum: [LOW,MEDIUM,HIGH,HIGHER]
+        (annotations.enumDescription):
+        - LOW: "It’s the low scale of the ratings on category defined to the agent."
+        - MEDIUM: "It’s the medium scale of the ratings on category defined to the agent."
+        - HIGH: "It’s the high scale of the ratings on category defined to the agent."
+        - HIGHER: "It’s the higher scale of the ratings on category defined to the agent."
+

@@ -1,0 +1,36 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  debtParcialAmount: data.business.financialInformation.sectors.punctuations.debtParcialAmount.raml
+  qualification: data.business.financialInformation.sectors.punctuations.qualification.raml
+
+types:
+  punctuations:
+    type: object
+    description: "Information about the reports on a certain period of time of the external consultations."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique identifier of the report.
+        required: true
+
+      punctuationDate:
+        type: date-only
+        description: |
+          String based on ISO-8601 date format for providing the date when the report was registered.
+        required: true
+
+      debtParcialAmount:
+        type: debtParcialAmount.debtParcialAmount
+        description: |
+          Amount information of the debt on a reported period.
+        required: false
+
+      qualification:
+        type: qualification.qualification[]
+        description: |
+          Information about the punctuations realized on the reported period in which is the external financial information was registered.
+        required: false
+
+    

@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  certification:
+    type: object
+    description: "Certification type of the financial statements associated to the rating."
+    properties:
+      certificationType:
+        type: string
+        description: |
+          Type of certification.
+        required: true
+        enum: [FISCAL,AUDITED,OF_MANAGEMENT,TRADE_REGISTRY,PROFORMA]
+        (annotations.enumDescription):
+        - FISCAL: "Internal financial information."
+        - AUDITED: "Financial information reviewed by an auditor."
+        - OF_MANAGEMENT: "Internal financial information."
+        - TRADE_REGISTRY: "Merchant information."
+        - PROFORMA: "In advance ways of mergers acquisitions and other singular operations. They may generate a rating, but in this case they will always need approval by the corresponding delegation level."
+

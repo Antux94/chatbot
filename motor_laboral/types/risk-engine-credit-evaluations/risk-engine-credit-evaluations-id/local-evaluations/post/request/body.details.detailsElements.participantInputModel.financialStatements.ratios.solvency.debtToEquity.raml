@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  debtToEquity:
+    type: object
+    description: "This ratio indicates the level of leverage, which implies the ability of the company to repay its obligations."
+    properties:
+      percentage:
+        type: number
+        description: |
+          Percentage of the asset.
+        required: true
+

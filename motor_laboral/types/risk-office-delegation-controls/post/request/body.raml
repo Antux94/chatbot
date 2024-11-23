@@ -1,0 +1,39 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  proposal: body.proposal.raml
+  details: body.details.raml
+
+types:
+  body:
+    type: object
+    description: ""
+    properties:
+      id:
+        type: string
+        description: |
+          Unique identifier delegation control.
+        required: true
+
+      delegationType:
+        type: string
+        description: |
+          Type of delegation to be made, this field determines the source from which the office delegation is being made.
+        required: true
+        enum: [OFFICE_DELEGATION,RISK_DELEGATION]
+        (annotations.enumDescription):
+        - OFFICE_DELEGATION: "office delegation"
+        - RISK_DELEGATION: "risk delegation"
+
+      proposal:
+        type: proposal.proposal
+        description: |
+          Risk proposal to be analyzed.
+        required: true
+
+      details:
+        type: details.details[]
+        description: |
+          Details used as list of details elements that represent the possible information for a delegation control in a risk study.
+        required: true
+

@@ -1,0 +1,196 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  proposal: data.proposal.raml
+  dictum: data.dictum.raml
+  economicGroup: data.economicGroup.raml
+  customersLimitAmount: data.customersLimitAmount.raml
+  groupLimitAmount: data.groupLimitAmount.raml
+  othersLimitAmount: data.othersLimitAmount.raml
+  othersLimitGroupAmount: data.othersLimitGroupAmount.raml
+  delegationCommittees: data.delegationCommittees.raml
+  participants: data.participants.raml
+  guarantees: data.guarantees.raml
+  approvedRisks: data.approvedRisks.raml
+  bank: data.bank.raml
+  riskAnalystAgent: data.riskAnalystAgent.raml
+  authorizationBusinessAgent: data.authorizationBusinessAgent.raml
+  assignmentBusinessAgents: data.assignmentBusinessAgents.raml
+  sanctionComments: data.sanctionComments.raml
+  clarifications: data.clarifications.raml
+  attachments: data.attachments.raml
+
+types:
+  data:
+    type: object
+    description: ""
+    properties:
+      id:
+        type: string
+        description: |
+          Unique identifier of the risk sanction.
+        required: true
+
+      proposal:
+        type: proposal.proposal
+        description: |
+          Information about the related proposal.
+        required: true
+
+      sanctionStatus:
+        type: string
+        description: |
+          The state in which the sanction is.
+        required: true
+        enum: [APPROVED,OPEN,CLOSED,RECONSIDERED,CANCELLED,DENIED,FINISHED]
+        (annotations.enumDescription):
+        - APPROVED: "It's the status in which the sanction has been approved and can continue with the next stage."
+        - OPEN: "It's the status in which the sanction is open and ready to be reconsidered."
+        - CLOSED: "It's the status in which the sanction is closed and has already been reconsidered."
+        - RECONSIDERED: "It's the status in which the sanction is in the revision or reconsideration stage."
+        - CANCELLED: "It's the status in which the reconsideration of the sanction was canceled."
+        - DENIED: "It's the status in which the sanction has been denied and must return to the previous stage."
+        - FINISHED: "It's the status in which the sanction has been completed to later be closed."
+
+      startDate:
+        type: date-only
+        description: |
+          String based on ISO-8601 date format for providing the date when the workflow of the sanction start.
+        required: true
+
+      endDate:
+        type: date-only
+        description: |
+          String based on ISO-8601 date format for providing the date when the workflow of the sanction finish.
+        required: true
+
+      riskModelType:
+        type: string
+        description: |
+          Risk model used to evaluated proposal.
+        required: true
+        enum: [RATING,SCORING]
+        (annotations.enumDescription):
+        - RATING: "Rating model used to evaluated proposal."
+        - SCORING: "Scoring model used to evaluated proposal."
+
+      analysisDate:
+        type: datetime
+        description: |
+          String based on ISO-8601 date format for specifying the date of risk evaluation date.
+        required: true
+
+      dictum:
+        type: dictum.dictum
+        description: |
+          Final automatic sanction made by risk tool.
+        required: true
+
+      economicGroup:
+        type: economicGroup.economicGroup
+        description: |
+          Information about the economic group in wich is sanctioning the proposal.
+        required: false
+
+      customersLimitAmount:
+        type: customersLimitAmount.customersLimitAmount
+        description: |
+          Total consolidation of the limit calculated by risk agent that analyzed the clients who are making the request in the proposal.
+        required: false
+
+      groupLimitAmount:
+        type: groupLimitAmount.groupLimitAmount
+        description: |
+          Total consolidation of the limit calculated by risk agent that analyzed the main group who are making the request in the proposal.
+        required: false
+
+      othersLimitAmount:
+        type: othersLimitAmount.othersLimitAmount
+        description: |
+          Total consolidation of the limit calculated by the risk agent by other products or services used in the analysis in the proposal.
+        required: false
+
+      othersLimitGroupAmount:
+        type: othersLimitGroupAmount.othersLimitGroupAmount
+        description: |
+          Total consolidation of the limit calculated by the risk agent that analyzed the main group who are making the request, for other products or services used in the analysis in the proposal.
+        required: false
+
+      delegationCommittees:
+        type: delegationCommittees.delegationCommittees[]
+        description: |
+          Information about the committee encharge to made the delegation.
+        required: false
+
+      participants:
+        type: participants.participants[]
+        description: |
+          Information about proposal participants
+        required: true
+
+      guarantees:
+        type: guarantees.guarantees[]
+        description: |
+          Guarantees information.
+        required: false
+
+      approvedRisks:
+        type: approvedRisks.approvedRisks[]
+        description: |
+          Refers to the new obligation that the customer has just acquired with the bank.
+        required: false
+
+      bank:
+        type: bank.bank
+        description: |
+          Full bank detail of the bank where the obligation was issued.
+        required: true
+
+      riskAnalystAgent:
+        type: riskAnalystAgent.riskAnalystAgent
+        description: |
+          Data of the risk analyst in charge of evaluating the proposal data first.
+        required: false
+
+      authorizationBusinessAgent:
+        type: authorizationBusinessAgent.authorizationBusinessAgent
+        description: |
+          Data of the agent in charge of authorization the sanction of the proposal when an other  risk analyst doesn't have the profile to sanction.
+        required: false
+
+      assignmentBusinessAgents:
+        type: assignmentBusinessAgents.assignmentBusinessAgents
+        description: |
+          Information about the agent in charge of assignment the proposal to other agent with other profile.
+        required: false
+
+      sanctionComments:
+        type: sanctionComments.sanctionComments[]
+        description: |
+          Comments about the sanction business rules.
+        required: false
+
+      clarifications:
+        type: clarifications.clarifications[]
+        description: |
+          Clarifications about the sanction business rules.
+        required: false
+
+      riskPolicy:
+        type: string
+        description: |
+          Evaluate the limits with the risk policies.
+        required: false
+        enum: [INCREASES,KEEP,REDUCE,EXTINGUISH]
+        (annotations.enumDescription):
+        - INCREASES: "Increases the risk limit of the participant."
+        - KEEP: "Keep the risk limit of the participant."
+        - REDUCE: "Reduces the risk limit of the participant."
+        - EXTINGUISH: "Extinguishes the risk limit of the participant."
+
+      attachments:
+        type: attachments.attachments[]
+        description: |
+          Evaluate the limits with the risk policies.
+        required: false
+

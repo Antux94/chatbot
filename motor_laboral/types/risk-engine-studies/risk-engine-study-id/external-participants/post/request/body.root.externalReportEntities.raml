@@ -1,0 +1,28 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  externalReportEntities:
+    type: object
+    description: "Information of the negative report made by a financial institution."
+    properties:
+      name:
+        type: string
+        description: |
+          Name of the entity to which the report belongs.
+        required: true
+
+      cutOffDate:
+        type: date-only
+        description: |
+          Date the report belongs to.
+        required: true
+
+      hasArrears:
+        type: boolean
+        description: |
+          Indicates if the customer has payment defaults.
+        required: true
+
+    

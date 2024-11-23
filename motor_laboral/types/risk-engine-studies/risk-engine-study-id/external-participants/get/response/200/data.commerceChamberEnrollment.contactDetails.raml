@@ -1,0 +1,27 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  contactDetails:
+    type: object
+    description: "Contact information related to the company."
+    properties:
+      contact:
+        type: string
+        description: |
+          Contact information value of the company.
+        required: true
+
+      contactType:
+        type: string
+        description: |
+          Contact information type identifier.
+        required: true
+        enum: [EMAIL,ADDRESS,WEB_PAGE]
+        (annotations.enumDescription):
+        - EMAIL: "Email contact of the company."
+        - ADDRESS: "Address of the company."
+        - WEB_PAGE: "Web page of the company."
+
+    

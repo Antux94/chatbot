@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  riskAnalystAgents:
+    type: object
+    description: "Data of the risk agent in charge of evaluating the proposal data first."
+    properties:
+      id:
+        type: string
+        description: |
+          User responsible for analyze the risk assignment category.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Name of the user responsible for analyze the risk assignment category.
+        required: false
+
+    

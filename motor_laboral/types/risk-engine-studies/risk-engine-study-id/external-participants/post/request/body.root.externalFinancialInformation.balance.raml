@@ -1,0 +1,44 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  shortTerm: body.root.externalFinancialInformation.balance.shortTerm.raml
+  longTerm: body.root.externalFinancialInformation.balance.longTerm.raml
+  debtTotalPrincipal: body.root.externalFinancialInformation.balance.debtTotalPrincipal.raml
+  guarantorTotalAmount: body.root.externalFinancialInformation.balance.guarantorTotalAmount.raml
+  arrearPrincipalAmount: body.root.externalFinancialInformation.balance.arrearPrincipalAmount.raml
+
+types:
+  balance:
+    type: object
+    description: "Long and short term balance information."
+    properties:
+      shortTerm:
+        type: shortTerm.shortTerm
+        description: |
+          is the sum of the balances of the financial obligations reported in credit bureaus, with a term shorter or equal to 12 months..
+        required: true
+
+      longTerm:
+        type: longTerm.longTerm
+        description: |
+          is the sum of the balances of the financial obligations reported in credit bureaus, with a term greater than 12 months.
+        required: true
+
+      debtTotalPrincipal:
+        type: debtTotalPrincipal.debtTotalPrincipal
+        description: |
+          Amount information of the principal value.
+        required: false
+
+      guarantorTotalAmount:
+        type: guarantorTotalAmount.guarantorTotalAmount
+        description: |
+          Amount information of the debt as guarantor role.
+        required: false
+
+      arrearPrincipalAmount:
+        type: arrearPrincipalAmount.arrearPrincipalAmount
+        description: |
+          Amount information of the non-payment value of the principal debt.
+        required: false
+

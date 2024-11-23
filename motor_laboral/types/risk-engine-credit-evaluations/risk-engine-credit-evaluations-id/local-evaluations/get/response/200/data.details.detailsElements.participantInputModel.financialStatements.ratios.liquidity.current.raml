@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  current:
+    type: object
+    description: "This ratio is used to measure a company's liquidity or ability to pay off short-term debts."
+    properties:
+      percentage:
+        type: number
+        description: |
+          Percentage of the asset.
+        required: true
+

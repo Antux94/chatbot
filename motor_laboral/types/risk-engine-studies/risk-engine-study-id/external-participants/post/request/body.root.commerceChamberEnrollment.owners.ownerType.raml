@@ -1,0 +1,26 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  ownerType:
+    type: object
+    description: "Owner role."
+    properties:
+      id:
+        type: string
+        description: |
+          Type of owner.
+        required: true
+        enum: [EXECUTIVE,DIRECTOR,SHAREHOLDER]
+        (annotations.enumDescription):
+        - EXECUTIVE: "Identifier document passport."
+        - DIRECTOR: "Identifier document fiscal identification number."
+        - SHAREHOLDER: "Identifier document residence."
+
+      name:
+        type: string
+        description: |
+          Owner type description.
+        required: false
+

@@ -1,0 +1,34 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  level: data.approvedRisks.limits.line.level.raml
+
+types:
+  line:
+    type: object
+    description: "Group of global product aggregated by risk definition."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique identifier of the limit, being a limit a group of global product aggregated by risk definition.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Name of the Line.
+        required: true
+
+      level:
+        type: level.level
+        description: |
+          Level of typology, subtypology or modality.
+        required: true
+
+      sequential:
+        type: string
+        description: |
+          Sequential within the modality to be able to differentiate those limits for the same modality with different conditions.
+        required: true
+

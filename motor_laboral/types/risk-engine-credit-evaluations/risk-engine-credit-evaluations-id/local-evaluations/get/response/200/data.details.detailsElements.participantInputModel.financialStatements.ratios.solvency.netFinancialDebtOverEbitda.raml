@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  netFinancialDebtOverEbitda:
+    type: object
+    description: "Ratio that measures the capacity of the company when it comes to dealing with its financial debt based on its EBITDA generation."
+    properties:
+      percentage:
+        type: number
+        description: |
+          Percentage of the asset.
+        required: true
+

@@ -1,0 +1,30 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  identityDocument:
+    type: object
+    description: "Identity document of the customer."
+    properties:
+      documentNumber:
+        type: string
+        description: |
+          Identity number of customer.
+        required: true
+        example: "123456789"
+
+      documentType:
+        type: string
+        description: |
+          This field is used to distinguish the different type of document needed to identify the participant depending its situation.
+        required: true
+        enum: [CC,CE,NIT,RUT,PASSPORT]
+        (annotations.enumDescription):
+        - CC: "Identifier document for citizenship card."
+        - CE: "Foreigner ID."
+        - NIT: "Identifier document tax identification number."
+        - RUT: "Identifier national identity document."
+        - PASSPORT: "Identifier document passport."
+        example: "CC"
+

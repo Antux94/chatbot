@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  cashConversionCycle:
+    type: object
+    description: "It measures the time in days it takes for a company to convert its investments in inventory and other resources into cash flows from sales."
+    properties:
+      percentage:
+        type: number
+        description: |
+          Percentage of the asset.
+        required: true
+

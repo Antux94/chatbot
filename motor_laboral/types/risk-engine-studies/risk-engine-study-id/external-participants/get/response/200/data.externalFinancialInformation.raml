@@ -1,0 +1,130 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  statusDocument: data.externalFinancialInformation.statusDocument.raml
+  balance: data.externalFinancialInformation.balance.raml
+  tracking: data.externalFinancialInformation.tracking.raml
+  sectors: data.externalFinancialInformation.sectors.raml
+  creditVisionResultOperation: data.externalFinancialInformation.creditVisionResultOperation.raml
+
+types:
+  externalFinancialInformation:
+    type: object
+    description: "it is information that produces the indispensable accounting for the administration and the development of the companies and is processed and concentrated for the use of the management and governmental entities."
+    properties:
+      reportDate:
+        type: date-only
+        description: |
+          Report date.
+        required: true
+
+      creditScore:
+        type: number
+        description: |
+          Score that the natural or legal person has in the risk centers.
+        required: true
+
+      statusDocument:
+        type: statusDocument.statusDocument
+        description: |
+          Current status of the document
+        required: true
+
+      balance:
+        type: balance.balance
+        description: |
+          Long and short term balance information.
+        required: true
+
+      indebtednessLevel:
+        type: string
+        description: |
+          Level of indebtedness. It is the ability of a participant to borrow at the time of acquiring an example debt: if a participant has a high borrowing capacity, a very high loan can be made, but if the participant has low borrowing capacity, the loan will be You will be denied or you will not be given all the amount you requested.
+        required: true
+
+      bankingCompliance:
+        type: string
+        description: |
+          It indicates the banking compliance of the owner It is when the customer is in default with any of their payments.
+        required: true
+
+      punctualityPayment:
+        type: string
+        description: |
+          It indicates the level of payment compliance of the participant.
+        required: true
+
+      tracking:
+        type: tracking.tracking
+        description: |
+          It represents number of times the financial information is consulted of customer.
+        required: false
+
+      maximumExtinguishedContracts:
+        type: number
+        description: |
+          Maximum number of extinguished Contracts.
+        required: false
+
+      sectors:
+        type: sectors.sectors[]
+        description: |
+          Sets of productive or commercial activities that meet a series of similar characteristics; that is, they have a similar nature.
+        required: false
+
+      hasSeizedContracts:
+        type: boolean
+        description: |
+          Indicates if the owner has embargoed contracts.
+        required: false
+
+      hasObligationsRestructured:
+        type: boolean
+        description: |
+          Flag identifier when the participant has an obligation restructured.
+        required: false
+
+      bureauOperator:
+        type: string
+        description: |
+          Third party with which the client's information is being checked.
+        required: false
+        enum: [CIFIN,DATACREDITO]
+        (annotations.enumDescription):
+        - CIFIN: "Central de Información Financiera"
+        - DATACREDITO: "Central de riesgo con información financiera"
+        example: "CIFIN"
+
+      negativeReason:
+        type: string
+        description: |
+          Reasons why the rating was reported as negative.
+        required: false
+        example: "N1, N4, N5"
+
+      positiveReason:
+        type: string
+        description: |
+          Codes that identifies the reasons why the rating was reported as positive.
+        required: false
+        example: "P1"
+
+      scoreCreditVision:
+        type: string
+        description: |
+          CreditVision Scoring Tool.
+        required: false
+        example: "A"
+
+      riskGroup:
+        type: string
+        description: |
+          Risk group associated with card risk studies.
+        required: false
+
+      creditVisionResultOperation:
+        type: creditVisionResultOperation.creditVisionResultOperation
+        description: |
+          Credivition resol operation.
+        required: false
+

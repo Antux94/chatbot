@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  roe:
+    type: object
+    description: "The return on equity (ROE) is a measure of the profitability of a business in relation to the equity. It´s a measure of how well a company uses investments to generate earnings growth."
+    properties:
+      percentage:
+        type: number
+        description: |
+          Percentage of the asset.
+        required: true
+

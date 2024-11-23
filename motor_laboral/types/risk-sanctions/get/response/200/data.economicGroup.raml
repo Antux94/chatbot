@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  economicGroup:
+    type: object
+    description: "Information about the economic group in wich is sanctioning the proposal."
+    properties:
+      id:
+        type: string
+        description: |
+          Economic group's identification.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Economic group's name.
+        required: true
+

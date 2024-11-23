@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  business:
+    type: object
+    description: "Business customer identifier."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique business customer identifier.
+        required: true
+

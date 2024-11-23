@@ -1,0 +1,102 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  business: data.details.detailsElements.participantInputModel.business.raml
+  visitReports: data.details.detailsElements.participantInputModel.visitReports.raml
+  financialStatements: data.details.detailsElements.participantInputModel.financialStatements.raml
+  roleType: data.details.detailsElements.participantInputModel.roleType.raml
+  fixedAssets: data.details.detailsElements.participantInputModel.fixedAssets.raml
+  economicActivityClass: data.details.detailsElements.participantInputModel.economicActivityClass.raml
+  fastTrackEligibility: data.details.detailsElements.participantInputModel.fastTrackEligibility.raml
+  qualitativeBlocks: data.details.detailsElements.participantInputModel.qualitativeBlocks.raml
+
+types:
+  participantInputModel:
+    type: object
+    discriminator: detailsType
+    discriminatorValue: PARTICIPANT_INPUT_MODEL
+    description: "Refers when the proposal information is evaluated and output from participant filters for the proposal."
+    properties:
+      detailsType:
+        type: string
+        description: |
+          Details or notice code.
+        required: true
+        enum: [PARTICIPANT_INPUT_MODEL,PROPOSAL_INPUT_MODEL,PARTICIPANT_OUTPUT_MODEL,PROPOLSAL_OUTPUT_MODEL]
+        (annotations.enumDescription):
+        - PARTICIPANT_INPUT_MODEL: "It refers at the the proposal information."
+        - PROPOSAL_INPUT_MODEL: "It refers when the proposal information is evaluated and output from participant filters for the proposal."
+        - PARTICIPANT_OUTPUT_MODEL: "It refers when the proposal information is evaluated to be a customer for the proposal."
+        - PROPOLSAL_OUTPUT_MODEL: "It refers when the proposal information is evaluated and output from engines for the proposal."
+
+      business:
+        type: business.business
+        description: |
+          Business customer identifier
+        required: true
+
+      visitReports:
+        type: visitReports.visitReports[]
+        description: |
+          Information related to client visit report.
+        required: false
+
+      financialStatements:
+        type: financialStatements.financialStatements[]
+        description: |
+          Information related to client financial statements.
+        required: true
+
+      roleType:
+        type: roleType.roleType
+        description: |
+          Role type, it refers to the role of the customer on the proposal.
+        required: true
+
+      clientStartDate:
+        type: date-only
+        description: |
+          Creation date of the client in the base of customer.
+        required: false
+
+      fixedAssets:
+        type: fixedAssets.fixedAssets
+        description: |
+          This are the monetary value of fix assets when is guarantor.
+        required: false
+
+      economicActivityClass:
+        type: economicActivityClass.economicActivityClass
+        description: |
+          Economic activity of the related participant.
+        required: true
+
+      vulnerability:
+        type: number
+        description: |
+          It is a numeric qualification from 1 to 5 (being 1 the best qualification representing a low vulnerability and 5 the worst representing a high vulnerability) given to the person by the Research area according to the evaluation of certain variables.
+        required: true
+
+      modelSector:
+        type: string
+        description: |
+          Participant segment or sector model asigned to perform risk evaluation due to participant economic.
+        required: true
+        enum: [INDUSTRY,SERVICES,TRADE]
+        (annotations.enumDescription):
+        - INDUSTRY: "Industry sector model handles the manufacturing or manufacturing part of specific articles."
+        - SERVICES: "The service sector model is the one that handles the consulting or personnel part that works in a specific task."
+        - TRADE: "Trade sector model is the one that handles the sales part of any type."
+
+      fastTrackEligibility:
+        type: fastTrackEligibility.fastTrackEligibility
+        description: |
+          Participant segment or sector model asigned to perform risk evaluation due to participant economic.
+        required: false
+
+      qualitativeBlocks:
+        type: qualitativeBlocks.qualitativeBlocks[]
+        description: |
+          Object that contains all information about qualitative info used to execute rating.
+        required: false
+

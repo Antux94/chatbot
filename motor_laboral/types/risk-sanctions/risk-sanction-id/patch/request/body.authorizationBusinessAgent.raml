@@ -1,0 +1,28 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  bank: body.authorizationBusinessAgent.bank.raml
+
+types:
+  authorizationBusinessAgent:
+    type: object
+    description: "Data of the agent in charge of authorization the sanction of the proposal when an other  risk analyst doesn't have the profile to sanction."
+    properties:
+      user:
+        type: string
+        description: |
+          User responsible for authorizing, Responsable to do the sanction.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Name of the responsible for analyzing. Responsable to do the sanction.
+        required: true
+
+      bank:
+        type: bank.bank
+        description: |
+          Bank where the proposal information is registered
+        required: false
+

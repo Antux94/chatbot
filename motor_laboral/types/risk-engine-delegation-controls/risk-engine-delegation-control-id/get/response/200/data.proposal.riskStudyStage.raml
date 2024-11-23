@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  riskStudyStage:
+    type: object
+    description: "Risk proposal to be analyzed."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier stage of proposal or risk engine modules.
+        required: true
+        enum: [SCREENING_CLUSTER,CREDIT_DECISION,PRICING,DELEGATION,FILTERS_PRE_DISBURSEMENT]
+        (annotations.enumDescription):
+        - SCREENING_CLUSTER: "It refers when the proposal information is evaluated to be a customer for the proposal."
+        - CREDIT_DECISION: "Where the evaluation is carried out if it is viable or not, by the risk engine."
+        - PRICING: "When the proposal price is calculated."
+        - DELEGATION: "It is the phase where it is decided which statement (office manager, risk user... must sanction the proposal in the evaluation."
+        - FILTERS_PRE_DISBURSEMENT: "When the proposal is evaluated again before disbursement."
+

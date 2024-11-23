@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  identityDocument: body.details.detailsElements.delegationOutput.businessRatingQualification.identityDocument.raml
+  ratingAllowed: body.details.detailsElements.delegationOutput.businessRatingQualification.ratingAllowed.raml
+
+types:
+  businessRatingQualification:
+    type: object
+    description: "Information of the highest qualified participant of the proposal when it is evaluated by the rating decision model."
+    properties:
+      identityDocument:
+        type: identityDocument.identityDocument
+        description: |
+          Identity document information of the highest scored participant.
+        required: true
+
+      ratingAllowed:
+        type: ratingAllowed.ratingAllowed
+        description: |
+          Information of the rating decision model.
+        required: true
+

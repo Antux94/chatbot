@@ -1,0 +1,36 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  guaranteeAmount: body.details.detailsElements.proposalInputModel.guarantees.guaranteeAmount.raml
+  coverageAmount: body.details.detailsElements.proposalInputModel.guarantees.coverageAmount.raml
+
+types:
+  guarantees:
+    type: object
+    description: "Products information of guarantees."
+    properties:
+      id:
+        type: string
+        description: |
+          Guarantee identifier.
+        required: true
+
+      coverageMarginPercentage:
+        type: number
+        description: |
+          Represents the percentage that be taken from the coverage percentage.
+        required: true
+
+      guaranteeAmount:
+        type: guaranteeAmount.guaranteeAmount
+        description: |
+          Guarantee value.
+        required: false
+
+      coverageAmount:
+        type: coverageAmount.coverageAmount
+        description: |
+          Coverage values of the guarantee.
+        required: false
+
+    

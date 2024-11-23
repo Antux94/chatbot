@@ -1,0 +1,24 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  period:
+    type: object
+    description: "Information about the approval risk period"
+    properties:
+      number:
+        type: number
+        description: |
+          Number of the period about an approval risk of a product.
+        required: true
+
+      frequency:
+        type: string
+        description: |
+          Frequency of the period about  an approval risk of a product.
+        required: true
+        enum: [MONTHS]
+        (annotations.enumDescription):
+        - MONTHS: "The period is expressed in Months."
+

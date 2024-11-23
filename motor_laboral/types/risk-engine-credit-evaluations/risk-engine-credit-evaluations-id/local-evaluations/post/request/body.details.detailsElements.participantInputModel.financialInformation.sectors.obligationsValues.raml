@@ -1,0 +1,33 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  period: body.details.detailsElements.participantInputModel.financialInformation.sectors.obligationsValues.period.raml
+
+types:
+  obligationsValues:
+    type: object
+    description: "Detail of the commitment acquired by the customer, as a loan, with financial credit entities."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of obligations values.
+        required: true
+        enum: [PERIODS_NUMBER_WITH_DELAY,MAXIMUM_ARREARS_PERIODS]
+        (annotations.enumDescription):
+        - PERIODS_NUMBER_WITH_DELAY: "Number of periods of arrears of the obligation."
+        - MAXIMUM_ARREARS_PERIODS: "Maximum months in arrears of obligations."
+
+      value:
+        type: number
+        description: |
+          Quantity of obligations in a period of time.
+        required: true
+
+      period:
+        type: period.period
+        description: |
+          Period of obligation.
+        required: true
+
+    

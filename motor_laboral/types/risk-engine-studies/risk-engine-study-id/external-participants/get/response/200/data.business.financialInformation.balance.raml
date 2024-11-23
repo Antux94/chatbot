@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  shortTerm: data.business.financialInformation.balance.shortTerm.raml
+  longTerm: data.business.financialInformation.balance.longTerm.raml
+
+types:
+  balance:
+    type: object
+    description: "Long and short term balance information."
+    properties:
+      shortTerm:
+        type: shortTerm.shortTerm
+        description: |
+          is the sum of the balances of the financial obligations reported in credit bureaus, with a term shorter or equal to 12 months..
+        required: true
+
+      longTerm:
+        type: longTerm.longTerm
+        description: |
+          is the sum of the balances of the financial obligations reported in credit bureaus, with a term greater than 12 months.
+        required: true
+

@@ -1,0 +1,59 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  obligationAmounts: body.root.externalFinancialInformation.sectors.obligationAmounts.raml
+  obligationsValues: body.root.externalFinancialInformation.sectors.obligationsValues.raml
+  punctuations: body.root.externalFinancialInformation.sectors.punctuations.raml
+
+types:
+  sectors:
+    type: object
+    description: "Sets of productive or commercial activities that meet a series of similar characteristics; that is, they have a similar nature."
+    properties:
+      id:
+        type: string
+        description: |
+          Obligation identifier.
+        required: true
+        enum: [REAL,FINANCIAL]
+        (annotations.enumDescription):
+        - REAL: "All obligations that are contracted by the owner of information with entities that do not belong to the financial sector."
+        - FINANCIAL: "All obligations that are contracted by the owner of the information with the financial sectors."
+
+      paymentBehavior:
+        type: string
+        description: |
+          Payment behavior of the holder in the last 24 months.
+        required: false
+
+      extinctObligationsNumber:
+        type: number
+        description: |
+          Number of the obligations in extinct in a sector.
+        required: false
+
+      obligationAmounts:
+        type: obligationAmounts.obligationAmounts[]
+        description: |
+          Amounts of financial obligations.
+        required: false
+
+      obligationsValues:
+        type: obligationsValues.obligationsValues[]
+        description: |
+          Detail of the commitment acquired by the customer, as a loan, with financial credit entities.
+        required: false
+
+      arrearsObligationsNumber:
+        type: number
+        description: |
+          Quantity the obligations in arrears in the last months.
+        required: false
+
+      punctuations:
+        type: punctuations.punctuations[]
+        description: |
+          Information about the reports on a certain period of time of the external consultations.
+        required: false
+
+    

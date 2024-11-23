@@ -1,0 +1,20 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  status:
+    type: object
+    description: "Status of the financial exercice."
+    properties:
+      id:
+        type: string
+        description: |
+          Status identifier.
+        required: true
+        enum: [VALIDATED,FINALIZED,INITIALIZED]
+        (annotations.enumDescription):
+        - VALIDATED: "It represents the balance where the accounting accounts are held, but it is not possible to perform the financial statement exercise."
+        - FINALIZED: "It represents the balance that was completed to perform the exercise of the financial statement."
+        - INITIALIZED: "It represents unfinished balance when performing the financial statement exercise."
+

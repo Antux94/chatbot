@@ -1,0 +1,16 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  amount: body.details.detailsElements.participantInputModel.financialStatements.ratios.profitability.ebitda.amount.raml
+
+types:
+  ebitda:
+    type: object
+    description: "Asset that measures a company's earnings, before interest expenses, taxes, depreciation, and amortization are subtracted (EBITDA)."
+    properties:
+      amount:
+        type: amount.amount
+        description: |
+          Monetary amount.
+        required: true
+

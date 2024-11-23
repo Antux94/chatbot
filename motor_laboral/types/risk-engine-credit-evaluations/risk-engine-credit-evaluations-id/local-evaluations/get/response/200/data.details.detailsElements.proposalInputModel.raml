@@ -1,0 +1,37 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  products: data.details.detailsElements.proposalInputModel.products.raml
+  guarantees: data.details.detailsElements.proposalInputModel.guarantees.raml
+
+types:
+  proposalInputModel:
+    type: object
+    discriminator: detailsType
+    discriminatorValue: PARTICIPANT_INPUT_MODEL
+    description: "Refers at the the proposal information."
+    properties:
+      detailsType:
+        type: string
+        description: |
+          Details or notice code.
+        required: true
+        enum: [PARTICIPANT_INPUT_MODEL,PROPOSAL_INPUT_MODEL,PARTICIPANT_OUTPUT_MODEL,PROPOLSAL_OUTPUT_MODEL]
+        (annotations.enumDescription):
+        - PARTICIPANT_INPUT_MODEL: "It refers at the the proposal information."
+        - PROPOSAL_INPUT_MODEL: "It refers when the proposal information is evaluated and output from participant filters for the proposal."
+        - PARTICIPANT_OUTPUT_MODEL: "It refers when the proposal information is evaluated to be a customer for the proposal."
+        - PROPOLSAL_OUTPUT_MODEL: "It refers when the proposal information is evaluated and output from engines for the proposal."
+
+      products:
+        type: products.products[]
+        description: |
+          Products information of proposals.
+        required: false
+
+      guarantees:
+        type: guarantees.guarantees[]
+        description: |
+          Products information of guarantees.
+        required: false
+

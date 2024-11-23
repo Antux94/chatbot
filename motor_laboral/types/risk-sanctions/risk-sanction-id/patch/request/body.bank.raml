@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  branch: body.bank.branch.raml
+
+types:
+  bank:
+    type: object
+    description: "Full bank detail of the bank where the obligation was issued."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique identifier of a bank.
+        required: true
+
+      branch:
+        type: branch.branch
+        description: |
+          Branch Information.
+        required: false
+

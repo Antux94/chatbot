@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  riskStudyStage: data.proposal.riskStudyStage.raml
+
+types:
+  proposal:
+    type: object
+    description: "Risk proposal to be analyzed."
+    properties:
+      id:
+        type: string
+        description: |
+          Proposal identifier.
+        required: true
+
+      riskStudyStage:
+        type: riskStudyStage.riskStudyStage
+        description: |
+          Risk proposal to be analyzed.
+        required: true
+

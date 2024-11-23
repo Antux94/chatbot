@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  liquidationType:
+    type: object
+    description: "Product liquidation data"
+    properties:
+      id:
+        type: string
+        description: |
+          Form of payment agreed with the client of interest and capital payment.
+        required: true
+
+      description:
+        type: string
+        description: |
+          Form of payment agreed with the client of interest and capital payment.
+        required: true
+

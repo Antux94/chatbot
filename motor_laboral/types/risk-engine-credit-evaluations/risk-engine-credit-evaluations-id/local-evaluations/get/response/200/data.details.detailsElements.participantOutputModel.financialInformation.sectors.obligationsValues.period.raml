@@ -1,0 +1,24 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  period:
+    type: object
+    description: "Period of obligation."
+    properties:
+      unit:
+        type: string
+        description: |
+          Type of period query.
+        required: true
+        enum: [MONTHS]
+        (annotations.enumDescription):
+        - MONTHS: "Time expressed in months."
+
+      number:
+        type: number
+        description: |
+          Number of periods.
+        required: true
+

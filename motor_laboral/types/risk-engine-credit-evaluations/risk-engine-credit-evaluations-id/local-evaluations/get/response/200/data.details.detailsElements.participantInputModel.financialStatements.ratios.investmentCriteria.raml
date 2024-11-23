@@ -1,0 +1,16 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  netPayBack: data.details.detailsElements.participantInputModel.financialStatements.ratios.investmentCriteria.netPayBack.raml
+
+types:
+  investmentCriteria:
+    type: object
+    description: "Grouping investment criteria ratios."
+    properties:
+      netPayBack:
+        type: netPayBack.netPayBack
+        description: |
+          The payback represents the time in years required to earn back the amount invested in an asset from its net cash flows (Years).
+        required: true
+

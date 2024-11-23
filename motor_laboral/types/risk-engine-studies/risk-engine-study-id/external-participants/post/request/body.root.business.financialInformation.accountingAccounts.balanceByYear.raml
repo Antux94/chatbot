@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  imports: body.root.business.financialInformation.accountingAccounts.balanceByYear.imports.raml
+
+types:
+  balanceByYear:
+    type: object
+    description: "Years to which the information belongs to the accounts"
+    properties:
+      year:
+        type: string
+        description: |
+          Year of financial report.
+        required: true
+
+      imports:
+        type: imports.imports[]
+        description: |
+          Value corresponding to the financial year.
+        required: true
+
+    

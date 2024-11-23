@@ -1,0 +1,37 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  employessInformation: data.business.employessInformation.raml
+  exports: data.business.exports.raml
+  imports: data.business.imports.raml
+  financialInformation: data.business.financialInformation.raml
+
+types:
+  business:
+    type: object
+    description: "information about a participant's company"
+    properties:
+      employessInformation:
+        type: employessInformation.employessInformation
+        description: |
+          Information corresponding to the number of employees and subscribed capital that has been effectively canceled by the shareholders..
+        required: true
+
+      exports:
+        type: exports.exports
+        description: |
+          Is the value that the client registers before the Dian for each of these items in a determined period comprised of 12 months.
+        required: true
+
+      imports:
+        type: imports.imports
+        description: |
+          Is the value that the client registers before the Dian for each of these items in a determined period comprised of 12 months.
+        required: true
+
+      financialInformation:
+        type: financialInformation.financialInformation
+        description: |
+          Information that produces accounting indispensable for the administration and development of companies and is processed and concentrated for the use of management and government entities.
+        required: true
+

@@ -1,0 +1,24 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  gracePeriod:
+    type: object
+    description: "Grace period for approval risk. A grace period is the provision that allows payment to be received for a certain period of time after the actual due date. During this period, no late fees are charged, and the late payment does not result in default or cancellation of the obligation."
+    properties:
+      frequency:
+        type: string
+        description: |
+          Frequency of the grace period of product pay.
+        required: true
+        enum: [MONTHS]
+        (annotations.enumDescription):
+        - MONTHS: "The period is expressed in Months."
+
+      number:
+        type: number
+        description: |
+          Value of the grace period of product pay.
+        required: true
+

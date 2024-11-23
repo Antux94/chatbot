@@ -1,0 +1,36 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  ownerType: body.root.commerceChamberEnrollment.owners.ownerType.raml
+  identityDocument: body.root.commerceChamberEnrollment.owners.identityDocument.raml
+
+types:
+  owners:
+    type: object
+    description: "Owners information of the stakeholders of the company."
+    properties:
+      ownerType:
+        type: ownerType.ownerType
+        description: |
+          Owner role.
+        required: true
+
+      fullName:
+        type: string
+        description: |
+          Full name of the person.
+        required: true
+
+      identityDocument:
+        type: identityDocument.identityDocument
+        description: |
+          Identification document number..
+        required: true
+
+      limitations:
+        type: string
+        description: |
+          Description Limitations, are the clauses, duties and faculties that the legal representative has.
+        required: false
+
+    

@@ -1,0 +1,51 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  status: data.details.detailsElements.participantInputModel.financialStatements.status.raml
+  certification: data.details.detailsElements.participantInputModel.financialStatements.certification.raml
+  period: data.details.detailsElements.participantInputModel.financialStatements.period.raml
+  accountingAccounts: data.details.detailsElements.participantInputModel.financialStatements.accountingAccounts.raml
+  ratios: data.details.detailsElements.participantInputModel.financialStatements.ratios.raml
+
+types:
+  financialStatements:
+    type: object
+    description: "Information related to client financial statements."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the Financial Statement.
+        required: true
+
+      status:
+        type: status.status
+        description: |
+          Status of the financial exercice.
+        required: true
+
+      certification:
+        type: certification.certification
+        description: |
+          Certification type of the financial statements associated to the rating.
+        required: true
+
+      period:
+        type: period.period
+        description: |
+          Associated period to the financial statement. Represents the period covered by it.
+        required: false
+
+      accountingAccounts:
+        type: accountingAccounts.accountingAccounts[]
+        description: |
+          Accounting accounts of the financial statement.
+        required: true
+
+      ratios:
+        type: ratios.ratios
+        description: |
+          Ratios information a financial statement.
+        required: true
+
+    

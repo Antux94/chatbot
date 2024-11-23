@@ -1,0 +1,43 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  periodType: data.participants.ratings.period.periodType.raml
+
+types:
+  period:
+    type: object
+    description: "Associated period to the financial statement. Represents the period covered by this."
+    properties:
+      unit:
+        type: string
+        description: |
+          Type of period query.
+        required: true
+        enum: [MONTHS]
+        (annotations.enumDescription):
+        - MONTHS: "Time expressed in months."
+
+      number:
+        type: number
+        description: |
+          Number of units of the period of the Financial Statement.
+        required: true
+
+      periodType:
+        type: periodType.periodType
+        description: |
+          Information about the period covered by the financial statement (one year or less than one year).
+        required: true
+
+      startDate:
+        type: date-only
+        description: |
+          String based on ISO-8601 date format for providing the initial day of the economic period covered by the financial statements(Startline).
+        required: true
+
+      endDate:
+        type: date-only
+        description: |
+          String based on ISO-8601 date format for providing the last day of the economic period covered by the financial statements(deadline).
+        required: true
+

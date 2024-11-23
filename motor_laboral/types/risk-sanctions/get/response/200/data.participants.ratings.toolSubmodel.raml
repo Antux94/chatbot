@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  toolSubmodel:
+    type: object
+    description: "Information about the model execution tool."
+    properties:
+      id:
+        type: string
+        description: |
+          Partial Punctuation identifier.
+        required: true
+

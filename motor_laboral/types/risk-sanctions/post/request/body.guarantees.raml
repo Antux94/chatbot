@@ -1,0 +1,62 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  guaranteeType: body.guarantees.guaranteeType.raml
+  coverageAmount: body.guarantees.coverageAmount.raml
+  guaranteeAmount: body.guarantees.guaranteeAmount.raml
+  linesType: body.guarantees.linesType.raml
+
+types:
+  guarantees:
+    type: object
+    description: "Guarantees information."
+    properties:
+      guaranteeType:
+        type: guaranteeType.guaranteeType
+        description: |
+          Guarantee type.
+        required: false
+
+      coverageAmount:
+        type: coverageAmount.coverageAmount
+        description: |
+          It refers to the value of the funds or guarantee that cover a credit operation.
+        required: true
+
+      guaranteeAmount:
+        type: guaranteeAmount.guaranteeAmount
+        description: |
+          Guarantee value.
+        required: true
+
+      coveragePercentage:
+        type: number
+        description: |
+          Represents in percentage of the coverage amount, it refers the percentage to cover the proposal requested amount.
+        required: true
+
+      downPaymentPercentage:
+        type: number
+        description: |
+          It is the payment made by the tenant directly to the provider for the account at the beginning of the contract.
+        required: true
+
+      purchaseOptionPercentage:
+        type: number
+        description: |
+          Percentage of the commercial value of a given good in leasing that is agreed in the lease contract and that the client must cancel BBVA to exercise the right to acquire the property.
+        required: true
+
+      hasEconomicGroup:
+        type: boolean
+        description: |
+          Information associated with the guarantee, it is associated to an economic group when is active else is relate to the proposal holder.
+        required: false
+
+      linesType:
+        type: linesType.linesType[]
+        description: |
+          Relationship between the line and guarantee.
+        required: false
+
+    

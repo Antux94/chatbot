@@ -1,0 +1,23 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  identityDocument: data.identityDocument.raml
+
+types:
+  data:
+    type: object
+    description: "Root node"
+    properties:
+      identityDocument:
+        type: identityDocument.identityDocument
+        description: |
+          Identity document of the customer.
+        required: true
+
+      incomes:
+        type: number
+        description: |
+          Amount of income customer.
+        required: true
+        example: 3700000
+

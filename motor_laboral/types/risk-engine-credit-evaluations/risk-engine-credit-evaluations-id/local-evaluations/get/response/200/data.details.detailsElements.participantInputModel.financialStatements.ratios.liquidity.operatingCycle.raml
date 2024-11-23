@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  operatingCycle:
+    type: object
+    description: "It´s the average period of time in days required for a business to make an initial outlay of cash to produce goods, sell the goods and receive cash from customers in exchange for the goods."
+    properties:
+      percentage:
+        type: number
+        description: |
+          Percentage of the asset.
+        required: true
+

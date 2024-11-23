@@ -1,0 +1,30 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  subLimit: data.approvedRisks.limits.subLimit.raml
+  line: data.approvedRisks.limits.line.raml
+
+types:
+  limits:
+    type: object
+    description: "list of limits approved by risks."
+    properties:
+      id:
+        type: string
+        description: |
+          Associated limit identifier.
+        required: true
+
+      subLimit:
+        type: subLimit.subLimit
+        description: |
+          Detailed SubLimits approved by risks.
+        required: true
+
+      line:
+        type: line.line
+        description: |
+          Group of global product aggregated by risk definition.
+        required: true
+
+    

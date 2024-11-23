@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  accountLevel:
+    type: object
+    description: "Level of the account for its visualization (it is the tabulation)."
+    properties:
+      id:
+        type: string
+        description: |
+          Level identifier.
+        required: true
+

@@ -1,0 +1,20 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  historicalArrears:
+    type: object
+    description: "Information about the historical arrears of the participant on the risk proposal."
+    properties:
+      riskStage:
+        type: string
+        description: |
+          Contract indicator that reflects its deterioration, depending on it, the bank has to make allowance according to IFRS9.
+        required: true
+        enum: [STAGE_ONE,STAGE_TWO,STAGE_THREE]
+        (annotations.enumDescription):
+        - STAGE_ONE: "Dictum and/or qualification of the behavior of historical arrears from 0 to 30 days."
+        - STAGE_TWO: "Dictum and/or qualification of the behavior of historical arrears from 30 to 90 days."
+        - STAGE_THREE: "Dictum and/or qualification of the behavior of historical arrears of more than 90 days."
+

@@ -1,0 +1,106 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  customersLimitAmount: data.details.detailsElements.delegationInput.attributions.attributionConfigurations.customersLimitAmount.raml
+  groupLimitAmount: data.details.detailsElements.delegationInput.attributions.attributionConfigurations.groupLimitAmount.raml
+  othersLimitAmount: data.details.detailsElements.delegationInput.attributions.attributionConfigurations.othersLimitAmount.raml
+  scoringAllowed: data.details.detailsElements.delegationInput.attributions.attributionConfigurations.scoringAllowed.raml
+  ratingAllowed: data.details.detailsElements.delegationInput.attributions.attributionConfigurations.ratingAllowed.raml
+
+types:
+  attributionConfigurations:
+    type: object
+    description: "Attribution information module."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique identifier of an attribution.
+        required: true
+
+      riskModelType:
+        type: string
+        description: |
+          Risk model executed for credit decision.
+        required: true
+        enum: [SCORING,RATING]
+        (annotations.enumDescription):
+        - SCORING: "Decision model for a specific customer segment for a scoring."
+        - RATING: "Decision model for a specific customer segment for a rating."
+
+      riskStage:
+        type: string
+        description: |
+          Contract indicator that reflects its deterioration, depending on it, the bank has to make allowance according to IFRS9.
+        required: true
+        enum: [STAGE_ONE,STAGE_TWO,STAGE_THREE]
+        (annotations.enumDescription):
+        - STAGE_ONE: "Dictum and/or qualification of the behavior of historical arrears from 0 to 30 days."
+        - STAGE_TWO: "Dictum and/or qualification of the behavior of historical arrears from 30 to 90 days."
+        - STAGE_THREE: "Dictum and/or qualification of the behavior of historical arrears of more than 90 days."
+
+      highRiskEconomicActivity:
+        type: boolean
+        description: |
+          Indicates if the profile retrieved can evaluate customers that have a high risk economic activity.
+        required: true
+
+      canEvaluatePublicResponsability:
+        type: boolean
+        description: |
+          Indicates if the profile retrieved can evaluate customers that have public responsibility.
+        required: true
+
+      segment:
+        type: string
+        description: |
+          Segment in which the attributions will be delegated.
+        required: false
+        enum: [PYMES,BUSINESS]
+        (annotations.enumDescription):
+        - PYMES: "It refers to the segment of small and medium-sized companies."
+        - BUSINESS: "It refers to a business that, due to its number of employees and its assets, is considered a company."
+
+      canEvaluateRefinancing:
+        type: boolean
+        description: |
+          Indicates if the profile retrieved can evaluate a refinancing that has been delegated.
+        required: false
+
+      customersLimitAmount:
+        type: customersLimitAmount.customersLimitAmount
+        description: |
+          Monetary amount of the customers limit that can be evaluated on the profile retrieved.
+        required: false
+
+      groupLimitAmount:
+        type: groupLimitAmount.groupLimitAmount
+        description: |
+          Monetary amount of the groups limit that can be evaluated on the profile retrieved.
+        required: false
+
+      othersLimitAmount:
+        type: othersLimitAmount.othersLimitAmount
+        description: |
+          Monetary amount of others limits that can be evaluated on the profile retrieved.
+        required: false
+
+      scoringAllowed:
+        type: scoringAllowed.scoringAllowed
+        description: |
+          Information the scoring decision model.
+        required: false
+
+      ratingAllowed:
+        type: ratingAllowed.ratingAllowed
+        description: |
+          Information the scoring decision model.
+        required: false
+
+      canAssumeRiskOperation:
+        type: boolean
+        description: |
+          Indicates if the profile retrieved can take a risk operation that has been delegated.
+        required: true
+
+    

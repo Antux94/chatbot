@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  branch: body.riskAnalystAgent.bank.branch.raml
+
+types:
+  bank:
+    type: object
+    description: "Bank where the proposal information is registered"
+    properties:
+      id:
+        type: string
+        description: |
+          Unique identifier of a bank.
+        required: true
+
+      branch:
+        type: branch.branch
+        description: |
+          Branch Information.
+        required: false
+

@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  paidCapital: data.business.employessInformation.paidCapital.raml
+
+types:
+  employessInformation:
+    type: object
+    description: "Information corresponding to the number of employees and subscribed capital that has been effectively canceled by the shareholders.."
+    properties:
+      employeesNumber:
+        type: number
+        description: |
+          Quantity of employees.
+        required: true
+
+      paidCapital:
+        type: paidCapital.paidCapital
+        description: |
+          Capital canceled by shareholders.
+        required: true
+

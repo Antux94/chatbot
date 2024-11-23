@@ -1,0 +1,32 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  owner:
+    type: object
+    description: "Information about owner comments."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the owner. When the owner is a Participant is the identity document, when is approved_risk is the id, when is a liability is the identity document + liability id, when is a guarantee is the guarantee id.
+        required: true
+
+      type:
+        type: string
+        description: |
+          Owner type description.
+        required: true
+        enum: [PARTICIPANT,APPROVED_RISK,APPROVED_RISK_APPLICATION,SANCTION,LIABILITIES,LIABILITIES_APPLICATION,INITIAL_GUARANTEE,GUARANTEE,GUARANTEE_APPLICATION]
+        (annotations.enumDescription):
+        - PARTICIPANT: "Identify when the comment is a participant."
+        - APPROVED_RISK: "Identify when the comment is a risk product."
+        - APPROVED_RISK_APPLICATION: "Identify when the comment is general in a risk product."
+        - SANCTION: "Identify when the comment is about sanction."
+        - LIABILITIES: "Identify the current obligation."
+        - LIABILITIES_APPLICATION: "Identify the comment as general for current obligations."
+        - INITIAL_GUARANTEE: "Initial comment on the radication workflow"
+        - GUARANTEE: "Identify when the comment is a guarantee."
+        - GUARANTEE_APPLICATION: "Identify when the comment is a guarantee."
+

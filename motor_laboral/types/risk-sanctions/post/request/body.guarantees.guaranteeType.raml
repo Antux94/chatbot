@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  division: body.guarantees.guaranteeType.division.raml
+
+types:
+  guaranteeType:
+    type: object
+    description: "Guarantee type."
+    properties:
+      id:
+        type: string
+        description: |
+          Guarantee identifier.
+        required: true
+
+      division:
+        type: division.division
+        description: |
+          Guarantee identifier.
+        required: false
+

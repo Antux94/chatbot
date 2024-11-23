@@ -1,0 +1,42 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  status: data.details.detailsElements.delegationInput.participants.financialStatements.status.raml
+  accountingAccounts: data.details.detailsElements.delegationInput.participants.financialStatements.accountingAccounts.raml
+
+types:
+  financialStatements:
+    type: object
+    description: "Information related to client financial statements."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the Financial Statement.
+        required: true
+
+      startDate:
+        type: date-only
+        description: |
+          String based on ISO-8601 date format for providing the initial day of the economic period covered by the financial statements (startline).
+        required: true
+
+      endDate:
+        type: date-only
+        description: |
+          String based on ISO-8601 date format for providing the last day of the economic period covered by the financial statements (deadline).
+        required: true
+
+      status:
+        type: status.status
+        description: |
+          Status of the financial exercice.
+        required: true
+
+      accountingAccounts:
+        type: accountingAccounts.accountingAccounts[]
+        description: |
+          Accounting accounts of the financial statement.
+        required: true
+
+    

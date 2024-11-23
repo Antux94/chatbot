@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  equityToAssets:
+    type: object
+    description: "This ratio indicates which percentages of a company's total assets are owned by the shareholders instead of leveraged avoiding the risk of coming under the control of debtholders (such as banks) in the event of bankruptcy."
+    properties:
+      percentage:
+        type: number
+        description: |
+          Percentage of the asset.
+        required: true
+

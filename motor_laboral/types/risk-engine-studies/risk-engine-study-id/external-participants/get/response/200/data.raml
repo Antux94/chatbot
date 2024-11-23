@@ -1,0 +1,57 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  identityDocument: data.identityDocument.raml
+  commerceChamberEnrollment: data.commerceChamberEnrollment.raml
+  business: data.business.raml
+  externalReportEntities: data.externalReportEntities.raml
+  externalFinancialInformation: data.externalFinancialInformation.raml
+
+types:
+  data:
+    type: object
+    description: ""
+    properties:
+      identityDocument:
+        type: identityDocument.identityDocument
+        description: |
+          Identity document of the participant.
+        required: true
+
+      commerceChamberEnrollment:
+        type: commerceChamberEnrollment.commerceChamberEnrollment
+        description: |
+          Commerce chamber 'A Chamber of Commerce is an organization formed by entrepreneurs or owners of small, medium or large businesses in order to increase productivity, employees and competitiveness of their businesses.' This commerce chamber  contains information about the companies and the owners.
+        required: false
+
+      partnershipValidity:
+        type: string
+        description: |
+          Validity date that the company has in front of the Chamber of Commerce.
+        required: true
+
+      hasSeizedProducts:
+        type: boolean
+        description: |
+          Indicates if the owner has embargoed products.
+        required: false
+
+      business:
+        type: business.business
+        description: |
+          information about a participant's company
+        required: false
+
+      externalReportEntities:
+        type: externalReportEntities.externalReportEntities[]
+        description: |
+          Information of the negative report made by a financial institution.
+        required: false
+
+      externalFinancialInformation:
+        type: externalFinancialInformation.externalFinancialInformation
+        description: |
+          it is information that produces the indispensable accounting for the administration and the development of the companies and is processed and concentrated for the use of the management and governmental entities.
+        required: false
+
+    

@@ -1,0 +1,29 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  stage: body.stage.raml
+  details: body.details.raml
+
+types:
+  body:
+    type: object
+    description: ""
+    properties:
+      stage:
+        type: stage.stage
+        description: |
+          Stage information of study risk.
+        required: true
+
+      proposalId:
+        type: string
+        description: |
+          Proposal identifier.
+        required: true
+
+      details:
+        type: details.details[]
+        description: |
+          Details  or notice code.
+        required: true
+

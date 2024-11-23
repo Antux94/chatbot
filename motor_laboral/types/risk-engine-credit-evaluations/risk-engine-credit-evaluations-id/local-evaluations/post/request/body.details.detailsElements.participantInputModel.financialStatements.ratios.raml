@@ -1,0 +1,51 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  profitability: body.details.detailsElements.participantInputModel.financialStatements.ratios.profitability.raml
+  activity: body.details.detailsElements.participantInputModel.financialStatements.ratios.activity.raml
+  investmentCriteria: body.details.detailsElements.participantInputModel.financialStatements.ratios.investmentCriteria.raml
+  solvency: body.details.detailsElements.participantInputModel.financialStatements.ratios.solvency.raml
+  changeOfScale: body.details.detailsElements.participantInputModel.financialStatements.ratios.changeOfScale.raml
+  liquidity: body.details.detailsElements.participantInputModel.financialStatements.ratios.liquidity.raml
+
+types:
+  ratios:
+    type: object
+    description: "Ratios information a financial statement."
+    properties:
+      profitability:
+        type: profitability.profitability
+        description: |
+          Grouping profitability ratios.
+        required: true
+
+      activity:
+        type: activity.activity
+        description: |
+          Grouping activity ratios.
+        required: true
+
+      investmentCriteria:
+        type: investmentCriteria.investmentCriteria
+        description: |
+          Grouping investment criteria ratios.
+        required: true
+
+      solvency:
+        type: solvency.solvency
+        description: |
+          Grouping solvency ratios.
+        required: true
+
+      changeOfScale:
+        type: changeOfScale.changeOfScale
+        description: |
+          Grouping change of scale ratios
+        required: true
+
+      liquidity:
+        type: liquidity.liquidity
+        description: |
+          Grouping liquidity ratios.
+        required: true
+

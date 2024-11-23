@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  bank: body.riskAnalystAgent.bank.raml
+
+types:
+  riskAnalystAgent:
+    type: object
+    description: "Data of the risk analyst in charge of evaluating the proposal data first."
+    properties:
+      user:
+        type: string
+        description: |
+          User responsible for analyze the proposal.
+        required: true
+
+      bank:
+        type: bank.bank
+        description: |
+          Bank where the proposal information is registered
+        required: false
+

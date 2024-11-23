@@ -1,0 +1,31 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  sanction:
+    type: object
+    description: "Risk sanction information."
+    properties:
+      riskModelType:
+        type: string
+        description: |
+          Risk model executed for credit decision.
+        required: true
+        enum: [SCORING,RATING]
+        (annotations.enumDescription):
+        - SCORING: "Decision model for a specific customer segment for a scoring."
+        - RATING: "Decision model for a specific customer segment for a rating."
+
+      dictum:
+        type: string
+        description: |
+          Final automatic sanction made by risk tool.
+        required: true
+        enum: [APPROVED,REJECTED,DUBIOUS,NOT_APPLY]
+        (annotations.enumDescription):
+        - APPROVED: "The customer profile is approved for a requested product."
+        - REJECTED: "The customer profile is rejected for a requested product."
+        - DUBIOUS: "The customer profile is dubious for a requested product."
+        - NOT_APPLY: "The customer profile is not apply for a requested product."
+

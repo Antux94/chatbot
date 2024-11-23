@@ -1,0 +1,37 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  acidTest: data.details.detailsElements.participantInputModel.financialStatements.ratios.liquidity.acidTest.raml
+  cashConversionCycle: data.details.detailsElements.participantInputModel.financialStatements.ratios.liquidity.cashConversionCycle.raml
+  current: data.details.detailsElements.participantInputModel.financialStatements.ratios.liquidity.current.raml
+  operatingCycle: data.details.detailsElements.participantInputModel.financialStatements.ratios.liquidity.operatingCycle.raml
+
+types:
+  liquidity:
+    type: object
+    description: "Grouping liquidity ratios."
+    properties:
+      acidTest:
+        type: acidTest.acidTest
+        description: |
+          Ratio to measure the ability of a company to use its near cash or quick assets to extinguish or retire its current liabilities immediately.
+        required: true
+
+      cashConversionCycle:
+        type: cashConversionCycle.cashConversionCycle
+        description: |
+          It measures the time in days it takes for a company to convert its investments in inventory and other resources into cash flows from sales.
+        required: true
+
+      current:
+        type: current.current
+        description: |
+          This ratio is used to measure a company's liquidity or ability to pay off short-term debts.
+        required: true
+
+      operatingCycle:
+        type: operatingCycle.operatingCycle
+        description: |
+          It´s the average period of time in days required for a business to make an initial outlay of cash to produce goods, sell the goods and receive cash from customers in exchange for the goods.
+        required: true
+

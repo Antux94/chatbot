@@ -1,0 +1,16 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  amount: data.details.detailsElements.participantInputModel.financialStatements.ratios.activity.workingCapital.amount.raml
+
+types:
+  workingCapital:
+    type: object
+    description: "Working capital, also known as net working capital, is the difference between a company’s current assets, like cash, accounts receivable (customers’ unpaid bills) and inventories of raw materials and finished goods, and its current liabilities, like accounts payable."
+    properties:
+      amount:
+        type: amount.amount
+        description: |
+          Monetary amount.
+        required: true
+

@@ -1,0 +1,91 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  products: data.details.detailsElements.proposalOutputModel.products.raml
+  sumFixedAssetsHolders: data.details.detailsElements.proposalOutputModel.sumFixedAssetsHolders.raml
+  sumFixedAssetsGuarantors: data.details.detailsElements.proposalOutputModel.sumFixedAssetsGuarantors.raml
+  totalRequestedAmount: data.details.detailsElements.proposalOutputModel.totalRequestedAmount.raml
+  sumAnnualizedFess: data.details.detailsElements.proposalOutputModel.sumAnnualizedFess.raml
+  totalAnnualFeesFinancialDebts: data.details.detailsElements.proposalOutputModel.totalAnnualFeesFinancialDebts.raml
+  valueCoverageFixedAssets: data.details.detailsElements.proposalOutputModel.valueCoverageFixedAssets.raml
+  valueCoverageGuarantees: data.details.detailsElements.proposalOutputModel.valueCoverageGuarantees.raml
+
+types:
+  proposalOutputModel:
+    type: object
+    discriminator: detailsType
+    discriminatorValue: PARTICIPANT_OUTPUT_MODEL
+    description: "Refers when the proposal information."
+    properties:
+      detailsType:
+        type: string
+        description: |
+          Details or notice code.
+        required: true
+        enum: [PARTICIPANT_INPUT_MODEL,PROPOSAL_INPUT_MODEL,PARTICIPANT_OUTPUT_MODEL,PROPOLSAL_OUTPUT_MODEL]
+        (annotations.enumDescription):
+        - PARTICIPANT_INPUT_MODEL: "It refers at the the proposal information."
+        - PROPOSAL_INPUT_MODEL: "It refers when the proposal information is evaluated and output from participant filters for the proposal."
+        - PARTICIPANT_OUTPUT_MODEL: "It refers when the proposal information is evaluated to be a customer for the proposal."
+        - PROPOLSAL_OUTPUT_MODEL: "It refers when the proposal information is evaluated and output from engines for the proposal."
+
+      products:
+        type: products.products[]
+        description: |
+          Products information of proposals.
+        required: false
+
+      guarantorsNumber:
+        type: number
+        description: |
+          Number of guarantors.
+        required: true
+
+      bankCustomerGuarantorsNumber:
+        type: number
+        description: |
+          Number of guarantors who are customers of the bank.
+        required: true
+
+      sumFixedAssetsHolders:
+        type: sumFixedAssetsHolders.sumFixedAssetsHolders
+        description: |
+          Sum Fixed Assets Holders
+        required: true
+
+      sumFixedAssetsGuarantors:
+        type: sumFixedAssetsGuarantors.sumFixedAssetsGuarantors
+        description: |
+          Sum fixed assets the guarantor
+        required: true
+
+      totalRequestedAmount:
+        type: totalRequestedAmount.totalRequestedAmount
+        description: |
+          Total requested amount for proposal.
+        required: true
+
+      sumAnnualizedFess:
+        type: sumAnnualizedFess.sumAnnualizedFess
+        description: |
+          Sum of annualized fees.
+        required: true
+
+      totalAnnualFeesFinancialDebts:
+        type: totalAnnualFeesFinancialDebts.totalAnnualFeesFinancialDebts
+        description: |
+          Total annual fees financial debts.
+        required: true
+
+      valueCoverageFixedAssets:
+        type: valueCoverageFixedAssets.valueCoverageFixedAssets
+        description: |
+          Value of coverage for net fixed assets.
+        required: true
+
+      valueCoverageGuarantees:
+        type: valueCoverageGuarantees.valueCoverageGuarantees
+        description: |
+          Value of coverage of guarantees
+        required: true
+

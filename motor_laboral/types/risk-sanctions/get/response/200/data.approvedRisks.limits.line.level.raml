@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  level:
+    type: object
+    description: "Level of typology, subtypology or modality."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique level identifier.
+        required: true
+

@@ -1,0 +1,47 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  owners: data.commerceChamberEnrollment.owners.raml
+  contactDetails: data.commerceChamberEnrollment.contactDetails.raml
+
+types:
+  commerceChamberEnrollment:
+    type: object
+    description: "Commerce chamber 'A Chamber of Commerce is an organization formed by entrepreneurs or owners of small, medium or large businesses in order to increase productivity, employees and competitiveness of their businesses.' This commerce chamber  contains information about the companies and the owners."
+    properties:
+      status:
+        type: string
+        description: |
+          State of registration in the Chamber of Commerce.
+        required: true
+
+      registrationDate:
+        type: date-only
+        description: |
+          Registration date in front of the chamber of commerce.
+        required: true
+
+      renewalYear:
+        type: string
+        description: |
+          Date of last registration renewal.
+        required: true
+
+      registrationCity:
+        type: string
+        description: |
+          City of issue of registration.
+        required: true
+
+      owners:
+        type: owners.owners[]
+        description: |
+          Owners information of the stakeholders of the company.
+        required: false
+
+      contactDetails:
+        type: contactDetails.contactDetails[]
+        description: |
+          Contact information related to the company.
+        required: false
+

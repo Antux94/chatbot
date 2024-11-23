@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  branch:
+    type: object
+    description: "Branch Information."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique identifier of a branch.
+        required: true
+

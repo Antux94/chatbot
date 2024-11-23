@@ -1,0 +1,65 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  identityDocument: data.details.detailsElements.delegationInput.participants.identityDocument.raml
+  roleType: data.details.detailsElements.delegationInput.participants.roleType.raml
+  historicalArrears: data.details.detailsElements.delegationInput.participants.historicalArrears.raml
+  economicActivity: data.details.detailsElements.delegationInput.participants.economicActivity.raml
+  scoring: data.details.detailsElements.delegationInput.participants.scoring.raml
+  rating: data.details.detailsElements.delegationInput.participants.rating.raml
+  financialStatements: data.details.detailsElements.delegationInput.participants.financialStatements.raml
+
+types:
+  participants:
+    type: object
+    description: "It refers when the proposal information is evaluated and input from participant of the proposal."
+    properties:
+      identityDocument:
+        type: identityDocument.identityDocument
+        description: |
+          Information about the identity document of the proposal participant.
+        required: true
+
+      roleType:
+        type: roleType.roleType
+        description: |
+          Role type, it refers to the role of the customer on the proposal.
+        required: false
+
+      historicalArrears:
+        type: historicalArrears.historicalArrears
+        description: |
+          Information about the historical arrears of the participant on the risk proposal.
+        required: false
+
+      economicActivity:
+        type: economicActivity.economicActivity
+        description: |
+          Economic activity information.
+        required: false
+
+      canEvaluatePublicResponsability:
+        type: boolean
+        description: |
+          Indicates if the profile retrieved can evaluate customers that have public responsibility.
+        required: true
+
+      scoring:
+        type: scoring.scoring
+        description: |
+          Information about the scoring decision model.
+        required: false
+
+      rating:
+        type: rating.rating
+        description: |
+          Rating information for a period of the customer.
+        required: false
+
+      financialStatements:
+        type: financialStatements.financialStatements[]
+        description: |
+          Information related to client financial statements.
+        required: false
+
+    

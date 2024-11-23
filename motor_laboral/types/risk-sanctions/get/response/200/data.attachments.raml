@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  attachments:
+    type: object
+    description: "Evaluate the limits with the risk policies."
+    properties:
+      id:
+        type: string
+        description: |
+          Attachment identifier.
+        required: true
+
+      url:
+        type: string
+        description: |
+          Server location of the attachments.
+        required: true
+
+    

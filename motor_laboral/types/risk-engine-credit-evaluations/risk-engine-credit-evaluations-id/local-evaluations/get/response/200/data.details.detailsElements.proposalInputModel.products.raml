@@ -1,0 +1,43 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  requestedAmountShortTerm: data.details.detailsElements.proposalInputModel.products.requestedAmountShortTerm.raml
+  requestedAmountLongTerm: data.details.detailsElements.proposalInputModel.products.requestedAmountLongTerm.raml
+  longTermAnnualDebt: data.details.detailsElements.proposalInputModel.products.longTermAnnualDebt.raml
+
+types:
+  products:
+    type: object
+    description: "Products information of proposals."
+    properties:
+      id:
+        type: string
+        description: |
+          identifier product.
+        required: true
+
+      requestedAmountShortTerm:
+        type: requestedAmountShortTerm.requestedAmountShortTerm
+        description: |
+          Amount requested short term.
+        required: true
+
+      requestedAmountLongTerm:
+        type: requestedAmountLongTerm.requestedAmountLongTerm
+        description: |
+          Amount requested long term
+        required: true
+
+      avergeInterestRate:
+        type: number
+        description: |
+          Average interest rate.
+        required: true
+
+      longTermAnnualDebt:
+        type: longTermAnnualDebt.longTermAnnualDebt
+        description: |
+          Annual debt for long term operations.
+        required: false
+
+    

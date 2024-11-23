@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  period: body.root.business.financialInformation.tracking.period.raml
+
+types:
+  tracking:
+    type: object
+    description: "It represents number of times the financial information is consulted of customer."
+    properties:
+      value:
+        type: number
+        description: |
+          Number of registered customer queries.
+        required: true
+
+      period:
+        type: period.period
+        description: |
+          Period of tracking.
+        required: true
+

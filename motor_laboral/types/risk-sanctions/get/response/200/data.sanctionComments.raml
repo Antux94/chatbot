@@ -1,0 +1,40 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  owner: data.sanctionComments.owner.raml
+
+types:
+  sanctionComments:
+    type: object
+    description: "Comments about the sanction business rules."
+    properties:
+      id:
+        type: number
+        description: |
+          Comments identifier.
+        required: true
+
+      comment:
+        type: string
+        description: |
+          Description of the comment.
+        required: true
+
+      owner:
+        type: owner.owner
+        description: |
+          Information about owner comments.
+        required: true
+
+      status:
+        type: string
+        description: |
+          Identify when the comment is enabled or disabled.
+        required: true
+        enum: [ENABLED,DISABLED,BLOCKED]
+        (annotations.enumDescription):
+        - ENABLED: "Identify the comments that are enabled."
+        - DISABLED: "Identify the comments that are disabled."
+        - BLOCKED: "Identify when the comment can not change the status."
+
+    

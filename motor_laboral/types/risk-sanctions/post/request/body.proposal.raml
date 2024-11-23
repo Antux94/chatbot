@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  proposal:
+    type: object
+    description: "Information about the related proposal."
+    properties:
+      id:
+        type: string
+        description: |
+          Proposal identifier.
+        required: true
+

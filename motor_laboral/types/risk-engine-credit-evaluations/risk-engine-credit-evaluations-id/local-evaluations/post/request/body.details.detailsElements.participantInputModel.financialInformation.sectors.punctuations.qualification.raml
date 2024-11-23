@@ -1,0 +1,22 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  qualification:
+    type: object
+    description: "Information about the punctuations realized on the reported period in which is the external financial information was registered."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the punctuation in a certain range.
+        required: true
+
+      value:
+        type: string
+        description: |
+          Punctuation value of the registered period.
+        required: true
+
+    

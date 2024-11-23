@@ -1,0 +1,43 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  visitReports:
+    type: object
+    description: "Information related to client visit report."
+    properties:
+      id:
+        type: number
+        description: |
+          The identifier of the report.
+        required: true
+
+      endDate:
+        type: date-only
+        description: |
+          String based on ISO-8601 date format for specifying the completion date of the report of the visit by the employee of the bank, with which change the status of the report to closed or canceled.
+        required: true
+
+      reportStatus:
+        type: string
+        description: |
+          Status of the internal report number.
+        required: true
+        enum: [OPEN,CLOSED,DISCARDED]
+        (annotations.enumDescription):
+        - OPEN: "Status of visit reports that have been created and are being managed."
+        - CLOSED: "Status of visit reports that have been finished successfully."
+        - DISCARDED: "Status of visit reports that have been closed unsuccessfully."
+
+      ownerType:
+        type: string
+        description: |
+          User report that has management the visit report.
+        required: true
+        enum: [HOLDER,GUARANTOR]
+        (annotations.enumDescription):
+        - HOLDER: "It is the main participant interested."
+        - GUARANTOR: "It is the participant that support to the main participant."
+
+    

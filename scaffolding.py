@@ -67,7 +67,7 @@ def gen_scaffolding():
     formatos_carpeta = f'{rutaNueva}{carpeta_nombreNuevo}/business/{version_mayor}/dao/model/{carpeta_tx}/in' #TODO: Reemplaza con la ruta de los formatos, se debe dejar parametrico
 
     # Llamada a la función genDtos para generar los DTOs
-    rutaApi = 'C:/Users/SURAMERICANA/PycharmProjects/asoAsistantMaster/asoasistantv1/motor_laboral/api.raml'
+    rutaApi = 'motor_laboral/api.raml'
     mainDto = leerApiRaml.leerApiRamml(rutaApi)
     print("MAIN DTO: " + mainDto)
     leerRaml.leerRaml(nueva_carpeta, int_carpeta, formatos_carpeta, carpeta_tx, mainDto)

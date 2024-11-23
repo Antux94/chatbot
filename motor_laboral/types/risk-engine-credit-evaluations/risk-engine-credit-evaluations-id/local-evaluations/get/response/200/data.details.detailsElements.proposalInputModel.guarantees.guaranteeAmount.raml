@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  guaranteeAmount:
+    type: object
+    description: "Guarantee value."
+    properties:
+      currency:
+        type: string
+        description: |
+          String based on ISO-4217 for specifying the currency related to the amount.
+        required: true
+
+      amount:
+        type: number
+        description: |
+          Monetary amount.
+        required: true
+

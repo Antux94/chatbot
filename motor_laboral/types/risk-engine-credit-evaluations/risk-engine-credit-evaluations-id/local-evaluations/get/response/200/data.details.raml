@@ -1,0 +1,20 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  participantInputModelDetailselements: data.details.detailsElements.participantInputModel.raml
+  proposalInputModelDetailselements: data.details.detailsElements.proposalInputModel.raml
+  participantOutputModelDetailselements: data.details.detailsElements.participantOutputModel.raml
+  proposalOutputModelDetailselements: data.details.detailsElements.proposalOutputModel.raml
+
+types:
+  details:
+    type: object
+    description: "Details  or notice code."
+    properties:
+      detailsElements:
+        type: participantInputModelDetailselements.participantInputModel | proposalInputModelDetailselements.proposalInputModel | participantOutputModelDetailselements.participantOutputModel | proposalOutputModelDetailselements.proposalOutputModel
+        description: |
+          Posibles values of details elements.
+        required: true
+
+    

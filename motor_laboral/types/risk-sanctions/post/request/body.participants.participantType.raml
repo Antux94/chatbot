@@ -1,0 +1,24 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  participantType:
+    type: object
+    description: "Participant role type, it refers to a participant, guarantor, shareholder or economic group."
+    properties:
+      id:
+        type: string
+        description: |
+          Role identifier.
+        required: true
+        enum: [HOLDER,GUARANTOR,ECONOMIC_GROUPS,SHAREHOLDER,HOLDER_RISK,GUARANTOR_RISK,OTHERS_RISK]
+        (annotations.enumDescription):
+        - HOLDER: "Holder related to the proposal"
+        - GUARANTOR: "Person who guarantees or places the guarantee on the operation."
+        - ECONOMIC_GROUPS: "It refers when a participant is an economic group."
+        - SHAREHOLDER: "It refers when a participant is a shareholder."
+        - HOLDER_RISK: "Holder related to the proposal that is included in risk."
+        - GUARANTOR_RISK: "Person who guarantees or places the guarantee on the operation that is included in risk.."
+        - OTHERS_RISK: "Others that are included in risk."
+

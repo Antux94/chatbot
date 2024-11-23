@@ -1,0 +1,21 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  position:
+    type: object
+    description: "Position of the responsible for assigning. Responsable to do the sanction."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of position of the responsible to do the sanction.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Name of position of the responsible to do the sanction.
+        required: true
+

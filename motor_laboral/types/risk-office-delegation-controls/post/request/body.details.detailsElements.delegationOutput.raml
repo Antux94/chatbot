@@ -1,0 +1,28 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  riskDelegationProfiles: body.details.detailsElements.delegationOutput.riskDelegationProfiles.raml
+
+types:
+  delegationOutput:
+    type: object
+    discriminator: detailsType
+    discriminatorValue: DELEGATION_OUTPUT
+    description: "Output information for the delegation control module."
+    properties:
+      detailsType:
+        type: string
+        description: |
+          Details or notice code
+        required: true
+        enum: [DELEGATION_INPUT,DELEGATION_OUTPUT]
+        (annotations.enumDescription):
+        - DELEGATION_INPUT: "Input information for the delegation control module."
+        - DELEGATION_OUTPUT: "Output information for the delegation control module."
+
+      riskDelegationProfiles:
+        type: riskDelegationProfiles.riskDelegationProfiles
+        description: |
+          Data of the risk delegation profiles of the proposal.
+        required: false
+

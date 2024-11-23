@@ -1,0 +1,41 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  riskAnalystAgents: data.details.detailsElements.delegationOutput.riskDelegationProfiles.riskAnalystAgents.raml
+
+types:
+  riskDelegationProfiles:
+    type: object
+    description: "Data of the risk delegation profiles of the proposal."
+    properties:
+      id:
+        type: string
+        description: |
+          Identifier of the profile that is able to perform risk delegations.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Role the risk delegation agent.
+        required: true
+
+      riskAnalystAgents:
+        type: riskAnalystAgents.riskAnalystAgents[]
+        description: |
+          Data of the risk agent in charge of evaluating the proposal data first.
+        required: false
+
+      levelDelegation:
+        type: string
+        description: |
+          Indicates the level of delegation of the commercial agent.
+        required: false
+
+      canAttributeOfficeOperation:
+        type: boolean
+        description: |
+          Indicates if the profile retrieved can attribute a risk operation that has been delegated.
+        required: true
+
+    

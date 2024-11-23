@@ -1,0 +1,80 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  accountingAccounts: data.business.financialInformation.accountingAccounts.raml
+  statusDocument: data.business.financialInformation.statusDocument.raml
+  balance: data.business.financialInformation.balance.raml
+  tracking: data.business.financialInformation.tracking.raml
+  sectors: data.business.financialInformation.sectors.raml
+
+types:
+  financialInformation:
+    type: object
+    description: "Information that produces accounting indispensable for the administration and development of companies and is processed and concentrated for the use of management and government entities."
+    properties:
+      accountingAccounts:
+        type: accountingAccounts.accountingAccounts[]
+        description: |
+          Information on the accounts of a participant.
+        required: true
+
+      reportDate:
+        type: date-only
+        description: |
+          Report date.
+        required: true
+
+      creditScore:
+        type: number
+        description: |
+          Score that the natural or legal person has in the risk centers.
+        required: true
+
+      statusDocument:
+        type: statusDocument.statusDocument
+        description: |
+          Current status of the document
+        required: true
+
+      balance:
+        type: balance.balance
+        description: |
+          Long and short term balance information.
+        required: true
+
+      indebtednessLevel:
+        type: string
+        description: |
+          Level of indebtedness. It is the ability of a participant to borrow at the time of acquiring an example debt: if a participant has a high borrowing capacity, a very high loan can be made, but if the participant has low borrowing capacity, the loan will be You will be denied or you will not be given all the amount you requested.
+        required: true
+
+      bankingCompliance:
+        type: string
+        description: |
+          It indicates the banking compliance of the owner It is when the customer is in default with any of their payments.
+        required: true
+
+      punctualityPayment:
+        type: string
+        description: |
+          It indicates the level of payment compliance of the participant.
+        required: true
+
+      tracking:
+        type: tracking.tracking
+        description: |
+          It represents number of times the financial information is consulted of customer.
+        required: false
+
+      maximumExtinguishedContracts:
+        type: number
+        description: |
+          Maximum number of extinguished Contracts.
+        required: false
+
+      sectors:
+        type: sectors.sectors[]
+        description: |
+          Sets of productive or commercial activities that meet a series of similar characteristics; that is, they have a similar nature.
+        required: false
+

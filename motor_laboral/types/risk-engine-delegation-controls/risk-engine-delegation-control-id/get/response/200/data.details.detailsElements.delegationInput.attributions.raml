@@ -1,0 +1,29 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  attributionConfigurations: data.details.detailsElements.delegationInput.attributions.attributionConfigurations.raml
+
+types:
+  attributions:
+    type: object
+    description: "Attribution information module."
+    properties:
+      id:
+        type: string
+        description: |
+          Unique identifier of an attribution.
+        required: true
+
+      name:
+        type: string
+        description: |
+          Name of the risk attribution.
+        required: true
+
+      attributionConfigurations:
+        type: attributionConfigurations.attributionConfigurations[]
+        description: |
+          Attribution information module.
+        required: true
+
+    

@@ -1,0 +1,20 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  scoringAllowed:
+    type: object
+    description: "Information the scoring decision model."
+    properties:
+      dictum:
+        type: string
+        description: |
+          Identifier stage of proposal or risk engine modules.
+        required: true
+        enum: [APPROVED,REJECTED,DUBIOUS]
+        (annotations.enumDescription):
+        - APPROVED: "The customer profile is approved for a requested product."
+        - REJECTED: "The customer profile is rejected for a requested product."
+        - DUBIOUS: "The customer profile is dubious for a requested product."
+
