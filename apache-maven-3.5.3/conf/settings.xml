@@ -17,12 +17,12 @@
         <server>
             <id>aso</id>
             <username>andresfelipe.buitrago.gualter</username>
-            <password>${ARTIFACTORY_TOKEN}</password>
+            <password>AKCp8jQd24EcswkGz2BaeakAZfpWUMgTmgnVY2nGHqw6tEnFzf51xKUxBWE76eELGZLJGmbTH</password>
         </server>
         <server>
             <id>apx</id>
             <username>andresfelipe.buitrago.gualter</username>
-            <password>${ARTIFACTORY_TOKEN}</password>
+            <password>AKCp8jQd24EcswkGz2BaeakAZfpWUMgTmgnVY2nGHqw6tEnFzf51xKUxBWE76eELGZLJGmbTH</password>
         </server>
     </servers>
     <profiles>
