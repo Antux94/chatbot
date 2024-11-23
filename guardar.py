@@ -5,6 +5,7 @@ import os
 
 
 import os
+import streamlit as st
 
 
 
@@ -149,7 +150,7 @@ except FileNotFoundError:
 
 # Contenedor vacío
 if code:  # Solo procede si se encontró el archivo y se leyó el contenido
-    #code_container = st.empty()
+    code_container = st.empty()
 
     # Crear un contenedor para ejecutar el script de scroll
     #scroll_script_container = st.empty()
@@ -158,7 +159,7 @@ if code:  # Solo procede si se encontró el archivo y se leyó el contenido
     displayed_code = ""
     for char in code:
         displayed_code += char
-        #code_container.code(displayed_code, language='java')
+        code_container.code(displayed_code, language='java')
         time.sleep(0.01)
 
 
