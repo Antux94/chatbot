@@ -27,7 +27,15 @@ def compilar():
     #print(result.stderr)
 
     # Ruta al archivo .bat
-    print("UBICACION------------------: " + str(os.system("pwd"))) 
+    import os
+    import subprocess
+
+    # Usando subprocess
+    ubicacion = subprocess.check_output("pwd").decode("utf-8").strip()
+    print("UBICACION------------------: " + ubicacion)
+
+
+
     bat_file = "/workspaces/chatbot/install.sh"
     print("bat_file" + bat_file)
 
