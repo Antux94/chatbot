@@ -7,6 +7,14 @@ public class BIdentityDocument {
     private String documentType;
     private String documentNumber;
     
+    public BIdentityDocument() {
+    }
+    
+    public BIdentityDocument(String documentType, String documentNumber) {
+        this.documentType = documentType;
+        this.documentNumber = documentNumber;
+    }
+    
     public String getDocumentType() {
         return documentType;
     }

@@ -27,6 +27,7 @@ def compilar():
     #print(result.stderr)
 
     # Ruta al archivo .bat
+    os.system("pwd")
     bat_file = "/workspaces/chatbot/install.sh"
     print("bat_file" + bat_file)
 
