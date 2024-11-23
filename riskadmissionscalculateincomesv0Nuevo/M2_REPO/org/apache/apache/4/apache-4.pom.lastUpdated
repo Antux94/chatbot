@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Nov 23 08:32:55 UTC 2024
+https\://globaldevtools.bbva.com/artifactory-api/repository-apx-dev/.lastUpdated=1732350775601
+https\://artifactory.globaldevtools.bbva.com/artifactory/common-aso-maven-virtual/.error=Could not transfer artifact org.apache\:apache\:pom\:4 from/to aso (https\://artifactory.globaldevtools.bbva.com/artifactory/common-aso-maven-virtual)\: Not authorized , ReasonPhrase\:.
+52f75d164b56fa79f1304ecbbd903f087a6f55fa@default-aso-https\://artifactory.globaldevtools.bbva.com/artifactory/common-aso-maven-virtual/.lastUpdated=1732350775331

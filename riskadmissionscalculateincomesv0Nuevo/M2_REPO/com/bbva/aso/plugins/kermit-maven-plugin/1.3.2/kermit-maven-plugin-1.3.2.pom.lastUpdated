@@ -1,8 +1,8 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Sat Nov 23 08:31:47 UTC 2024
-https\://artifactory.globaldevtools.bbva.com/artifactory/common-aso-maven-virtual/.error=Could not transfer artifact com.bbva.aso.plugins\:kermit-maven-plugin\:pom\:1.3.2 from/to aso (https\://artifactory.globaldevtools.bbva.com/artifactory/common-aso-maven-virtual)\: Not authorized , ReasonPhrase\:.
+#Sat Nov 23 08:32:40 UTC 2024
 https\://globaldevtools.bbva.com/artifactory-api/repository-apx-dev/.lastUpdated=1732350707369
+https\://artifactory.globaldevtools.bbva.com/artifactory/common-aso-maven-virtual/.error=Could not transfer artifact com.bbva.aso.plugins\:kermit-maven-plugin\:pom\:1.3.2 from/to aso (https\://artifactory.globaldevtools.bbva.com/artifactory/common-aso-maven-virtual)\: Not authorized , ReasonPhrase\:.
 https\://repo.maven.apache.org/maven2/.lastUpdated=1732350707387
 https\://globaldevtools.bbva.com/artifactory-api/repository-apx-dev/.error=
-52f75d164b56fa79f1304ecbbd903f087a6f55fa@default-aso-https\://artifactory.globaldevtools.bbva.com/artifactory/common-aso-maven-virtual/.lastUpdated=1732350706053
+52f75d164b56fa79f1304ecbbd903f087a6f55fa@default-aso-https\://artifactory.globaldevtools.bbva.com/artifactory/common-aso-maven-virtual/.lastUpdated=1732350760420
 https\://repo.maven.apache.org/maven2/.error=
