@@ -35,8 +35,9 @@ def compilar():
     print("UBICACION------------------: " + ubicacion)
 
 
+    os.chdir(ubicacion)
 
-    bat_file = "/workspaces/chatbot/install.sh"
+    bat_file = "install.sh"
     print("bat_file" + bat_file)
 
     # Parámetro de entrada (ruta al archivo .java)
