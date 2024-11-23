@@ -8,8 +8,8 @@ pwd
 ls
 
 
-export JAVA_HOME=jdk1.8.0_202
-export PATH=$JAVA_HOME/bin:$PATH
+#export JAVA_HOME=jdk1.8.0_202
+#export PATH=$JAVA_HOME/bin:$PATH
 
 
 echo JAVA VERSION
