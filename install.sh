@@ -4,18 +4,18 @@ echo SHELL---------------------------------------------------------------------
 #cd /mount/src/chatbot
 
 
-pwd
-ls
+#pwd
+#ls
 
 
-export JAVA_HOME=jdk-11.0.2
-export PATH=$JAVA_HOME/bin:$PATH
+#export JAVA_HOME=jdk-11.0.2
+#export PATH=$JAVA_HOME/bin:$PATH
 
 
 echo JAVA VERSION
 java -version
 
-cat /etc/os-release
+#cat /etc/os-release
 
 
 #export M2_HOME=/mount/src/chatbot/apache-maven-3.5.3
