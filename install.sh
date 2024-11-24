@@ -13,6 +13,9 @@ ls
 echo JAVA VERSION
 java -version
 
+cat /etc/os-release
+
+
 #export M2_HOME=/mount/src/chatbot/apache-maven-3.5.3
 #export PATH=$M2_HOME/bin:$PATH
 
