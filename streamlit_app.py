@@ -23,51 +23,6 @@ from datetime import datetime
 import os
 import subprocess
 
-# Usando subprocess
-ubicacion = subprocess.check_output("pwd").decode("utf-8").strip()
-print("UBICACION------------------: " + ubicacion)
-
-
-#os.chdir(ubicacion)
-
-#bat_file = f"{ubicacion}/install.sh"
-#print("bat_file" + bat_file)
-#
-## Parámetro de entrada (ruta al archivo .java)
-##java_file = "C:/Users/SURAMERICANA/OneDrive/Desktop/HolaMundo.java"
-#
-## Ejecutar el archivo .bat con el parámetro
-##ruta_completa = "C:/Users/SURAMERICANA/OneDrive/Desktop/HolaMundo.java"
-##result = subprocess.run([bat_file], capture_output=True, text=True, shell=True)
-#
-## Imprimir la salida del comando
-##print(result.stdout)
-##print(result.stderr)
-#
-#
-#
-## Ejecutar el archivo .bat con Popen
-#process = subprocess.Popen([bat_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, shell=True)
-#
-## Mostrar la salida en tiempo real
-#while True:
-#    output = process.stdout.readline()
-#    if output == "" and process.poll() is not None:
-#        break
-#    if output:
-#        print(output.strip())
-#
-## Mostrar errores (si los hay)
-#err = process.stderr.read()
-#if err:
-#    print(err.strip())
-
-
-
-
-
-
-
 
 
 # Define la ruta de JAVA_HOME
@@ -86,11 +41,58 @@ print("PATH------------------: " + path)
 
 
 # Imprimir la versión de Java
-version_output = subprocess.check_output(['java', '-version'], stderr=subprocess.STDOUT).decode("utf-8")
+#version_output = subprocess.check_output(['java', '-version'], stderr=subprocess.STDOUT).decode("utf-8")
 
 
 
-print("JAVA VERSION------------------: " + version_output)
+#print("JAVA VERSION------------------: " + version_output)
+
+
+
+
+
+
+
+
+
+
+# Usando subprocess
+ubicacion = subprocess.check_output("pwd").decode("utf-8").strip()
+print("UBICACION------------------: " + ubicacion)
+
+
+os.chdir(ubicacion)
+bat_file = f"{ubicacion}/install.sh"
+print("bat_file" + bat_file)
+
+# Parámetro de entrada (ruta al archivo .java)
+#java_file = "C:/Users/SURAMERICANA/OneDrive/Desktop/HolaMundo.java"
+
+# Ejecutar el archivo .bat con el parámetro
+#ruta_completa = "C:/Users/SURAMERICANA/OneDrive/Desktop/HolaMundo.java"
+#result = subprocess.run([bat_file], capture_output=True, text=True, shell=True)
+
+# Imprimir la salida del comando
+#print(result.stdout)
+#print(result.stderr)
+
+
+
+# Ejecutar el archivo .bat con Popen
+process = subprocess.Popen([bat_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, shell=True)
+
+# Mostrar la salida en tiempo real
+while True:
+    output = process.stdout.readline()
+    if output == "" and process.poll() is not None:
+        break
+    if output:
+        print(output.strip())
+
+# Mostrar errores (si los hay)
+err = process.stderr.read()
+if err:
+    print(err.strip())
 
 
 
@@ -130,7 +132,7 @@ with st.sidebar:
             "nav-link-selected": {"background-color": "#0f5bd6"},
         }
     )
-    st.text(str(version_output))
+    #st.text(str(version_output))
 
 #--------------------------------------------------------------------------------------------------------------SIDEBAR
 
