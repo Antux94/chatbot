@@ -26,19 +26,42 @@ import subprocess
 
 
 # Define la ruta de JAVA_HOME
-java_home_path = "/mount/src/chatbot/jdk-11.0.2"
+#java_home_path = "/mount/src/chatbot/jdk-11.0.2"
+#
+## Establece JAVA_HOME en la sesión actual de Python
+#os.environ['JAVA_HOME'] = java_home_path
+## Agrega JAVA_HOME al PATH
+#os.environ['PATH'] = java_home_path + "/bin:" + os.environ['PATH']
+#
+#java_home = os.getenv('JAVA_HOME')
+#path = os.getenv('PATH')
+#
+#print("JAVA HOME------------------: " + java_home)
+#print("PATH------------------: " + path)
 
-# Establece JAVA_HOME en la sesión actual de Python
+
+
+
+import os
+import subprocess
+
+# Define la ruta de JAVA_HOME y actualiza LD_LIBRARY_PATH
+java_home_path = "jdk-11.0.2"
+ld_library_path = f"{java_home_path}/lib"
+
+# Establecer las variables de entorno
 os.environ['JAVA_HOME'] = java_home_path
-# Agrega JAVA_HOME al PATH
-os.environ['PATH'] = java_home_path + "/bin:" + os.environ['PATH']
+os.environ['LD_LIBRARY_PATH'] = ld_library_path
+os.environ['PATH'] = f"{java_home_path}/bin:{os.environ['PATH']}"
 
-java_home = os.getenv('JAVA_HOME')
-path = os.getenv('PATH')
-
-print("JAVA HOME------------------: " + java_home)
-print("PATH------------------: " + path)
-
+# Imprimir la versión de Java
+try:
+    version_output = subprocess.check_output(['java', '-version'], stderr=subprocess.STDOUT).decode("utf-8")
+    print("Versión de Java:", version_output)
+except subprocess.CalledProcessError as e:
+    print(f"Error al ejecutar java -version: {e.output.decode('utf-8')}")
+except FileNotFoundError:
+    print("El comando 'java' no se encuentra en el PATH.")
 
 
 
