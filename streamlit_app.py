@@ -70,6 +70,19 @@ if err:
 
 
 
+# Define la ruta de JAVA_HOME
+java_home_path = "jdk1.8.0_202"
+
+# Establece JAVA_HOME en la sesión actual de Python
+os.environ['JAVA_HOME'] = java_home_path
+# Agrega JAVA_HOME al PATH
+os.environ['PATH'] = java_home_path + "/bin:" + os.environ['PATH']
+
+java_home = os.getenv('JAVA_HOME')
+
+# Imprimir la versión de Java
+version_output = subprocess.check_output(['java', '-version'], stderr=subprocess.STDOUT).decode("utf-8")
+
 
 
 
@@ -108,6 +121,7 @@ with st.sidebar:
             "nav-link-selected": {"background-color": "#0f5bd6"},
         }
     )
+    st.text(str(version_output))
 
 #--------------------------------------------------------------------------------------------------------------SIDEBAR
 
