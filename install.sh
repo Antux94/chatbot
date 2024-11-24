@@ -12,6 +12,9 @@ echo SHELL---------------------------------------------------------------------
 #export PATH=$JAVA_HOME/bin:$PATH
 
 
+rm /usr/bin/java
+update-alternatives --config java
+
 echo JAVA VERSION
 java -version
 
