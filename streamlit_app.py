@@ -90,16 +90,13 @@ if err:
 
 
 
-import subprocess
+#import subprocess
+#
+#result = subprocess.run(['java', '-version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+#version_output = result.stderr.decode("utf-8")  # La salida de la versión de Java se imprime en stderr
+#print("Versión de Java:", version_output)
 
-result = subprocess.run(['java', '-version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-version_output = result.stderr.decode("utf-8")  # La salida de la versión de Java se imprime en stderr
-print("Versión de Java:", version_output)
-
-
-
-
-print("JAVA VERSION------------------: " + version_output)
+#print("JAVA VERSION------------------: " + version_output)
 
 
 
@@ -136,7 +133,7 @@ with st.sidebar:
             "nav-link-selected": {"background-color": "#0f5bd6"},
         }
     )
-    st.text(str(version_output))
+    #st.text(str(version_output))
 
 #--------------------------------------------------------------------------------------------------------------SIDEBAR
 
