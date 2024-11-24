@@ -26,7 +26,7 @@ import subprocess
 
 
 # Define la ruta de JAVA_HOME
-java_home_path = "jdk1.8.0_202"
+java_home_path = "jdk-11.0.2"
 
 # Establece JAVA_HOME en la sesión actual de Python
 os.environ['JAVA_HOME'] = java_home_path
@@ -73,20 +73,20 @@ print("bat_file" + bat_file)
 
 
 # Ejecutar el archivo .bat con Popen
-process = subprocess.Popen([bat_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, shell=True)
-
-# Mostrar la salida en tiempo real
-while True:
-    output = process.stdout.readline()
-    if output == "" and process.poll() is not None:
-        break
-    if output:
-        print(output.strip())
-
-# Mostrar errores (si los hay)
-err = process.stderr.read()
-if err:
-    print(err.strip())
+#process = subprocess.Popen([bat_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, shell=True)
+#
+## Mostrar la salida en tiempo real
+#while True:
+#    output = process.stdout.readline()
+#    if output == "" and process.poll() is not None:
+#        break
+#    if output:
+#        print(output.strip())
+#
+## Mostrar errores (si los hay)
+#err = process.stderr.read()
+#if err:
+#    print(err.strip())
 
 
 
