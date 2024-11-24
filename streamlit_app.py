@@ -91,11 +91,11 @@ if err:
 
 
 # Imprimir la versión de Java
-version_output = subprocess.check_output(['java', '-version'], stderr=subprocess.STDOUT).decode("utf-8")
+#version_output = subprocess.check_output(['java', '-version'], stderr=subprocess.STDOUT).decode("utf-8")
 
 
 
-print("JAVA VERSION------------------: " + version_output)
+#print("JAVA VERSION------------------: " + version_output)
 
 
 
