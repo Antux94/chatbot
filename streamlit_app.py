@@ -18,6 +18,64 @@ from streamlit_option_menu import option_menu
 from datetime import datetime
 
 
+
+
+import os
+import subprocess
+
+# Usando subprocess
+ubicacion = subprocess.check_output("pwd").decode("utf-8").strip()
+print("UBICACION------------------: " + ubicacion)
+
+
+#os.chdir(ubicacion)
+
+bat_file = f"{ubicacion}/install.sh"
+print("bat_file" + bat_file)
+
+# Parámetro de entrada (ruta al archivo .java)
+#java_file = "C:/Users/SURAMERICANA/OneDrive/Desktop/HolaMundo.java"
+
+# Ejecutar el archivo .bat con el parámetro
+#ruta_completa = "C:/Users/SURAMERICANA/OneDrive/Desktop/HolaMundo.java"
+#result = subprocess.run([bat_file], capture_output=True, text=True, shell=True)
+
+# Imprimir la salida del comando
+#print(result.stdout)
+#print(result.stderr)
+
+
+
+# Ejecutar el archivo .bat con Popen
+process = subprocess.Popen([bat_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, shell=True)
+
+# Mostrar la salida en tiempo real
+while True:
+    output = process.stdout.readline()
+    if output == "" and process.poll() is not None:
+        break
+    if output:
+        print(output.strip())
+
+# Mostrar errores (si los hay)
+err = process.stderr.read()
+if err:
+    print(err.strip())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Configuracion modo amplio
 st.set_page_config(layout="wide")
 
@@ -234,7 +292,7 @@ if selected == "Inicio":
           #while (st.session_state['cantidad_componentes'] < 100):
           #  progress_bar.progress(math.floor(st.session_state['cantidad_componentes']))
 
-          scaffolding.gen_scaffolding()
+          #scaffolding.gen_scaffolding()
 
           # Mostrar un mensaje cuando se complete el proceso
           datetime_final = datetime.now()
