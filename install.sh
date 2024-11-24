@@ -24,8 +24,8 @@ java -version
 #export M2_HOME=/mount/src/chatbot/apache-maven-3.5.3
 #export PATH=$M2_HOME/bin:$PATH
 
-#echo $JAVA_HOME
-#echo $M2_HOME
+echo $JAVA_HOME
+echo $M2_HOME
 
 #mvn -version
 
