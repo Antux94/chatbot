@@ -79,9 +79,18 @@ os.environ['JAVA_HOME'] = java_home_path
 os.environ['PATH'] = java_home_path + "/bin:" + os.environ['PATH']
 
 java_home = os.getenv('JAVA_HOME')
+path = os.getenv('PATH')
+
+print("JAVA HOME------------------: " + java_home)
+print("PATH------------------: " + path)
+
 
 # Imprimir la versión de Java
 version_output = subprocess.check_output(['java', '-version'], stderr=subprocess.STDOUT).decode("utf-8")
+
+
+
+print("JAVA VERSION------------------: " + version_output)
 
 
 
