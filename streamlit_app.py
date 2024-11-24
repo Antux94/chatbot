@@ -26,7 +26,7 @@ import subprocess
 
 
 # Define la ruta de JAVA_HOME
-java_home_path = "jdk-11.0.2"
+java_home_path = "/mount/src/chatbot/jdk-11.0.2"
 
 # Establece JAVA_HOME en la sesión actual de Python
 os.environ['JAVA_HOME'] = java_home_path
